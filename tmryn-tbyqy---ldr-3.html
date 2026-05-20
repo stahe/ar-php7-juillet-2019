@@ -1349,7 +1349,7 @@
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    $this-&gt;x = &quot;1000&quot;;
 </code></pre></div>
-<p>فسيتم إضافة السمة <strong>[<bdi dir="ltr" class="odt-ltr-term">x</bdi>]</strong> إلى الكائن <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong> حتى لو لم يتم إعلان هذه السمة في الفئة <strong>[<bdi dir="ltr" class="odt-ltr-term">TaxAdminData</bdi>]</strong>. ما هو مؤكد هو أن السمات في الأسطر 6–20 هي بالفعل جزء من الكائن <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong>، ولكن ربما لم يتم تهيئتها. هذا خطأ يسهل الوقوع فيه؛ كل ما يتطلبه الأمر هو خطأ مطبعي في اسم سمة في ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">taxadmindata.json</bdi>]</strong>؛</p>
+<p>فسيتم إضافة السمة <strong>[x]</strong> إلى الكائن <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong> حتى لو لم يتم إعلان هذه السمة في الفئة <strong>[<bdi dir="ltr" class="odt-ltr-term">TaxAdminData</bdi>]</strong>. ما هو مؤكد هو أن السمات في الأسطر 6–20 هي بالفعل جزء من الكائن <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong>، ولكن ربما لم يتم تهيئتها. هذا خطأ يسهل الوقوع فيه؛ كل ما يتطلبه الأمر هو خطأ مطبعي في اسم سمة في ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">taxadmindata.json</bdi>]</strong>؛</p>
 <ul>
   <li>الأسطر 54-57: نكرر جميع سمات <b>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</b>، وإذا لم يتم تهيئة أي منها، فإننا نطلق استثناءً؛
   </li>
@@ -1908,7 +1908,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 3: نظرًا لأن عددًا من العمليات قد يؤدي إلى حدوث استثناء، فإن كتلة <bdi dir="ltr" class="odt-ltr-term">try</bdi> / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> / <bdi dir="ltr" class="odt-ltr-term">finally</bdi> تحيط بكامل كود الأسلوب؛
+  <li>السطر 3: نظرًا لأن عددًا من العمليات قد يؤدي إلى حدوث استثناء، فإن كتلة try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> / <bdi dir="ltr" class="odt-ltr-term">finally</bdi> تحيط بكامل كود الأسلوب؛
   </li>
   <li>الأسطر 3–19: يتم فتح الملفات الثلاثة. يتم إلقاء استثناء بمجرد فشل عملية الفتح؛
   </li>
@@ -1920,7 +1920,7 @@
   </li>
   <li>الأسطر 33–52: يتم التحقق من صحة العناصر الثلاثة. هنا، لا يتم إلقاء استثناء في حالة حدوث خطأ، ولكن يتم كتابة رسالة الخطأ في الملف النصي <b>[$<bdi dir="ltr" class="odt-ltr-term">errors</bdi>] </b>(السطر 55)؛
   </li>
-  <li>السطر 59: إذا كان السطر المقروء صالحًا، يتم حساب الضريبة. يتم الحصول على النتيجة كمصفوفة ترابطية <b>[&quot;<bdi dir="ltr" class="odt-ltr-term">tax</bdi>&quot; =&gt; <bdi dir="ltr" class="odt-ltr-term">floor</bdi>($<bdi dir="ltr" class="odt-ltr-term">tax</bdi>), &quot;<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">discount</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">discount</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">reduction</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">reduction</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">rate</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">rate</bdi>]</b>؛
+  <li>السطر 59: إذا كان السطر المقروء صالحًا، يتم حساب الضريبة. يتم الحصول على النتيجة كمصفوفة ترابطية <b>[&quot;tax&quot; =&gt; <bdi dir="ltr" class="odt-ltr-term">floor</bdi>($tax), &quot;<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">discount</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">discount</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">reduction</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">reduction</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">rate</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">rate</bdi>]</b>؛
   </li>
   <li>السطر 61: تتم إضافة المفاتيح <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>, <bdi dir="ltr" class="odt-ltr-term">children</bdi>, <bdi dir="ltr" class="odt-ltr-term">salary</bdi>] </b>إلى النتيجة؛
   </li>
@@ -2029,7 +2029,7 @@
   </li>
   <li>السطر 7: يتم أيضًا وضع البرنامج النصي<b> [<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>] </b>في مساحة اسم<b> [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]</b>؛
   </li>
-  <li>الأسطر 10–15: نخبر مترجم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> بمكان وجود الفئات والواجهات التي يستخدمها البرنامج النصي. لاحظ أننا لم نستخدم هنا عبارة <i>`<bdi dir="ltr" class="odt-ltr-term">use</bdi>` </i>لإعلان الأسماء الكاملة للفئات التي يستخدمها البرنامج النصي. وهذا غير ضروري لأن البرنامج النصي والفئات موجودة في نفس مساحة الاسم <b>[<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]</b>؛
+  <li>الأسطر 10–15: نخبر مترجم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> بمكان وجود الفئات والواجهات التي يستخدمها البرنامج النصي. لاحظ أننا لم نستخدم هنا عبارة <i>`use` </i>لإعلان الأسماء الكاملة للفئات التي يستخدمها البرنامج النصي. وهذا غير ضروري لأن البرنامج النصي والفئات موجودة في نفس مساحة الاسم <b>[<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]</b>؛
   </li>
   <li>الأسطر 18–22: أسماء الملفات النصية المستخدمة في البرنامج النصي؛
   </li>

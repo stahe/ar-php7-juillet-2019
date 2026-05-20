@@ -1174,7 +1174,7 @@
   </li>
   <li>الأسطر 38–45: نُعرّف فئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class05</bdi>] </b>التي تأخذ الكود من السمة <b>[<bdi dir="ltr" class="odt-ltr-term">Trait04</bdi>] </b>(السطر 40) وتضيف مُنشئًا (الأسطر 43–45)، مطابقًا لمُنشئ الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class04</bdi>]</b>، لجعل الفئة قابلة للتجسيد؛
   </li>
-  <li>السطر 40: تسمح الكلمة الرئيسية <b>[<bdi dir="ltr" class="odt-ltr-term">use</bdi>] </b>بتضمين سمة في فئة؛
+  <li>السطر 40: تسمح الكلمة الرئيسية <b>[use] </b>بتضمين سمة في فئة؛
   </li>
   <li>الأسطر 50–56: تُظهر الاختبارات أن الفئتين <b>[<bdi dir="ltr" class="odt-ltr-term">Class04</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">Class05</bdi>] </b>تعملان بنفس الطريقة؛
   </li>
@@ -1426,7 +1426,7 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 4-23: تستبدل فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </b>السمة<b> [<bdi dir="ltr" class="odt-ltr-term">Trait01</bdi>]</b>. تم تضمين كود <b>[<bdi dir="ltr" class="odt-ltr-term">Trait01</bdi>] </b>في كود فئتي <b>[<bdi dir="ltr" class="odt-ltr-term">Class02</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">Class03</bdi>]</b>. هنا، لن يكون الأمر كذلك. بدلاً من ذلك، سيتم إدخال مرجع إلى الكود في فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </b>في <b>[<bdi dir="ltr" class="odt-ltr-term">Class02</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">Class03</bdi>]</b>. وهذا يعني أن سمات فئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </b>ستكون خارجية بالنسبة لكود <b>[<bdi dir="ltr" class="odt-ltr-term">Class02</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">Class03</bdi>]</b>. نظرًا لأن السمة<b> [<bdi dir="ltr" class="odt-ltr-term">id</bdi>] </b>خاصة هنا (السطر 6)، يجب توفير دالة الحصول (الأسطر 14–16) ودالة التعيين (الأسطر 9–11). هذا هو الاختلاف الأول عن السمة: يجب عليك إنشاء الكود للوصول إلى السمات الخاصة للفئة. كان بإمكاننا تغيير رؤية السمة<b> [<bdi dir="ltr" class="odt-ltr-term">id</bdi>] </b>إلى <b>[<bdi dir="ltr" class="odt-ltr-term">public</bdi>]</b>، ولكن لا يُنصح بذلك أبدًا. يتيح لنا استخدام دالة تعيين لتعيين قيمة السمة التحقق من صحتها؛
+  <li>الأسطر 4-23: تستبدل فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </b>السمة<b> [<bdi dir="ltr" class="odt-ltr-term">Trait01</bdi>]</b>. تم تضمين كود <b>[<bdi dir="ltr" class="odt-ltr-term">Trait01</bdi>] </b>في كود فئتي <b>[<bdi dir="ltr" class="odt-ltr-term">Class02</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">Class03</bdi>]</b>. هنا، لن يكون الأمر كذلك. بدلاً من ذلك، سيتم إدخال مرجع إلى الكود في فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </b>في <b>[<bdi dir="ltr" class="odt-ltr-term">Class02</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">Class03</bdi>]</b>. وهذا يعني أن سمات فئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </b>ستكون خارجية بالنسبة لكود <b>[<bdi dir="ltr" class="odt-ltr-term">Class02</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">Class03</bdi>]</b>. نظرًا لأن السمة<b> [id] </b>خاصة هنا (السطر 6)، يجب توفير دالة الحصول (الأسطر 14–16) ودالة التعيين (الأسطر 9–11). هذا هو الاختلاف الأول عن السمة: يجب عليك إنشاء الكود للوصول إلى السمات الخاصة للفئة. كان بإمكاننا تغيير رؤية السمة<b> [id] </b>إلى <b>[<bdi dir="ltr" class="odt-ltr-term">public</bdi>]</b>، ولكن لا يُنصح بذلك أبدًا. يتيح لنا استخدام دالة تعيين لتعيين قيمة السمة التحقق من صحتها؛
   </li>
   <li>السطر 27: تضمين إشارة إلى الفئة<b> [<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </b>في كود<b> [<bdi dir="ltr" class="odt-ltr-term">Class02</bdi>]</b>. نظرًا لأن هذه السمة خاصة، نحتاج إلى إنشاء دالة تعيين (الأسطر 30-32) لتهيئتها؛
   </li>
@@ -1775,7 +1775,7 @@
 
 <p><strong><span style="color: #000000">تعليقات</span></strong></p>
 <ul>
-  <li><span style="color: #000000">الأسطر 3–24: تستبدل الفئة </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </span></b><span style="color: #000000">السمة </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Trait01</bdi>]</span></b><span style="color: #000000">. وبما أن الفئة </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </span></b><span style="color: #000000">ستُدمج في الفئات عبر مرجع، فقد تم توفير طرق <bdi dir="ltr" class="odt-ltr-term">get/set</bdi> للسمة </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">الأسطر 3–24: تستبدل الفئة </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </span></b><span style="color: #000000">السمة </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Trait01</bdi>]</span></b><span style="color: #000000">. وبما أن الفئة </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Class01</bdi>] </span></b><span style="color: #000000">ستُدمج في الفئات عبر مرجع، فقد تم توفير طرق <bdi dir="ltr" class="odt-ltr-term">get/set</bdi> للسمة </span><b><span style="color: #000000">[$i]</span></b><span style="color: #000000">؛</span>
   </li>
   <li><span style="color: #000000">الأسطر 26–38: تظل الفئة </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Class02</bdi>] </span></b><span style="color: #000000">دون تغيير؛</span>
   </li>

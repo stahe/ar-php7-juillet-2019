@@ -1648,9 +1648,9 @@
   </li>
   <li>الأسطر 21–23: مصفوفات البيانات الثلاثة التي تحدد شرائح الضريبة المختلفة لحساب الضريبة؛
   </li>
-  <li>الأسطر 26–30: فتح ملف بيانات دافع الضرائب للقراءة <b>[<bdi dir="ltr" class="odt-ltr-term">r</bdi>]</b>. تُرجع الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">fopen</bdi>] </b>القيمة المنطقية <bdi dir="ltr" class="odt-ltr-term">FALSE</bdi> إذا تعذر فتح الملف؛
+  <li>الأسطر 26–30: فتح ملف بيانات دافع الضرائب للقراءة <b>[r]</b>. تُرجع الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">fopen</bdi>] </b>القيمة المنطقية <bdi dir="ltr" class="odt-ltr-term">FALSE</bdi> إذا تعذر فتح الملف؛
   </li>
-  <li>الأسطر 33–37: فتح ملف النتائج في وضع الكتابة <b>[<bdi dir="ltr" class="odt-ltr-term">w</bdi>]</b>؛
+  <li>الأسطر 33–37: فتح ملف النتائج في وضع الكتابة <b>[w]</b>؛
   </li>
   <li>الأسطر 40-51: حلقة لقراءة الأسطر (الزوج، الأبناء، الدخل) من ملف بيانات دافع الضرائب؛
   </li>
@@ -1668,7 +1668,7 @@
   </li>
   <li>السطران 53-54: بمجرد الانتهاء من معالجة ملف بيانات دافع الضرائب بالكامل، يتم إغلاق الملفات؛
   </li>
-  <li>السطر 60: الدالة التي تزيل فاصل الأسطر من السطر <i>$<bdi dir="ltr" class="odt-ltr-term">line</bdi></i>. فاصل الأسطر هو السلسلة &quot;\<bdi dir="ltr" class="odt-ltr-term">r</bdi>\<bdi dir="ltr" class="odt-ltr-term">n</bdi>&quot; في أنظمة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، و&quot;\<bdi dir="ltr" class="odt-ltr-term">n</bdi>&quot; في أنظمة <bdi dir="ltr" class="odt-ltr-term">Unix.</bdi> والنتيجة هي سلسلة الإدخال بدون فاصل الأسطر.
+  <li>السطر 60: الدالة التي تزيل فاصل الأسطر من السطر <i>$<bdi dir="ltr" class="odt-ltr-term">line</bdi></i>. فاصل الأسطر هو السلسلة &quot;\r\n&quot; في أنظمة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، و&quot;\n&quot; في أنظمة <bdi dir="ltr" class="odt-ltr-term">Unix.</bdi> والنتيجة هي سلسلة الإدخال بدون فاصل الأسطر.
   </li>
   <li>السطران 63-64: <i><bdi dir="ltr" class="odt-ltr-term">substr</bdi>($<bdi dir="ltr" class="odt-ltr-term">string</bdi>, $<bdi dir="ltr" class="odt-ltr-term">start</bdi>, $<bdi dir="ltr" class="odt-ltr-term">size</bdi>) </i>هي السلسلة الفرعية من <i>$<bdi dir="ltr" class="odt-ltr-term">string</bdi> </i>التي تبدأ من الحرف <i>$<bdi dir="ltr" class="odt-ltr-term">start</bdi> </i>وتحتوي على <i>$<bdi dir="ltr" class="odt-ltr-term">size</bdi> </i>حرفًا كحد أقصى؛
   </li>
@@ -1758,9 +1758,9 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 10: يتم حساب الضريبة الإجمالية بما في ذلك الأطفال. يتم إرجاع النتيجة في الصيغة <b>[&quot;<bdi dir="ltr" class="odt-ltr-term">tax</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">tax</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">rate</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">coeffR</bdi>[$<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</b>] حيث:
+  <li>السطر 10: يتم حساب الضريبة الإجمالية بما في ذلك الأطفال. يتم إرجاع النتيجة في الصيغة <b>[&quot;tax&quot; =&gt; $tax, &quot;<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">rate</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">coeffR</bdi>[$i]</b>] حيث:
     <ul>
-      <li><b>[‘<bdi dir="ltr" class="odt-ltr-term">tax</bdi>’]</b>: الضريبة الإجمالية؛
+      <li><b>[‘tax’]</b>: الضريبة الإجمالية؛
       </li>
       <li><b>[‘<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>’]</b>: مبلغ الرسوم الإضافية، إن وجدت. ينطبق هذا عندما يتجاوز الخصم بنسبة 10% الحد الأدنى البالغ 12,502 يورو؛
       </li>
@@ -1780,11 +1780,11 @@
   </li>
   <li>الأسطر 29-37: تم حساب ضريبتين إجماليتين <b>[<bdi dir="ltr" class="odt-ltr-term">impot1</bdi>، <bdi dir="ltr" class="odt-ltr-term">impot2</bdi>]</b>. تحتفظ سلطة الضرائب بأعلىهما. وينتج عن ذلك ضريبة إجمالية <b>[<bdi dir="ltr" class="odt-ltr-term">impot</bdi>]</b>؛
   </li>
-  <li>السطران 39-40: قد يخضع المبلغ الإجمالي <b>[<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] </b>لتخفيض؛
+  <li>السطران 39-40: قد يخضع المبلغ الإجمالي <b>[tax] </b>لتخفيض؛
   </li>
   <li>السطران 42-43: قد يخضع المبلغ الإجمالي <b>[<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] </b>لتخفيض؛
   </li>
-  <li>السطر 45: <b>[<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] </b>هو الآن الضريبة الصافية المستحقة. يتم إرجاع النتائج؛
+  <li>السطر 45: <b>[tax] </b>هو الآن الضريبة الصافية المستحقة. يتم إرجاع النتائج؛
   </li>
 </ul>
 
@@ -1862,7 +1862,7 @@
   </li>
   <li>الأسطر 30-36: يُستخدم هذا الناتج لتحديد الشريحة الضريبية للمكلف؛
   </li>
-  <li>السطر 40: بمجرد تحديد الشريحة الضريبية للمكلف، يمكن حساب الضريبة الإجمالية. تعرض الدالة<i> <bdi dir="ltr" class="odt-ltr-term">floor</bdi>($<bdi dir="ltr" class="odt-ltr-term">x</bdi>) </i>العدد الصحيح الأقرب إلى <b>[$<bdi dir="ltr" class="odt-ltr-term">x</bdi>]</b>؛
+  <li>السطر 40: بمجرد تحديد الشريحة الضريبية للمكلف، يمكن حساب الضريبة الإجمالية. تعرض الدالة<i> <bdi dir="ltr" class="odt-ltr-term">floor</bdi>($x) </i>العدد الصحيح الأقرب إلى <b>[$x]</b>؛
   </li>
   <li>السطر 42: يتم إرجاع المعلومات المحسوبة؛
   </li>

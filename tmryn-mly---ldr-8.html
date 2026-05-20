@@ -1224,7 +1224,7 @@
 <p>كانت بنية الإصدار 5 كما يلي:</p>
 <p><img src="images/100000000000069B00000199BF9F7122.png" width="507" height="123" style="width:13.42cm;height:3.246cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000069B00000199BF9F7122.png" /></p>
 <ul>
-  <li>تتولى الطبقة المسماة <b>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>(كائنات الوصول إلى البيانات) التعامل مع قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> ونظام الملفات المحلي؛
+  <li>تتولى الطبقة المسماة <b>[dao] </b>(كائنات الوصول إلى البيانات) التعامل مع قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> ونظام الملفات المحلي؛
   </li>
   <li>تقوم الطبقة المسماة <b>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>بحساب الضرائب؛
   </li>
@@ -1247,11 +1247,11 @@
       </li>
     </ul>
   </li>
-  <li>في <b>[7]</b>، يجب كتابة طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>الخاصة بالعميل:
+  <li>في <b>[7]</b>، يجب كتابة طبقة<b> [dao] </b>الخاصة بالعميل:
     <ul>
       <li>ستكون عميل <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لبرنامج الخادم النصي <b>[4، 5]</b>؛
       </li>
-      <li>ستعيد استخدام الطرق للوصول إلى نظام الملفات المحلي من طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>للإصدار 5؛
+      <li>ستعيد استخدام الطرق للوصول إلى نظام الملفات المحلي من طبقة<b> [dao] </b>للإصدار 5؛
       </li>
     </ul>
   </li>
@@ -1281,9 +1281,9 @@
 <a id="toc42690055"></a>
 <a id="toc42690441"></a>
 <a id="toc42690827"></a></p>
-<h3 id="1822-dao">18.2.2. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="1822-dao">18.2.2. <span style="color: #4f81bd">طبقة [dao]</span></h3>
 <p><img src="images/100000000000046500000171C51E6343.png" width="394" height="129" style="width:10.419cm;height:3.417cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000046500000171C51E6343.png" /></p>
-<p>تنفذ طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">InterfaceServerDao</bdi>]</strong> التالية:</p>
+<p>تنفذ طبقة <strong>[dao]</strong> واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">InterfaceServerDao</bdi>]</strong> التالية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1508,7 +1508,7 @@
 </ul>
 
 <p>ملفات <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">database.json</bdi>، <bdi dir="ltr" class="odt-ltr-term">taxadmindata.json</bdi>]</strong> هي تلك الموجودة في الإصدار 5، كما هو موضح في القسم <a href="#lesentites"><u><span style="color: #0563c1">المرتبط</span></u></a>.</p>
-<p>يقوم البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">impots-server</bdi>]</strong> بتنفيذ طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">web</bdi>]</strong> على النحو التالي:</p>
+<p>يقوم البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">impots-server</bdi>]</strong> بتنفيذ طبقة <strong>[web]</strong> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1685,7 +1685,7 @@
     <ul>
       <li>طلب <bdi dir="ltr" class="odt-ltr-term">GET</bdi> مع ثلاثة معلمات بالضبط؛
       </li>
-      <li>معلمة<b> [<bdi dir="ltr" class="odt-ltr-term">married</bdi>] </b>يجب أن تكون قيمتها ‘<bdi dir="ltr" class="odt-ltr-term">yes</bdi>’ أو ‘<bdi dir="ltr" class="odt-ltr-term">no</bdi>’؛
+      <li>معلمة<b> [<bdi dir="ltr" class="odt-ltr-term">married</bdi>] </b>يجب أن تكون قيمتها ‘yes’ أو ‘no’؛
       </li>
       <li>معلمة <b>[<bdi dir="ltr" class="odt-ltr-term">children</bdi>] </b>يجب أن تكون قيمتها عددًا صحيحًا &gt;= 0؛
       </li>
@@ -1699,7 +1699,7 @@
   </li>
   <li>السطر 123: توضح استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> للخادم سبب الخطأ؛
   </li>
-  <li>بدءًا من السطر 132، تم التحقق من كل شيء. يمكننا إنشاء مثيلات لطبقات<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>، <bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>. هذا الإنشاء له تكلفة ويجب ألا يتم إلا إذا كنا متأكدين من أن لدينا طلبًا صالحًا؛
+  <li>بدءًا من السطر 132، تم التحقق من كل شيء. يمكننا إنشاء مثيلات لطبقات<b> [dao، <bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>. هذا الإنشاء له تكلفة ويجب ألا يتم إلا إذا كنا متأكدين من أن لدينا طلبًا صالحًا؛
   </li>
   <li>الأسطر 130–138: يتم إنشاء بنية الخادم. قد يؤدي إنشاء طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>إلى إثارة استثناء<b> [<bdi dir="ltr" class="odt-ltr-term">ExceptionImpots</bdi>]</b>. إذا حدث هذا الاستثناء، يتم تسجيل الخطأ؛
   </li>
@@ -1713,7 +1713,7 @@
   </li>
 </ul>
 
-<p>دعونا نختبر هذا البرنامج النصي باستخدام متصفح. دعونا نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الآمن <strong>[<bdi dir="ltr" class="odt-ltr-term">https://localhost:443/php7/scripts-web/impots/version-08/impots-server.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">marié</bdi>=<bdi dir="ltr" class="odt-ltr-term">oui</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">enfants</bdi>=5&amp;<bdi dir="ltr" class="odt-ltr-term">salaire</bdi>=100000]</strong>:</p>
+<p>دعونا نختبر هذا البرنامج النصي باستخدام متصفح. دعونا نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الآمن <strong>[<bdi dir="ltr" class="odt-ltr-term">https://localhost:443/php7/scripts-web/impots/version-08/impots-server.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">marié</bdi>=oui&amp;<bdi dir="ltr" class="odt-ltr-term">enfants</bdi>=5&amp;<bdi dir="ltr" class="odt-ltr-term">salaire</bdi>=100000]</strong>:</p>
 <p><img src="images/10000000000008B0000005161B8206B6.png" width="556" height="326" style="width:14.713cm;height:8.613cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008B0000005161B8206B6.png" /></p>
 <ul>
   <li>في <b>[1]</b>، عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الآمن المطلوب؛
@@ -1747,10 +1747,10 @@
 </ul>
 
 <p>دعونا نجري بعض اختبارات الأخطاء:</p>
-<p>نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">https://localhost/php7/scripts-web/impots/version-08/impots-server.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">marié</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">enfants</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">salaire</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">w</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi>]</strong></p>
+<p>نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">https://localhost/php7/scripts-web/impots/version-08/impots-server.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">marié</bdi>=x&amp;<bdi dir="ltr" class="odt-ltr-term">enfants</bdi>=x&amp;<bdi dir="ltr" class="odt-ltr-term">salaire</bdi>=x&amp;w=x]</strong></p>
 <p>ونحصل على النتيجة التالية:</p>
 <p><img src="images/100000000000045F000001B4611160BD.png" width="336" height="131" style="width:8.879cm;height:3.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000045F000001B4611160BD.png" /></p>
-<p>نقوم بإيقاف تشغيل نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> ونطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">https://localhost/php7/scripts-web/impots/version-08/impots-server.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">marié</bdi>=<bdi dir="ltr" class="odt-ltr-term">oui</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">enfants</bdi>=3&amp;<bdi dir="ltr" class="odt-ltr-term">salaire</bdi>=60000]</strong>:</p>
+<p>نقوم بإيقاف تشغيل نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> ونطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">https://localhost/php7/scripts-web/impots/version-08/impots-server.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">marié</bdi>=oui&amp;<bdi dir="ltr" class="odt-ltr-term">enfants</bdi>=3&amp;<bdi dir="ltr" class="odt-ltr-term">salaire</bdi>=60000]</strong>:</p>
 <p><img src="images/1000000000000716000000F6B67E3A94.png" width="544" height="74" style="width:14.4cm;height:1.953cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000716000000F6B67E3A94.png" /></p>
 <p><a id="toc42690058"></a>
 <a id="toc42690444"></a>
@@ -1760,12 +1760,12 @@
 <p>في كل مرة نقوم فيها بإنشاء إصدار جديد من الخادم، سنقوم باختبار طبقات <strong>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</strong> كما تم القيام به منذ الإصدار 04 (انظر الفقرات <a href="#testsdela"><u><span style="color: #000080">الرابط </span></u></a><a href="#testsdela1"><u><span style="color: #000080">والرابط</span></u></a>).</p>
 <p>أولاً، نربط مشروع <strong>[<bdi dir="ltr" class="odt-ltr-term">scripts-web</bdi>]</strong> باختبارات <strong>[<bdi dir="ltr" class="odt-ltr-term">Codeception</bdi>]</strong>. للقيام بذلك، اتبع نفس الإجراء المستخدم لمشروع <strong>[<bdi dir="ltr" class="odt-ltr-term">scripts-console</bdi>]</strong> المذكور في الفقرة <a href="#installationduframework"><u><span style="color: #0563c1">التي تحتوي على الرابط</span></u></a>. وفي النهاية، نحصل على مشروع <strong>[<bdi dir="ltr" class="odt-ltr-term">scripts-web</bdi>]</strong> يحتوي على مجلد <strong>[<bdi dir="ltr" class="odt-ltr-term">Test Files</bdi>]</strong>:</p>
 <p><img src="images/100000000000064F0000032F7331FD7A.png" width="565" height="285" style="width:14.96cm;height:7.549cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000064F0000032F7331FD7A.png" /></p>
-<p>سنقوم بإنشاء اختبار لطبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> واختبار آخر لطبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</strong>.</p>
+<p>سنقوم بإنشاء اختبار لطبقة <strong>[dao]</strong> واختبار آخر لطبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</strong>.</p>
 <p><a id="toc42690059"></a>
 <a id="toc42690445"></a>
 <a id="toc42690831"></a>
 <a id="refheadingtoc185683971629160"></a></p>
-<h4 id="18251-dao">18.2.5.1. <span style="color: #4f81bd">اختبارات لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h4>
+<h4 id="18251-dao">18.2.5.1. <span style="color: #4f81bd">اختبارات لطبقة [dao]</span></h4>
 <p><img src="images/10000000000001CE000000D11D7782DA.png" width="162" height="73" style="width:4.279cm;height:1.937cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CE000000D11D7782DA.png" /></p>
 <p>سيكون <strong>[<bdi dir="ltr" class="odt-ltr-term">ServerDaoTest</bdi>]</strong> كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
@@ -1822,7 +1822,7 @@
 <ul>
   <li>الأسطر 9–24: نقوم بإعداد نفس بيئة العمل الموجودة في الخادم <b>[<bdi dir="ltr" class="odt-ltr-term">impots-server.php</bdi>]</b>. ويتم ذلك في الأسطر 9–12 عن طريق تعريف الثابتين اللتين تعتمد عليهما البيئة؛
   </li>
-  <li>الأسطر 32–40: نقوم بإنشاء مثيل لطبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>المراد اختبارها، كما تم في البرنامج النصي للخادم <b>[<bdi dir="ltr" class="odt-ltr-term">impots-server.php</bdi>]</b>؛
+  <li>الأسطر 32–40: نقوم بإنشاء مثيل لطبقة<b> [dao] </b>المراد اختبارها، كما تم في البرنامج النصي للخادم <b>[<bdi dir="ltr" class="odt-ltr-term">impots-server.php</bdi>]</b>؛
   </li>
   <li>من هذه النقطة فصاعدًا، نحن في نفس الظروف التي يعمل فيها البرنامج النصي للخادم <b>[<bdi dir="ltr" class="odt-ltr-term">impots-server.php</bdi>]</b>: يمكننا بدء الاختبارات؛
   </li>
@@ -1939,9 +1939,9 @@
 <a id="toc42690449"></a>
 <a id="toc42690835"></a>
 <a id="refheadingtoc1357942222329424"></a></p>
-<h3 id="1832-dao">18.3.2. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="1832-dao">18.3.2. <span style="color: #4f81bd">طبقة [dao]</span></h3>
 <p><img src="images/100000000000043E000001BCD159FE32.png" width="380" height="155" style="width:10.059cm;height:4.113cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000043E000001BCD159FE32.png" /></p>
-<p>تنفذ طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">InterfaceClientDao</bdi>]</strong> التالية:</p>
+<p>تنفذ طبقة <strong>[dao]</strong> واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">InterfaceClientDao</bdi>]</strong> التالية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2062,7 +2062,7 @@
   </li>
   <li>الأسطر 44-49: إذا لم يكن رمز حالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> هو 200، فهذا يعني أن الخادم قد واجه مشكلة. ثم نطلق استثناء<b> [<bdi dir="ltr" class="odt-ltr-term">ExceptionImpots</bdi>] </b>مع رسالة تتكون من استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> للخادم مرفقة برمز حالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>؛
   </li>
-  <li>السطر 51: نُرجع النتيجة، وهي مصفوفة ترابطية بمفاتيح <b>[<bdi dir="ltr" class="odt-ltr-term">tax</bdi>, <bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>, <bdi dir="ltr" class="odt-ltr-term">discount</bdi>, <bdi dir="ltr" class="odt-ltr-term">reduction</bdi>, <bdi dir="ltr" class="odt-ltr-term">rate</bdi>]</b>؛
+  <li>السطر 51: نُرجع النتيجة، وهي مصفوفة ترابطية بمفاتيح <b>[tax, <bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>, <bdi dir="ltr" class="odt-ltr-term">discount</bdi>, <bdi dir="ltr" class="odt-ltr-term">reduction</bdi>, <bdi dir="ltr" class="odt-ltr-term">rate</bdi>]</b>؛
   </li>
 </ul>
 <p><a id="lacouchemetier2"></a>
@@ -2147,9 +2147,9 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 11–14: يتلقى منشئ فئة<b> [<bdi dir="ltr" class="odt-ltr-term">ClientMetier</bdi>] </b>مرجعًا إلى طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>كمعلمة؛
+  <li>الأسطر 11–14: يتلقى منشئ فئة<b> [<bdi dir="ltr" class="odt-ltr-term">ClientMetier</bdi>] </b>مرجعًا إلى طبقة<b> [dao] </b>كمعلمة؛
   </li>
-  <li>الأسطر 17–19: يتم تفويض حساب الضريبة إلى طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</b>؛
+  <li>الأسطر 17–19: يتم تفويض حساب الضريبة إلى طبقة<b> [dao]</b>؛
   </li>
   <li>الأسطر 20-38: تم وصف الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">executeBatchImpots</bdi>] </b>في قسم <a href="#laclassemetier"><u><span style="color: #0563c1">الروابط</span></u></a>؛
   </li>
@@ -2270,7 +2270,7 @@
   </li>
   <li>الأسطر 18–26: تحميل التبعيات؛
   </li>
-  <li>السطر 37: إنشاء طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</b>. نمرر معلومتين يتوقعهما منشئ الطبقة:
+  <li>السطر 37: إنشاء طبقة<b> [dao]</b>. نمرر معلومتين يتوقعهما منشئ الطبقة:
     <ul>
       <li>عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخادم حساب الضرائب؛
       </li>
@@ -2278,7 +2278,7 @@
       </li>
     </ul>
   </li>
-  <li>السطر 39: إنشاء طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>. نمرر مرجعًا إلى طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>التي تم إنشاؤها للتو إلى منشئ الطبقة؛
+  <li>السطر 39: إنشاء طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>. نمرر مرجعًا إلى طبقة<b> [dao] </b>التي تم إنشاؤها للتو إلى منشئ الطبقة؛
   </li>
   <li>السطر 43: نطلب من طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>ما يلي:
     <ul>
@@ -2409,7 +2409,7 @@
 <ul>
   <li><span style="color: #000000">الأسطر 10–26: تعريف بيئة الاختبار. نستخدم نفس البيئة المستخدمة في البرنامج النصي الرئيسي </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">MainImpotsClient</bdi>] </span></b><span style="color: #000000">الموصوف في القسم </span><a href="#lescriptprincipal1"><u><span style="color: #0563c1">المرتبط</span></u></a><span style="color: #000000">؛</span>
   </li>
-  <li><span style="color: #000000">الأسطر 33–41: إنشاء طبقتي </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </span></b><span style="color: #000000">و</span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">الأسطر 33–41: إنشاء طبقتي </span><b><span style="color: #000000">[dao] </span></b><span style="color: #000000">و</span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
   <li><span style="color: #000000">السطر 40: تشير السمة </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>→<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </span></b><span style="color: #000000">إلى طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>

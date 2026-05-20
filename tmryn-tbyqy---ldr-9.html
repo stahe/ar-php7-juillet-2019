@@ -1570,7 +1570,7 @@
 <a id="toc42690073"></a>
 <a id="toc42690459"></a>
 <a id="toc42690845"></a></p>
-<h3 id="1912-dao">19.1.2. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="1912-dao">19.1.2. <span style="color: #4f81bd">طبقة [dao]</span></h3>
 <p><img src="images/10000000000001D3000000DFA9C42B19.png" width="164" height="78" style="width:4.33cm;height:2.067cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D3000000DFA9C42B19.png" /></p>
 <p>فيما يلي نص البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">ServeurDaoWithSession.php</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
@@ -1610,7 +1610,7 @@
   </li>
 </ul>
 
-<p>عند بدء جلسة الويب، سيتم إنشاء طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> باستخدام كائن <strong>[$<bdi dir="ltr" class="odt-ltr-term">databaseFilename</bdi>]</strong> غير <bdi dir="ltr" class="odt-ltr-term">NULL</bdi> وكائن <strong>[<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</strong> <bdi dir="ltr" class="odt-ltr-term">NULL.</bdi> بعد ذلك، سيتم استرداد بيانات إدارة الضرائب من قاعدة البيانات وتخزينها في الجلسة. بالنسبة للطلبات اللاحقة ضمن نفس الجلسة، سيتم إنشاء طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> باستخدام كائن <strong>[<bdi dir="ltr" class="odt-ltr-term">databaseFilename</bdi>]</strong> <bdi dir="ltr" class="odt-ltr-term">NULL</bdi> وكائن <strong>[<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</strong> تم استرداده من الجلسة (والذي ليس <bdi dir="ltr" class="odt-ltr-term">NULL</bdi>). لذلك، لن يتم إجراء أي بحث في قاعدة البيانات.</p>
+<p>عند بدء جلسة الويب، سيتم إنشاء طبقة <strong>[dao]</strong> باستخدام كائن <strong>[$<bdi dir="ltr" class="odt-ltr-term">databaseFilename</bdi>]</strong> غير <bdi dir="ltr" class="odt-ltr-term">NULL</bdi> وكائن <strong>[<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</strong> <bdi dir="ltr" class="odt-ltr-term">NULL.</bdi> بعد ذلك، سيتم استرداد بيانات إدارة الضرائب من قاعدة البيانات وتخزينها في الجلسة. بالنسبة للطلبات اللاحقة ضمن نفس الجلسة، سيتم إنشاء طبقة <strong>[dao]</strong> باستخدام كائن <strong>[<bdi dir="ltr" class="odt-ltr-term">databaseFilename</bdi>]</strong> <bdi dir="ltr" class="odt-ltr-term">NULL</bdi> وكائن <strong>[<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</strong> تم استرداده من الجلسة (والذي ليس <bdi dir="ltr" class="odt-ltr-term">NULL</bdi>). لذلك، لن يتم إجراء أي بحث في قاعدة البيانات.</p>
 <p><a id="toc42690074"></a>
 <a id="toc42690460"></a>
 <a id="toc42690846"></a>
@@ -1870,7 +1870,7 @@
     <ul>
       <li>أثناء الطلب الأول، سيتم إجراء البحث في قاعدة البيانات (السطر 108). ثم يتم تخزين البيانات المسترجعة في الجلسة (السطر 110) المرتبطة بمفتاح<b> [<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</b>؛
       </li>
-      <li>بالنسبة للطلبات اللاحقة، سيتم العثور على مفتاح<b> [<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </b>في الجلسة (السطر 103)، ثم يتم تمرير البيانات الموجودة على القرص مباشرةً إلى طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>(السطر 119)؛
+      <li>بالنسبة للطلبات اللاحقة، سيتم العثور على مفتاح<b> [<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </b>في الجلسة (السطر 103)، ثم يتم تمرير البيانات الموجودة على القرص مباشرةً إلى طبقة<b> [dao] </b>(السطر 119)؛
       </li>
     </ul>
   </li>
@@ -1899,7 +1899,7 @@
 <a id="refheadingtoc185695971629160"></a></p>
 <h3 id="1914-codeception">19.1.4. <span style="color: #4f81bd">[<bdi dir="ltr" class="odt-ltr-term">Codeception</bdi>] الاختبارات</span></h3>
 <p><img src="images/100000000000020D0000020B500994C0.png" width="184" height="183" style="width:4.86cm;height:4.842cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000020D0000020B500994C0.png" /></p>
-<p>سنقوم باختبار طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> فقط، وهي الطبقة الوحيدة التي تم تغييرها.</p>
+<p>سنقوم باختبار طبقة <strong>[dao]</strong> فقط، وهي الطبقة الوحيدة التي تم تغييرها.</p>
 <p>فيما يلي كود الاختبار <strong>[<bdi dir="ltr" class="odt-ltr-term">ServerDaoTest</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -1954,7 +1954,7 @@
 <ul>
   <li>الأسطر 9–24: نقوم بإنشاء بيئة تشغيل مطابقة لتلك الموجودة في البرنامج النصي للخادم <b>[<bdi dir="ltr" class="odt-ltr-term">impots-server</bdi>]</b>؛
   </li>
-  <li>السطر 38: لإنشاء طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</b>، نقوم بإنشاء مثيل لفئة<b> [<bdi dir="ltr" class="odt-ltr-term">ServerDaoWithSession</bdi>]</b>؛
+  <li>السطر 38: لإنشاء طبقة<b> [dao]</b>، نقوم بإنشاء مثيل لفئة<b> [<bdi dir="ltr" class="odt-ltr-term">ServerDaoWithSession</bdi>]</b>؛
   </li>
 </ul>
 
@@ -1973,7 +1973,7 @@
 <ul>
   <li>ملف التكوين <b>[<bdi dir="ltr" class="odt-ltr-term">config-client.json</bdi>]</b>؛
   </li>
-  <li>طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>الخاصة بالعميل؛
+  <li>طبقة<b> [dao] </b>الخاصة بالعميل؛
   </li>
 </ul>
 <p><a id="lacouchedao1"></a>
@@ -1981,7 +1981,7 @@
 <a id="toc42690077"></a>
 <a id="toc42690463"></a>
 <a id="toc42690849"></a></p>
-<h3 id="1921-dao">19.2.1. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="1921-dao">19.2.1. <span style="color: #4f81bd">طبقة [dao]</span></h3>
 <p>تتطور طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>]</strong> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -2074,7 +2074,7 @@
 </code></pre></div>
 
 <p><strong>تعليقات</strong></p>
-<p>يتضمن التعديل الذي أُجري على طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> الآن إدارة جلسة عمل:</p>
+<p>يتضمن التعديل الذي أُجري على طبقة <strong>[dao]</strong> الآن إدارة جلسة عمل:</p>
 <ul>
   <li>السطر 14: ملف تعريف الارتباط الخاص بالجلسة؛
   </li>
@@ -2088,7 +2088,7 @@
   </li>
 </ul>
 
-<p><strong>ملاحظة</strong>: كان بإمكاننا الاحتفاظ بالإصدار القديم من طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> وإجراء المصادقة على كل طلب، حيث أن التكلفة ضئيلة. ولأغراض تعليمية، أردنا توضيح كيفية إدارة عميل <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> للجلسة.</p>
+<p><strong>ملاحظة</strong>: كان بإمكاننا الاحتفاظ بالإصدار القديم من طبقة <strong>[dao]</strong> وإجراء المصادقة على كل طلب، حيث أن التكلفة ضئيلة. ولأغراض تعليمية، أردنا توضيح كيفية إدارة عميل <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> للجلسة.</p>
 <p><a id="toc42690078"></a>
 <a id="toc42690464"></a>
 <a id="toc42690850"></a>
@@ -2216,7 +2216,7 @@
 </code></pre></div></td></tr></table></div>
 <p>يتم الحصول على النتيجة التالية:</p>
 <p><img src="images/10000000000001C900000243A54FF7EA.png" width="160" height="203" style="width:4.232cm;height:5.362cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C900000243A54FF7EA.png" /></p>
-<p>يحتوي الملف <strong>[<bdi dir="ltr" class="odt-ltr-term">message</bdi>_1.<bdi dir="ltr" class="odt-ltr-term">txt</bdi>]</strong> على النص التالي:</p>
+<p>يحتوي الملف <strong>[<bdi dir="ltr" class="odt-ltr-term">message</bdi>_1.txt]</strong> على النص التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content">return-path: guest@localhost</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">received: from localhost (localhost <span style="font-weight:bold">[127.0.0.1]</span>) by DESKTOP-528I5CU with ESMTP ; Thu, 4 Jul 2019 15:20:22 +0200</span></span>

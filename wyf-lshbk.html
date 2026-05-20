@@ -1471,7 +1471,7 @@
   </li>
   <li>إذا لم يتلق بروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> الذي أرسل المقطع إقرارًا بالاستلام بعد فترة زمنية معينة، فإنه يعيد إرسال المقطع المعني، مما يضمن جودة خدمة توصيل المعلومات؛
   </li>
-  <li>الدائرة الافتراضية التي تم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبالتالي، يمكن لعملية الوجهة إرسال إقرارات حتى أثناء استمرار عملية المصدر في إرسال المعلومات. وهذا يسمح، على سبيل المثال، لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر بإرسال شرائح متعددة دون انتظار إقرار. وإذا أدرك، بعد فترة زمنية معينة، أنه لم يتلق إقرارًا باستلام مقطع معين رقم <bdi dir="ltr" class="odt-ltr-term">n</bdi>، فسيستأنف إرسال المقاطع من تلك النقطة؛
+  <li>الدائرة الافتراضية التي تم إنشاؤها بين عمليتي الاتصال هي <i>دائرة ثنائية الاتجاه</i>: وهذا يعني أن المعلومات يمكن أن تتدفق في كلا الاتجاهين. وبالتالي، يمكن لعملية الوجهة إرسال إقرارات حتى أثناء استمرار عملية المصدر في إرسال المعلومات. وهذا يسمح، على سبيل المثال، لبروتوكول <bdi dir="ltr" class="odt-ltr-term">TCP</bdi> المصدر بإرسال شرائح متعددة دون انتظار إقرار. وإذا أدرك، بعد فترة زمنية معينة، أنه لم يتلق إقرارًا باستلام مقطع معين رقم n، فسيستأنف إرسال المقاطع من تلك النقطة؛
   </li>
 </ul>
 <p><a id="toc42689983"></a>
@@ -1574,11 +1574,11 @@
   </li>
   <li>يقوم الخادم بتنفيذ الأوامر التي يكتبها المستخدم على لوحة المفاتيح. وهذه الأوامر هي كما يلي:
     <ul>
-      <li><b><bdi dir="ltr" class="odt-ltr-term">list</bdi></b>: يسرد العملاء المتصلين حاليًا بالخادم. يتم عرضهم بالتنسيق <b>[<bdi dir="ltr" class="odt-ltr-term">id</bdi>=<bdi dir="ltr" class="odt-ltr-term">x-name</bdi>=<bdi dir="ltr" class="odt-ltr-term">y</bdi>]</b>. يُستخدم حقل<b> [<bdi dir="ltr" class="odt-ltr-term">id</bdi>] </b>لتعريف العملاء؛
+      <li><b><bdi dir="ltr" class="odt-ltr-term">list</bdi></b>: يسرد العملاء المتصلين حاليًا بالخادم. يتم عرضهم بالتنسيق <b>[id=<bdi dir="ltr" class="odt-ltr-term">x-name</bdi>=y]</b>. يُستخدم حقل<b> [id] </b>لتعريف العملاء؛
       </li>
-      <li><b><bdi dir="ltr" class="odt-ltr-term">send x</bdi> [<bdi dir="ltr" class="odt-ltr-term">text</bdi>]</b>: يرسل <b>نصًا </b>إلى العميل <b>رقم <bdi dir="ltr" class="odt-ltr-term">x</bdi> </b>(<bdi dir="ltr" class="odt-ltr-term">id</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi>). لا يتم إرسال الأقواس المربعة []. وهي مطلوبة في الأمر. وتُستخدم لتمييز النص المرسل إلى العميل بصريًا؛
+      <li><b><bdi dir="ltr" class="odt-ltr-term">send x</bdi> [<bdi dir="ltr" class="odt-ltr-term">text</bdi>]</b>: يرسل <b>نصًا </b>إلى العميل <b>رقم x </b>(id=x). لا يتم إرسال الأقواس المربعة []. وهي مطلوبة في الأمر. وتُستخدم لتمييز النص المرسل إلى العميل بصريًا؛
       </li>
-      <li><b><bdi dir="ltr" class="odt-ltr-term">close x</bdi></b>: يغلق الاتصال مع العميل #<bdi dir="ltr" class="odt-ltr-term">x</bdi>؛
+      <li><b><bdi dir="ltr" class="odt-ltr-term">close x</bdi></b>: يغلق الاتصال مع العميل #x؛
       </li>
       <li><b><bdi dir="ltr" class="odt-ltr-term">quit</bdi></b>: يغلق جميع الاتصالات ويوقف الخدمة؛
       </li>
@@ -1765,7 +1765,7 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطران 7-8: نطلب من <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> الإبلاغ عن جميع الأخطاء (<bdi dir="ltr" class="odt-ltr-term">E_ALL</bdi> و <bdi dir="ltr" class="odt-ltr-term">E_STRICT</bdi>) وعرضها. يوصى باستخدام هذا الوضع فقط في وضع التطوير لتحسين الكود باستخدام تحذيرات <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> في وضع الإنتاج، السطر 8، سنضبطه على &quot;<bdi dir="ltr" class="odt-ltr-term">off</bdi>&quot;. منذ <bdi dir="ltr" class="odt-ltr-term">PHP 5.4</bdi>، تم تضمين مستوى <bdi dir="ltr" class="odt-ltr-term">E_STRICT</bdi> في <bdi dir="ltr" class="odt-ltr-term">E_ALL</bdi>؛
+  <li>السطران 7-8: نطلب من <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> الإبلاغ عن جميع الأخطاء (<bdi dir="ltr" class="odt-ltr-term">E_ALL</bdi> و <bdi dir="ltr" class="odt-ltr-term">E_STRICT</bdi>) وعرضها. يوصى باستخدام هذا الوضع فقط في وضع التطوير لتحسين الكود باستخدام تحذيرات <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> في وضع الإنتاج، السطر 8، سنضبطه على &quot;off&quot;. منذ <bdi dir="ltr" class="odt-ltr-term">PHP 5.4</bdi>، تم تضمين مستوى <bdi dir="ltr" class="odt-ltr-term">E_STRICT</bdi> في <bdi dir="ltr" class="odt-ltr-term">E_ALL</bdi>؛
   </li>
   <li>السطر 11: قائمة الأجهزة التي نريد الحصول على اسمها وعنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> الخاص بها؛
   </li>
@@ -1775,7 +1775,7 @@
 <ul>
   <li>السطر 25: تسترد الدالة<i> <bdi dir="ltr" class="odt-ltr-term">gethostbyname</bdi>($<bdi dir="ltr" class="odt-ltr-term">name</bdi>) </i>عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> &quot;<bdi dir="ltr" class="odt-ltr-term">ip3.ip2.ip1.ip0</bdi>&quot; الخاص بالجهاز المسمى <i>$<bdi dir="ltr" class="odt-ltr-term">name</bdi></i>. إذا كان الجهاز <i>$<bdi dir="ltr" class="odt-ltr-term">name</bdi> </i>غير موجود، فإن الدالة تُرجع <i>$<bdi dir="ltr" class="odt-ltr-term">name</bdi> </i>كنتيجة؛
   </li>
-  <li>السطر 30: تسترد الدالة<i> <bdi dir="ltr" class="odt-ltr-term">gethostbyaddr</bdi>($<bdi dir="ltr" class="odt-ltr-term">ip</bdi>) </i>اسم الجهاز المرتبط بعنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> $<bdi dir="ltr" class="odt-ltr-term">ip</bdi> بالتنسيق &quot;<bdi dir="ltr" class="odt-ltr-term">ip3.ip2.ip1.ip0</bdi>&quot;. إذا كان الجهاز <i>$<bdi dir="ltr" class="odt-ltr-term">ip</bdi> </i>غير موجود، فإن الدالة تُرجع <i>$<bdi dir="ltr" class="odt-ltr-term">ip</bdi> </i>كنتيجة؛
+  <li>السطر 30: تسترد الدالة<i> <bdi dir="ltr" class="odt-ltr-term">gethostbyaddr</bdi>($ip) </i>اسم الجهاز المرتبط بعنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> $ip بالتنسيق &quot;<bdi dir="ltr" class="odt-ltr-term">ip3.ip2.ip1.ip0</bdi>&quot;. إذا كان الجهاز <i>$ip </i>غير موجود، فإن الدالة تُرجع <i>$ip </i>كنتيجة؛
   </li>
 </ul>
 
@@ -2184,7 +2184,7 @@
   </li>
   <li>السطر 8: اللغة المطلوبة للوثيقة المطلوبة؛
   </li>
-  <li>السطر 9: حرف نهاية السطر للأوامر المرسلة من قبل العميل: قد يختلف هذا اعتمادًا على ما إذا كان الخادم يعمل على جهاز <bdi dir="ltr" class="odt-ltr-term">Unix</bdi> (\<bdi dir="ltr" class="odt-ltr-term">n</bdi>) أو جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> (\<bdi dir="ltr" class="odt-ltr-term">r</bdi>\<bdi dir="ltr" class="odt-ltr-term">n</bdi>)؛
+  <li>السطر 9: حرف نهاية السطر للأوامر المرسلة من قبل العميل: قد يختلف هذا اعتمادًا على ما إذا كان الخادم يعمل على جهاز <bdi dir="ltr" class="odt-ltr-term">Unix</bdi> (\n) أو جهاز <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> (\r\n)؛
   </li>
 </ul>
 
@@ -2322,7 +2322,7 @@
   </li>
   <li>الأسطر 16-21: نقوم بتكرار قائمة خوادم الويب في التكوين؛
   </li>
-  <li>السطر 26: تسترد الدالة<i> <bdi dir="ltr" class="odt-ltr-term">getURL</bdi>($<bdi dir="ltr" class="odt-ltr-term">site</bdi>, $<bdi dir="ltr" class="odt-ltr-term">protocol</bdi>, $<bdi dir="ltr" class="odt-ltr-term">log</bdi>) </i>مستندًا من موقع الويب <i>$<bdi dir="ltr" class="odt-ltr-term">site</bdi> </i>وتحفظه في الملف النصي <i>$<bdi dir="ltr" class="odt-ltr-term">site.HTML.</bdi> </i>بشكل افتراضي، يتم تسجيل تفاعلات العميل/الخادم في وحدة التحكم ($<bdi dir="ltr" class="odt-ltr-term">log</bdi>=<bdi dir="ltr" class="odt-ltr-term">TRUE</bdi>)؛
+  <li>السطر 26: تسترد الدالة<i> <bdi dir="ltr" class="odt-ltr-term">getURL</bdi>($<bdi dir="ltr" class="odt-ltr-term">site</bdi>, $<bdi dir="ltr" class="odt-ltr-term">protocol</bdi>, $log) </i>مستندًا من موقع الويب <i>$<bdi dir="ltr" class="odt-ltr-term">site</bdi> </i>وتحفظه في الملف النصي <i>$<bdi dir="ltr" class="odt-ltr-term">site.HTML.</bdi> </i>بشكل افتراضي، يتم تسجيل تفاعلات العميل/الخادم في وحدة التحكم ($log=<bdi dir="ltr" class="odt-ltr-term">TRUE</bdi>)؛
   </li>
   <li>السطر 33: تقوم الدالة<i> <bdi dir="ltr" class="odt-ltr-term">fsockopen</bdi>($<bdi dir="ltr" class="odt-ltr-term">site</bdi>,$<bdi dir="ltr" class="odt-ltr-term">port</bdi>,$<bdi dir="ltr" class="odt-ltr-term">errNumber</bdi>,$<bdi dir="ltr" class="odt-ltr-term">error</bdi>) </i>بإنشاء اتصال بخدمة <bdi dir="ltr" class="odt-ltr-term">TCP/IP</bdi> تعمل على المنفذ <i>$<bdi dir="ltr" class="odt-ltr-term">port</bdi> </i>على جهاز <i>$<bdi dir="ltr" class="odt-ltr-term">site</bdi></i>. إذا فشل الاتصال، فإن<b> [$<bdi dir="ltr" class="odt-ltr-term">errNumber</bdi>] </b>هو رمز الخطأ و<b>[$<bdi dir="ltr" class="odt-ltr-term">error</bdi>] </b>هي رسالة الخطأ المرتبطة به. بمجرد فتح اتصال العميل/الخادم، تتبادل العديد من خدمات <bdi dir="ltr" class="odt-ltr-term">TCP/IP</bdi> أسطر النص. هذا هو الحال هنا مع <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> (بروتوكول نقل النص التشعبي). يمكن بعد ذلك معالجة دفق البيانات من الخادم إلى العميل كملف نصي يتم قراءته باستخدام <b>[<bdi dir="ltr" class="odt-ltr-term">fgets</bdi>]</b>. وينطبق الأمر نفسه على دفق البيانات من العميل إلى الخادم، والذي يمكن كتابته باستخدام <b>[<bdi dir="ltr" class="odt-ltr-term">fputs</bdi>]</b>؛
   </li>
@@ -2653,7 +2653,7 @@
 
 <p>قد ينتج عن الأمر <strong>[<bdi dir="ltr" class="odt-ltr-term">curl</bdi> --<bdi dir="ltr" class="odt-ltr-term">help</bdi>]</strong> خطأ. السبب الأكثر احتمالاً هو أنك لا تمتلك نوع المحطة الطرفية الصحيح. في هذه الحالة، افتح محطة طرفية أخرى باستخدام الأوامر <strong>[4-6]</strong>؛</p>
 <p>يعرض الأمر <strong>[<bdi dir="ltr" class="odt-ltr-term">curl</bdi> --<bdi dir="ltr" class="odt-ltr-term">help</bdi>]</strong> جميع خيارات تكوين <strong>[<bdi dir="ltr" class="odt-ltr-term">curl</bdi>]</strong>. هناك العشرات منها. سنستخدم القليل منها فقط. لطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>، اكتب ببساطة الأمر <strong>[<bdi dir="ltr" class="odt-ltr-term">curl URL</bdi>]</strong>. سيعرض هذا الأمر المستند المطلوب على وحدة التحكم. إذا كنت تريد أيضًا رؤية تبادلات <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> بين العميل والخادم، اكتب <strong>[<bdi dir="ltr" class="odt-ltr-term">curl</bdi> --<bdi dir="ltr" class="odt-ltr-term">verbose URL</bdi>]</strong>. أخيرًا، لحفظ مستند <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> المطلوب في ملف، اكتب <strong>[<bdi dir="ltr" class="odt-ltr-term">curl</bdi> --<bdi dir="ltr" class="odt-ltr-term">verbose</bdi> --<bdi dir="ltr" class="odt-ltr-term">output file URL</bdi>]</strong>.</p>
-<p>لتجنب ازدحام مجلد <strong>[<bdi dir="ltr" class="odt-ltr-term">www</bdi>]</strong> في <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi>، دعونا ننتقل إلى موقع آخر في نظام الملفات:</p>
+<p>لتجنب ازدحام مجلد <strong>[www]</strong> في <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi>، دعونا ننتقل إلى موقع آخر في نظام الملفات:</p>
 <p><img src="images/10000000000003450000037C99C9E7D1.png" width="293" height="312" style="width:7.751cm;height:8.26cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003450000037C99C9E7D1.png" /></p>
 <ul>
   <li>في <b>[1]</b>، انتقل إلى مجلد<b> [<bdi dir="ltr" class="odt-ltr-term">c:</bdi>\<bdi dir="ltr" class="odt-ltr-term">temp</bdi>]</b>. إذا لم يكن هذا المجلد موجودًا، يمكنك إنشاؤه أو اختيار مجلد آخر؛
@@ -2905,7 +2905,7 @@
     <ul>
       <li><i><bdi dir="ltr" class="odt-ltr-term">timeout</bdi></i>: الحد الأقصى لوقت انتظار استجابة الخادم. بعد هذا الوقت، سيقوم العميل بقطع الاتصال؛
       </li>
-      <li><i><bdi dir="ltr" class="odt-ltr-term">url</bdi></i>: عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للوثيقة المطلوبة؛
+      <li><i>url</i>: عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للوثيقة المطلوبة؛
       </li>
     </ul>
   </li>
@@ -2998,7 +2998,7 @@
   </li>
   <li>الأسطر 17–22: نقوم بتكرار قائمة المواقع الموجودة في التكوين؛
   </li>
-  <li>السطر 19: لكل موقع، نستدعي الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">getUrl</bdi>]</b>، التي ستقوم بتنزيل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> $<bdi dir="ltr" class="odt-ltr-term">infos</bdi><b>[&quot;<bdi dir="ltr" class="odt-ltr-term">url</bdi>&quot;] </b>مع مهلة انتظار تبلغ $<bdi dir="ltr" class="odt-ltr-term">infos</bdi><b>[&quot;<bdi dir="ltr" class="odt-ltr-term">timeout</bdi>&quot;]</b>;
+  <li>السطر 19: لكل موقع، نستدعي الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">getUrl</bdi>]</b>، التي ستقوم بتنزيل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> $<bdi dir="ltr" class="odt-ltr-term">infos</bdi><b>[&quot;url&quot;] </b>مع مهلة انتظار تبلغ $<bdi dir="ltr" class="odt-ltr-term">infos</bdi><b>[&quot;<bdi dir="ltr" class="odt-ltr-term">timeout</bdi>&quot;]</b>;
   </li>
   <li>السطر 34: نبدأ جلسة<b> [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>]</b>. لا تتصل <b>[<bdi dir="ltr" class="odt-ltr-term">curl_init</bdi>] </b>بعد بخادم الويب. وهي تُرجع موردًا <b>[$<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] </b>سيكون معلمة لجميع دوال<b> [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] </b>اللاحقة؛
   </li>
@@ -3376,7 +3376,7 @@
 <p>نقوم بتشغيل العميل على النحو التالي:</p>
 <p><img src="images/1000000000000634000000832F27AD42.png" width="556" height="46" style="width:14.713cm;height:1.214cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000634000000832F27AD42.png" /></p>
 <ul>
-  <li>في <b>[1]</b>، نتصل بالمنفذ 25 على الجهاز المحلي، حيث تعمل خدمة <bdi dir="ltr" class="odt-ltr-term">SMTP</bdi> لـ <b>[<bdi dir="ltr" class="odt-ltr-term">hMailServer</bdi>]</b>. تشير الحجة <b>[--<bdi dir="ltr" class="odt-ltr-term">quit bye</bdi>] </b>إلى أن المستخدم سيخرج من البرنامج عن طريق كتابة الأمر <b>[<bdi dir="ltr" class="odt-ltr-term">bye</bdi>]</b>. بدون هذه الحجة، يكون الأمر لإنهاء البرنامج هو <b>[<bdi dir="ltr" class="odt-ltr-term">quit</bdi>]</b>. ومع ذلك، فإن<b> [<bdi dir="ltr" class="odt-ltr-term">quit</bdi>] </b>هو أيضًا أمر بروتوكول <bdi dir="ltr" class="odt-ltr-term">SMTP.</bdi> لذلك يجب علينا تجنب هذا الغموض؛
+  <li>في <b>[1]</b>، نتصل بالمنفذ 25 على الجهاز المحلي، حيث تعمل خدمة <bdi dir="ltr" class="odt-ltr-term">SMTP</bdi> لـ <b>[<bdi dir="ltr" class="odt-ltr-term">hMailServer</bdi>]</b>. تشير الحجة <b>[--<bdi dir="ltr" class="odt-ltr-term">quit bye</bdi>] </b>إلى أن المستخدم سيخرج من البرنامج عن طريق كتابة الأمر <b>[bye]</b>. بدون هذه الحجة، يكون الأمر لإنهاء البرنامج هو <b>[<bdi dir="ltr" class="odt-ltr-term">quit</bdi>]</b>. ومع ذلك، فإن<b> [<bdi dir="ltr" class="odt-ltr-term">quit</bdi>] </b>هو أيضًا أمر بروتوكول <bdi dir="ltr" class="odt-ltr-term">SMTP.</bdi> لذلك يجب علينا تجنب هذا الغموض؛
   </li>
   <li>في <b>[2]</b>، تم توصيل العميل بنجاح؛
   </li>
@@ -3388,7 +3388,7 @@
 
 <p><img src="images/1000000000000632000003630F519969.png" width="555" height="303" style="width:14.69cm;height:8.029cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000632000003630F519969.png" /></p>
 <ul>
-  <li>في <b>[5]</b>، يرسل العميل الأمر <b>[<bdi dir="ltr" class="odt-ltr-term">EHLO client-machine-name</bdi>]</b>. يرد الخادم بسلسلة من الرسائل على شكل <b>[250-<bdi dir="ltr" class="odt-ltr-term">xx</bdi>] </b>(6). يشير الرمز <b>[250] </b>إلى أن الأمر الذي أرسله العميل كان ناجحًا؛
+  <li>في <b>[5]</b>، يرسل العميل الأمر <b>[<bdi dir="ltr" class="odt-ltr-term">EHLO client-machine-name</bdi>]</b>. يرد الخادم بسلسلة من الرسائل على شكل <b>[250-xx] </b>(6). يشير الرمز <b>[250] </b>إلى أن الأمر الذي أرسله العميل كان ناجحًا؛
   </li>
   <li>في <b>[7]</b>، يحدد العميل مرسل الرسالة، وهو هنا <b>[<bdi dir="ltr" class="odt-ltr-term">guest@localhost</bdi>]</b>. يجب أن يكون هذا المستخدم موجودًا على خادم البريد <b>[<bdi dir="ltr" class="odt-ltr-term">hMailServer</bdi>]</b>. وهذا هو الحال هنا لأننا أنشأنا هذا المستخدم مسبقًا؛
   </li>
@@ -3493,7 +3493,7 @@
   </li>
   <li><b>[<bdi dir="ltr" class="odt-ltr-term">from</bdi>]</b>: مرسل الرسالة؛
   </li>
-  <li><b>[<bdi dir="ltr" class="odt-ltr-term">to</bdi>]</b>: مستلم الرسالة؛
+  <li><b>[to]</b>: مستلم الرسالة؛
   </li>
   <li><b>[<bdi dir="ltr" class="odt-ltr-term">subject</bdi>]</b>: موضوع الرسالة؛
   </li>
@@ -3755,7 +3755,7 @@
       </li>
       <li><b>[$<bdi dir="ltr" class="odt-ltr-term">verbose</bdi>]</b>: إذا كانت القيمة <bdi dir="ltr" class="odt-ltr-term">TRUE</bdi>، يتم تسجيل تبادلات العميل/الخادم في وحدة التحكم؛
       </li>
-      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">withRCLF</bdi>]</b>: إذا كانت القيمة <bdi dir="ltr" class="odt-ltr-term">TRUE</bdi>، يتم إرسال الأمر منتهياً بتسلسل \<bdi dir="ltr" class="odt-ltr-term">r</bdi>\<bdi dir="ltr" class="odt-ltr-term">n.</bdi> وهذا مطلوب لجميع أوامر بروتوكول <bdi dir="ltr" class="odt-ltr-term">SMTP</bdi>، ولكن <b>[<bdi dir="ltr" class="odt-ltr-term">sendCommand</bdi>] </b>تُستخدم أيضًا لإرسال الرسالة. في هذه الحالة، لا يُضاف تسلسل \<bdi dir="ltr" class="odt-ltr-term">r</bdi>\<bdi dir="ltr" class="odt-ltr-term">n</bdi>؛
+      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">withRCLF</bdi>]</b>: إذا كانت القيمة <bdi dir="ltr" class="odt-ltr-term">TRUE</bdi>، يتم إرسال الأمر منتهياً بتسلسل \r\<bdi dir="ltr" class="odt-ltr-term">n.</bdi> وهذا مطلوب لجميع أوامر بروتوكول <bdi dir="ltr" class="odt-ltr-term">SMTP</bdi>، ولكن <b>[<bdi dir="ltr" class="odt-ltr-term">sendCommand</bdi>] </b>تُستخدم أيضًا لإرسال الرسالة. في هذه الحالة، لا يُضاف تسلسل \r\n؛
       </li>
     </ul>
   </li>
@@ -3873,7 +3873,7 @@
 
 <p><img src="images/100000000000077A000002443547AF0E.png" width="574" height="174" style="width:15.191cm;height:4.604cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000077A000002443547AF0E.png" /></p>
 <ul>
-  <li>في <b>[3]</b>، تأكد من أنك في المجلد<b> [&lt;<bdi dir="ltr" class="odt-ltr-term">laragon</bdi>&gt;/<bdi dir="ltr" class="odt-ltr-term">www</bdi>]</b>، حيث &lt;<bdi dir="ltr" class="odt-ltr-term">laragon</bdi>&gt; هو مجلد تثبيت <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi>؛
+  <li>في <b>[3]</b>، تأكد من أنك في المجلد<b> [&lt;<bdi dir="ltr" class="odt-ltr-term">laragon</bdi>&gt;/www]</b>، حيث &lt;<bdi dir="ltr" class="odt-ltr-term">laragon</bdi>&gt; هو مجلد تثبيت <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi>؛
   </li>
   <li>في <b>[3]</b>، اكتب الأمر الموضح (مايو 2019). تحقق من الأمر الدقيق على الرابط <b>[<bdi dir="ltr" class="odt-ltr-term">https://swiftmailer.symfony.com/docs/introduction.HTML</bdi>]</b>؛
   </li>
@@ -3989,7 +3989,7 @@
 </code></pre></div></td></tr></table></div>
 <p>توجد نفس الحقول الموجودة في ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">config-smtp-01.json</bdi>]</strong>، مع حقلين إضافيين:</p>
 <ul>
-  <li><b>[<bdi dir="ltr" class="odt-ltr-term">tls</bdi>]</b>: إذا تم تعيينه على <bdi dir="ltr" class="odt-ltr-term">TRUE</bdi>، فهذا يشير إلى أنه يجب استخدام اتصال آمن مع خادم <bdi dir="ltr" class="odt-ltr-term">SMTP.</bdi> إذا تم تعيين <b>[<bdi dir="ltr" class="odt-ltr-term">tls</bdi>] </b>على <bdi dir="ltr" class="odt-ltr-term">TRUE</bdi>، فيجب إضافة حقلين إضافيين:
+  <li><b>[tls]</b>: إذا تم تعيينه على <bdi dir="ltr" class="odt-ltr-term">TRUE</bdi>، فهذا يشير إلى أنه يجب استخدام اتصال آمن مع خادم <bdi dir="ltr" class="odt-ltr-term">SMTP.</bdi> إذا تم تعيين <b>[tls] </b>على <bdi dir="ltr" class="odt-ltr-term">TRUE</bdi>، فيجب إضافة حقلين إضافيين:
     <ul>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>]</b>: اسم المستخدم المستخدم لتوثيق الاتصال؛
       </li>
@@ -4728,7 +4728,7 @@
   </li>
   <li>الأسطر 109–128: نقوم بتكرار كل رسالة. لكل رسالة، نصدر أمرين:
     <ul>
-      <li><bdi dir="ltr" class="odt-ltr-term">RETR i:</bdi> لاسترداد الرسالة رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> (الأسطر 111–117)؛
+      <li><bdi dir="ltr" class="odt-ltr-term">RETR i:</bdi> لاسترداد الرسالة رقم i (الأسطر 111–117)؛
       </li>
       <li><bdi dir="ltr" class="odt-ltr-term">DELE i:</bdi> لحذفها بمجرد قراءتها (الأسطر 118–125)؛
       </li>
@@ -4836,9 +4836,9 @@
 </code></pre></div></td></tr></table></div>
 <p>يحدد ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">config-imap-01.json</bdi>]</strong> مجموعة من خوادم <bdi dir="ltr" class="odt-ltr-term">IMAP/POP3</bdi> التي يجب الاتصال بها. كل عنصر عبارة عن بنية <strong>[مفتاح:قيمة]</strong>، حيث:</p>
 <ul>
-  <li><b>[<bdi dir="ltr" class="odt-ltr-term">key</bdi>]</b>: هو الخادم المراد الاتصال به. لدينا خادمان هنا:
+  <li><b>[key]</b>: هو الخادم المراد الاتصال به. لدينا خادمان هنا:
     <ul>
-      <li><b>[{<bdi dir="ltr" class="odt-ltr-term">imap.gmail.com:993/imap/ssl/novalidate-cert</bdi>}<bdi dir="ltr" class="odt-ltr-term">INBOX</bdi>]</b>: يشير إلى خادم<b> [<bdi dir="ltr" class="odt-ltr-term">imap.gmail.com</bdi>] </b>الذي يستمع على المنفذ 993. بروتوكول العميل/الخادم هو <bdi dir="ltr" class="odt-ltr-term">IMAP.</bdi> تشير المعلمة /<bdi dir="ltr" class="odt-ltr-term">ssl</bdi> إلى أن الاتصال بين العميل والخادم آمن. المعلمة /<bdi dir="ltr" class="odt-ltr-term">novalidate-cert</bdi> توجه العميل بعدم التحقق من شهادة الأمان التي سيرسلها الخادم. أخيرًا، يدير خادم <bdi dir="ltr" class="odt-ltr-term">IMAP</bdi> مجموعة من صناديق البريد لمستخدم واحد. من خلال تحديد <bdi dir="ltr" class="odt-ltr-term">INBOX</bdi> في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخادم <bdi dir="ltr" class="odt-ltr-term">IMAP</bdi>، نشير إلى أننا مهتمون بصندوق البريد المسمى <bdi dir="ltr" class="odt-ltr-term">INBOX</bdi>، والذي عادةً ما تصل إليه الرسائل الجديدة؛
+      <li><b>[{<bdi dir="ltr" class="odt-ltr-term">imap.gmail.com:993/imap/ssl/novalidate-cert</bdi>}<bdi dir="ltr" class="odt-ltr-term">INBOX</bdi>]</b>: يشير إلى خادم<b> [<bdi dir="ltr" class="odt-ltr-term">imap.gmail.com</bdi>] </b>الذي يستمع على المنفذ 993. بروتوكول العميل/الخادم هو <bdi dir="ltr" class="odt-ltr-term">IMAP.</bdi> تشير المعلمة /ssl إلى أن الاتصال بين العميل والخادم آمن. المعلمة /<bdi dir="ltr" class="odt-ltr-term">novalidate-cert</bdi> توجه العميل بعدم التحقق من شهادة الأمان التي سيرسلها الخادم. أخيرًا، يدير خادم <bdi dir="ltr" class="odt-ltr-term">IMAP</bdi> مجموعة من صناديق البريد لمستخدم واحد. من خلال تحديد <bdi dir="ltr" class="odt-ltr-term">INBOX</bdi> في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخادم <bdi dir="ltr" class="odt-ltr-term">IMAP</bdi>، نشير إلى أننا مهتمون بصندوق البريد المسمى <bdi dir="ltr" class="odt-ltr-term">INBOX</bdi>، والذي عادةً ما تصل إليه الرسائل الجديدة؛
       </li>
       <li><b>[{<bdi dir="ltr" class="odt-ltr-term">localhost:110/pop3</bdi>}<bdi dir="ltr" class="odt-ltr-term">INBOX</bdi>]</b>: يشير إلى خادم<b> [<bdi dir="ltr" class="odt-ltr-term">localhost</bdi>] </b>الذي يستمع على المنفذ 110. بروتوكول العميل/الخادم هنا هو <bdi dir="ltr" class="odt-ltr-term">POP3</bdi>؛
       </li>
@@ -4983,7 +4983,7 @@
   </li>
 </ul>
 
-<p>تقوم الدالة <strong>[<bdi dir="ltr" class="odt-ltr-term">imap</bdi>_open]</strong> بتأمين الاتصال إذا كان عنوان <bdi dir="ltr" class="odt-ltr-term">URL IMAP</bdi> لصندوق البريد يتضمن المعلمة /<bdi dir="ltr" class="odt-ltr-term">ssl</bdi>؛</p>
+<p>تقوم الدالة <strong>[<bdi dir="ltr" class="odt-ltr-term">imap</bdi>_open]</strong> بتأمين الاتصال إذا كان عنوان <bdi dir="ltr" class="odt-ltr-term">URL IMAP</bdi> لصندوق البريد يتضمن المعلمة /ssl؛</p>
 <ul>
   <li>السطر 41: تعرض الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">imap_num_msg</bdi>] </b>العدد الإجمالي للرسائل الموجودة في صندوق البريد؛
   </li>
@@ -5185,7 +5185,7 @@
 <a id="toc42690782"></a>
 <a id="refheadingtoc1357302222329424"></a></p>
 <h3 id="1665-pop3imap">16.6.5. <span style="color: #4f81bd">عميل <bdi dir="ltr" class="odt-ltr-term">POP3/IMAP</bdi> المحسّن</span></h3>
-<p>في البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">imap-01.php</bdi>]</strong>، نعرض نص الرسالة #<bdi dir="ltr" class="odt-ltr-term">i</bdi> كملف نصي يحتوي على أنواع الرسائل المختلفة والمحتوى المشفر للمرفقات المتنوعة. من الممكن الحصول على بنية الرسالة لتحديد هذه الأجزاء المختلفة. في البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">imap-02.php</bdi>]</strong>، نقوم بتعديل الدالة <strong>[<bdi dir="ltr" class="odt-ltr-term">getMailBody</bdi>]</strong> على النحو التالي:</p>
+<p>في البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">imap-01.php</bdi>]</strong>، نعرض نص الرسالة #i كملف نصي يحتوي على أنواع الرسائل المختلفة والمحتوى المشفر للمرفقات المتنوعة. من الممكن الحصول على بنية الرسالة لتحديد هذه الأجزاء المختلفة. في البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">imap-02.php</bdi>]</strong>، نقوم بتعديل الدالة <strong>[<bdi dir="ltr" class="odt-ltr-term">getMailBody</bdi>]</strong> على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">function</span><span style="color:#008080"> </span>getMailBody(<span style="color:#0000ff">$imapResource</span>,<span style="color:#008080"> </span><span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$msgNumber</span>,<span style="color:#008080"> </span><span style="font-weight:bold">array</span><span style="color:#008080"> </span><span style="color:#0000ff">$infos</span>):<span style="color:#008080"> </span>void<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// we retrieve the message structure</span></span></span>
@@ -5540,7 +5540,7 @@
 </code></pre></div>
 
 <ul>
-  <li>تحدد السطران 15) و33) رسالة<b> [<bdi dir="ltr" class="odt-ltr-term">multipart/mixed</bdi>] </b>(السطر <bdi dir="ltr" class="odt-ltr-term">m</bdi>)؛
+  <li>تحدد السطران 15) و33) رسالة<b> [<bdi dir="ltr" class="odt-ltr-term">multipart/mixed</bdi>] </b>(السطر m)؛
   </li>
   <li>السطران 18) و 16) يحددان الجزء الأول من الرسالة: رسالة <i>النص </i>العادي؛
   </li>
@@ -5665,7 +5665,7 @@
   </li>
   <li>السطر 7: <b>[<bdi dir="ltr" class="odt-ltr-term">ifdescription</bdi>]</b>=0 يشير إلى عدم وجود حقل<b> [<bdi dir="ltr" class="odt-ltr-term">description</bdi>] </b>في البنية؛
   </li>
-  <li>السطر 8: <b>[<bdi dir="ltr" class="odt-ltr-term">ifid</bdi>]</b>=0 يشير إلى عدم وجود حقل<b> [<bdi dir="ltr" class="odt-ltr-term">id</bdi>] </b>في البنية؛
+  <li>السطر 8: <b>[<bdi dir="ltr" class="odt-ltr-term">ifid</bdi>]</b>=0 يشير إلى عدم وجود حقل<b> [id] </b>في البنية؛
   </li>
   <li>السطر 10: <b>[<bdi dir="ltr" class="odt-ltr-term">ifdisposition</bdi>]</b>=0 يشير إلى عدم وجود حقل<b> [<bdi dir="ltr" class="odt-ltr-term">disposition</bdi>] </b>في البنية؛
   </li>
@@ -5681,17 +5681,17 @@
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>boundary=&quot;_=_swift_1558872295_5bc8ee2ca8b3723c0b39ca8bbfbebdeb_=_&quot;
 </code></pre></div>
-<p>تُستخدم هذه الأسطر لتحديد حدود الرسالة. في الرسالة التي تم استردادها بواسطة <strong>[<bdi dir="ltr" class="odt-ltr-term">imap-01.php</bdi>]</strong>، يتوافق الجزء الموصوف للتو من الرسالة مع السطر <bdi dir="ltr" class="odt-ltr-term">m</bdi>). السمة <strong>[<bdi dir="ltr" class="odt-ltr-term">boundary</bdi>]</strong> ليست هي نفسها لأن لقطات الشاشة تتوافق مع نفس الرسالة ولكن تم إرسالها في أوقات مختلفة؛</p>
+<p>تُستخدم هذه الأسطر لتحديد حدود الرسالة. في الرسالة التي تم استردادها بواسطة <strong>[<bdi dir="ltr" class="odt-ltr-term">imap-01.php</bdi>]</strong>، يتوافق الجزء الموصوف للتو من الرسالة مع السطر m). السمة <strong>[<bdi dir="ltr" class="odt-ltr-term">boundary</bdi>]</strong> ليست هي نفسها لأن لقطات الشاشة تتوافق مع نفس الرسالة ولكن تم إرسالها في أوقات مختلفة؛</p>
 <ul>
   <li>السطر 23: تبدأ هنا بنية الأجزاء المختلفة للرسالة؛
   </li>
-  <li>الأسطر 25–45: هذا الجزء الأول من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">multipart/alternative</bdi>]</b>. وهو يتوافق مع السطر <bdi dir="ltr" class="odt-ltr-term">p</bdi>) من نص الرسالة؛
+  <li>الأسطر 25–45: هذا الجزء الأول من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">multipart/alternative</bdi>]</b>. وهو يتوافق مع السطر p) من نص الرسالة؛
   </li>
   <li>السطر 47: يحتوي هذا الجزء الأول نفسه على أجزاء فرعية؛
   </li>
   <li>الأسطر 47-70: هذا <b>الجزء الفرعي الأول </b>من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">text/plain</bdi>] </b>(السطران 51 و54)، ومشفّر كـ <b>[<bdi dir="ltr" class="odt-ltr-term">QUOTED-PRINTABLE</bdi>] </b>(السطر 52)، وله معلمة<b> [<bdi dir="ltr" class="odt-ltr-term">charset</bdi>=<bdi dir="ltr" class="odt-ltr-term">utf-8</bdi>] </b>(السطران 66-67)؛
   </li>
-  <li>الأسطر 49–72 تصف الأسطر <bdi dir="ltr" class="odt-ltr-term">s</bdi>–<bdi dir="ltr" class="odt-ltr-term">x</bdi> من الرسالة النصية؛
+  <li>الأسطر 49–72 تصف الأسطر s–x من الرسالة النصية؛
   </li>
   <li>الأسطر 74–99: تصف <b>الجزء الفرعي الثاني </b>من الجزء<b> [<bdi dir="ltr" class="odt-ltr-term">multipart/alternative</bdi>]</b>؛
   </li>
@@ -5904,7 +5904,7 @@
   </li>
 </ul>
 
-<p>عندما يحتوي جزء ما على أجزاء فرعية، يتم ترقيمها <bdi dir="ltr" class="odt-ltr-term">x.1</bdi>، <bdi dir="ltr" class="odt-ltr-term">x.2...</bdi> حيث <bdi dir="ltr" class="odt-ltr-term">x</bdi> هو رقم الجزء الذي يضمها. وبالتالي:</p>
+<p>عندما يحتوي جزء ما على أجزاء فرعية، يتم ترقيمها <bdi dir="ltr" class="odt-ltr-term">x.1</bdi>، <bdi dir="ltr" class="odt-ltr-term">x.2...</bdi> حيث x هو رقم الجزء الذي يضمها. وبالتالي:</p>
 <ul>
   <li>السطران 11-12: الجزء الأول من قسم<b> [<bdi dir="ltr" class="odt-ltr-term">multipart/alternative</bdi>] </b>مرقّم بـ 1.1. وهو محتوى<b> [<bdi dir="ltr" class="odt-ltr-term">text/plain</bdi>]</b>: رسالة البريد الإلكتروني؛
   </li>
@@ -5978,7 +5978,7 @@
   </li>
   <li><span style="color: #000000">الأسطر 3–5: نقوم بتصحيح هذا الخطأ؛</span>
   </li>
-  <li><span style="color: #000000">الأسطر 37–43: إذا كان القسم الحالي يحتوي على أقسام فرعية، فإننا نمر على كل منها (الأسطر 38–43). رقم القسم الخاص بها هو </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">sectionNumber.</bdi>$<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">الأسطر 37–43: إذا كان القسم الحالي يحتوي على أقسام فرعية، فإننا نمر على كل منها (الأسطر 38–43). رقم القسم الخاص بها هو </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">sectionNumber.</bdi>$i]</span></b><span style="color: #000000">؛</span>
   </li>
   <li><span style="color: #000000">الأسطر 44-47: عندما لا يكون هناك المزيد من الأقسام الفرعية، نعرض نص القسم الحالي باستخدام دالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">imap_fetchbody</bdi>]</span></b><span style="color: #000000">. في مثالنا، هذه هي الأقسام </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">text/plain</bdi>] </span></b><span style="color: #000000">و</span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">text/HTML</bdi>] </span></b><span style="color: #000000">والمرفقات؛</span>
   </li>
@@ -6274,7 +6274,7 @@
       </li>
       <li><b>[$<bdi dir="ltr" class="odt-ltr-term">text</bdi>]</b>: هو النص المراد حفظه. ولكن يجب أولاً فك تشفيره لأنه مشفر؛
       </li>
-      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">infosMail</bdi>]</b>: يحتوي على معلومات عامة عن البريد الإلكتروني. سنستخدم الحقول<b> [<bdi dir="ltr" class="odt-ltr-term">from</bdi>, <bdi dir="ltr" class="odt-ltr-term">to</bdi>, <bdi dir="ltr" class="odt-ltr-term">subject</bdi>]</b>؛
+      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">infosMail</bdi>]</b>: يحتوي على معلومات عامة عن البريد الإلكتروني. سنستخدم الحقول<b> [<bdi dir="ltr" class="odt-ltr-term">from</bdi>, to, <bdi dir="ltr" class="odt-ltr-term">subject</bdi>]</b>؛
       </li>
       <li><b>[$<bdi dir="ltr" class="odt-ltr-term">struct</bdi>]</b>: هي البنية التي تصف الجزء من البريد الإلكتروني الذي نقوم بحفظه. سيسمح لنا ذلك بتحديد نوع تشفير النص المراد حفظه؛
       </li>
@@ -6282,7 +6282,7 @@
   </li>
   <li>الأسطر 4–12: نقوم بفك تشفير النص المراد حفظه؛
   </li>
-  <li>الأسطر 13–25: نسترد معلومات<b> [<bdi dir="ltr" class="odt-ltr-term">from</bdi>, <bdi dir="ltr" class="odt-ltr-term">to</bdi>, <bdi dir="ltr" class="odt-ltr-term">subject</bdi>] </b>من البريد الإلكتروني؛
+  <li>الأسطر 13–25: نسترد معلومات<b> [<bdi dir="ltr" class="odt-ltr-term">from</bdi>, to, <bdi dir="ltr" class="odt-ltr-term">subject</bdi>] </b>من البريد الإلكتروني؛
   </li>
   <li>الأسطر 27–36: اعتمادًا على نوع (0 أو 1) النص المراد حفظه، نقوم بإنشاء نص عادي (السطر 30) أو نص <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> (السطر 34)؛
   </li>
@@ -6375,7 +6375,7 @@
 <ul>
   <li>السطر 2: تقبل الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">saveAttachment</bdi>] </b>المعلمات التالية:
     <ul>
-      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">imapResource</bdi>, <bdi dir="ltr" class="odt-ltr-term">int</bdi> $<bdi dir="ltr" class="odt-ltr-term">msgNumber</bdi>, <bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">sectionNumber</bdi>] </b>تحدد بشكل فريد قسم <bdi dir="ltr" class="odt-ltr-term">IMAP</bdi> المراد حفظه؛
+      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">imapResource</bdi>, int $<bdi dir="ltr" class="odt-ltr-term">msgNumber</bdi>, <bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">sectionNumber</bdi>] </b>تحدد بشكل فريد قسم <bdi dir="ltr" class="odt-ltr-term">IMAP</bdi> المراد حفظه؛
       </li>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">outputDir</bdi>] </b>هو دليل الحفظ؛
       </li>
@@ -6574,7 +6574,7 @@
 </code></pre></div>
 
 <p>يتم سرد إصدار <bdi dir="ltr" class="odt-ltr-term">PHP 7.2.11</bdi> في السطر 3. ويُدرج في نفس السطر إصدار <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> المستخدم للتجميع (32 بت أو 64 بت).</p>
-<p>بمجرد الحصول على ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi>، يجب نسخه إلى المجلد <strong>[&lt;<bdi dir="ltr" class="odt-ltr-term">laragon</bdi>&gt;/<bdi dir="ltr" class="odt-ltr-term">bin/php/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">php-version</bdi>&gt;/<bdi dir="ltr" class="odt-ltr-term">ext</bdi>] [5]</strong>:</p>
+<p>بمجرد الحصول على ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi>، يجب نسخه إلى المجلد <strong>[&lt;<bdi dir="ltr" class="odt-ltr-term">laragon</bdi>&gt;/<bdi dir="ltr" class="odt-ltr-term">bin/php/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">php-version</bdi>&gt;/ext] [5]</strong>:</p>
 <p><img src="images/10000000000004C500000239861296A6.png" width="366" height="171" style="width:9.693cm;height:4.517cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004C500000239861296A6.png" /></p>
 <p>بمجرد الانتهاء من ذلك، يجب عليك تمكين هذا الملحق في ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">php.ini</bdi>]</strong> الذي يقوم بتكوين <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> (انظر القسم <a href="#configurationdephp"><u><span style="color: #0563c1">المرتبط</span></u></a>):</p>
 <p><img src="images/10000000000002920000010128F6AAD4.png" width="230" height="90" style="width:6.091cm;height:2.379cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002920000010128F6AAD4.png" /></p>
@@ -6589,7 +6589,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">Additional .ini files parsed:      (none)                                                              </span></span>
 </code></pre></div>
 
-<p>يقوم الأمر <strong>[<bdi dir="ltr" class="odt-ltr-term">php</bdi> –-<bdi dir="ltr" class="odt-ltr-term">ini</bdi>]</strong> بتحميل ملف التكوين من السطر 4. ثم يقوم بتحميل ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لجميع الامتدادات الممكّنة في <strong>[<bdi dir="ltr" class="odt-ltr-term">php.ini</bdi>]</strong>. إذا كان أي منها غير صحيح، فسيتم الإبلاغ عن ذلك. وبالتالي، سيتم التحقق من صحة ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> المضاف <strong>[<bdi dir="ltr" class="odt-ltr-term">php</bdi>_mailparse.<bdi dir="ltr" class="odt-ltr-term">dll</bdi>]</strong>. قد يتم الإعلان عن عدم صحته لأسباب مختلفة، وأكثرها شيوعًا هي التالية:</p>
+<p>يقوم الأمر <strong>[php –-ini]</strong> بتحميل ملف التكوين من السطر 4. ثم يقوم بتحميل ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لجميع الامتدادات الممكّنة في <strong>[<bdi dir="ltr" class="odt-ltr-term">php.ini</bdi>]</strong>. إذا كان أي منها غير صحيح، فسيتم الإبلاغ عن ذلك. وبالتالي، سيتم التحقق من صحة ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> المضاف <strong>[php_mailparse.dll]</strong>. قد يتم الإعلان عن عدم صحته لأسباب مختلفة، وأكثرها شيوعًا هي التالية:</p>
 <ul>
   <li>لقد قمت بتنزيل ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> لا يتطابق مع إصدار <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> المستخدم؛
   </li>
@@ -6602,7 +6602,7 @@
 <p>أدخل الأمر <strong>[8]</strong> في محطة <bdi dir="ltr" class="odt-ltr-term">Laragon</bdi> (انظر <a href="#installationdelaragon"><u><span style="color: #0563c1">الرابط في</span></u></a> الفقرة):</p>
 <p><img src="images/10000000000003E9000001FA4D18EEB7.png" width="350" height="177" style="width:9.269cm;height:4.685cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003E9000001FA4D18EEB7.png" /></p>
 <ul>
-  <li>في <b>[1]</b>، تحقق من أنك في الدليل<b> [&lt;<bdi dir="ltr" class="odt-ltr-term">laragon</bdi>&gt;/<bdi dir="ltr" class="odt-ltr-term">www</bdi>]</b>؛
+  <li>في <b>[1]</b>، تحقق من أنك في الدليل<b> [&lt;<bdi dir="ltr" class="odt-ltr-term">laragon</bdi>&gt;/www]</b>؛
   </li>
   <li>في <b>[2]</b>، الأمر لتثبيت مكتبة<b> [<bdi dir="ltr" class="odt-ltr-term">php-mime-mail-parser</bdi>]</b>؛
   </li>

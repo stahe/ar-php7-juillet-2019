@@ -1211,7 +1211,7 @@
 <ul>
   <li><span style="color: #000000">السطر 5: نطلب عرض الأخطاء على وحدة التحكم؛</span>
   </li>
-  <li><span style="color: #000000">السطر 9: نصل إلى عنصر غير موجود في المصفوفة </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">var</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">السطر 9: نصل إلى عنصر غير موجود في المصفوفة </span><b><span style="color: #000000">[$var]</span></b><span style="color: #000000">؛</span>
   </li>
   <li><span style="color: #000000">السطر 11: نقوم بعملية قسمة على صفر؛</span>
   </li>
@@ -1395,7 +1395,7 @@
       </li>
     </ul>
   </li>
-  <li><span style="color: #000000">الأسطر 32–62: 4 طرق مختلفة لمعالجة الاستثناء الذي تم إنشاؤه بواسطة الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">intdiv</bdi>] </span></b><span style="color: #000000">عند تمرير مقسوم عليه يساوي 0. تقوم الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">intdiv</bdi>(<bdi dir="ltr" class="odt-ltr-term">int</bdi> $<bdi dir="ltr" class="odt-ltr-term">dividend</bdi>, <bdi dir="ltr" class="odt-ltr-term">int</bdi> $<bdi dir="ltr" class="odt-ltr-term">divisor</bdi>): <bdi dir="ltr" class="odt-ltr-term">int</bdi>] </span></b><span style="color: #000000">بإجراء القسمة الصحيحة $<bdi dir="ltr" class="odt-ltr-term">dividend</bdi> / $<bdi dir="ltr" class="odt-ltr-term">divisor.</bdi> عندما يكون المقسوم عليه صفرًا، يتم إلقاء استثناء</span><b><span style="color: #000000"> [\<bdi dir="ltr" class="odt-ltr-term">DivisionByzeroError</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">الأسطر 32–62: 4 طرق مختلفة لمعالجة الاستثناء الذي تم إنشاؤه بواسطة الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">intdiv</bdi>] </span></b><span style="color: #000000">عند تمرير مقسوم عليه يساوي 0. تقوم الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">intdiv</bdi>(int $<bdi dir="ltr" class="odt-ltr-term">dividend</bdi>, int $<bdi dir="ltr" class="odt-ltr-term">divisor</bdi>): int] </span></b><span style="color: #000000">بإجراء القسمة الصحيحة $<bdi dir="ltr" class="odt-ltr-term">dividend</bdi> / $<bdi dir="ltr" class="odt-ltr-term">divisor.</bdi> عندما يكون المقسوم عليه صفرًا، يتم إلقاء استثناء</span><b><span style="color: #000000"> [\<bdi dir="ltr" class="odt-ltr-term">DivisionByzeroError</bdi>]</span></b><span style="color: #000000">؛</span>
     <ul>
       <li><span style="color: #000000">السطر 35: نلتقط أي خطأ ينفذ واجهة</span><b><span style="color: #000000"> [\<bdi dir="ltr" class="odt-ltr-term">Throwable</bdi>]</span></b><span style="color: #000000">. هذا صحيح؛</span>
       </li>
@@ -1441,17 +1441,17 @@
 <h2 id="78-finally">7.8. <span style="color: #4f81bd">جملة [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</span></h2>
 <p>يمكن أن تحتوي بنية <bdi dir="ltr" class="odt-ltr-term">try/catch</bdi> على عنصر ثالث وتصبح بنية <strong><bdi dir="ltr" class="odt-ltr-term">try/catch/finally</bdi></strong>. يتم تنفيذ الكود الموجود في جملة <strong>[<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</strong> في الحالتين التاليتين:</p>
 <ul>
-  <li>لا يرمي جملة<b> [<bdi dir="ltr" class="odt-ltr-term">try</bdi>] </b>استثناءً. ثم يتم تنفيذها بالكامل، ويستمر تنفيذ الكود إلى جملة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</b>، التي يتم تنفيذها بالكامل؛
+  <li>لا يرمي جملة<b> [try] </b>استثناءً. ثم يتم تنفيذها بالكامل، ويستمر تنفيذ الكود إلى جملة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</b>، التي يتم تنفيذها بالكامل؛
   </li>
-  <li>تقوم جملة<b> [<bdi dir="ltr" class="odt-ltr-term">try</bdi>] </b>بإلقاء استثناء. ثم يتم تنفيذها حتى العبارة التي تلقي الاستثناء. ثم ينتقل التنفيذ إلى جملة<b> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</b>، والتي يتم تنفيذها بالكامل. ثم ينتقل التنفيذ إلى جملة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</b>، والتي يتم تنفيذها بالكامل؛
+  <li>تقوم جملة<b> [try] </b>بإلقاء استثناء. ثم يتم تنفيذها حتى العبارة التي تلقي الاستثناء. ثم ينتقل التنفيذ إلى جملة<b> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</b>، والتي يتم تنفيذها بالكامل. ثم ينتقل التنفيذ إلى جملة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</b>، والتي يتم تنفيذها بالكامل؛
   </li>
 </ul>
 
 <p>أخيرًا، يتم دائمًا تنفيذ الكود الموجود في كتلة <strong>[<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</strong>. هذا السيناريو مفيد في الحالة التالية:</p>
 <ul>
-  <li>في كتلة<b> [<bdi dir="ltr" class="odt-ltr-term">try</bdi>]</b>، حصل الكود على موارد (ملفات، قواعد بيانات، اتصالات شبكة، قوائم انتظار). هذه الموارد عادةً ما تستهلك الكثير من الذاكرة. لذلك يجب تحريرها (يُشار إليها غالبًا <b>بـ &quot;إغلاق&quot;</b>) في أسرع وقت ممكن؛
+  <li>في كتلة<b> [try]</b>، حصل الكود على موارد (ملفات، قواعد بيانات، اتصالات شبكة، قوائم انتظار). هذه الموارد عادةً ما تستهلك الكثير من الذاكرة. لذلك يجب تحريرها (يُشار إليها غالبًا <b>بـ &quot;إغلاق&quot;</b>) في أسرع وقت ممكن؛
   </li>
-  <li>إذا تم الحصول على الموارد في كتلة<b> [<bdi dir="ltr" class="odt-ltr-term">try</bdi>]</b>، فيجب وضع عملية تحريرها في كتلة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</b>. وهذا يضمن أنه في جميع الحالات (سواء حدث خطأ أم لا)، يتم تحرير الموارد التي تم الحصول عليها وإعادتها إلى النظام؛
+  <li>إذا تم الحصول على الموارد في كتلة<b> [try]</b>، فيجب وضع عملية تحريرها في كتلة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</b>. وهذا يضمن أنه في جميع الحالات (سواء حدث خطأ أم لا)، يتم تحرير الموارد التي تم الحصول عليها وإعادتها إلى النظام؛
   </li>
 </ul>
 
@@ -1495,17 +1495,17 @@
 
 <p><strong>تعليقات الكود</strong></p>
 <ul>
-  <li>السطر 4: $<bdi dir="ltr" class="odt-ltr-term">e</bdi> هي مثيل لفئة<b> [\<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>] </b>المحددة مسبقًا. سنقوم بإلقاء الاستثناء في أماكن مختلفة؛
+  <li>السطر 4: $e هي مثيل لفئة<b> [\<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>] </b>المحددة مسبقًا. سنقوم بإلقاء الاستثناء في أماكن مختلفة؛
   </li>
-  <li>الأسطر 8–15: يتم إلقاء استثناء $<bdi dir="ltr" class="odt-ltr-term">e</bdi> في كتلة<b> [<bdi dir="ltr" class="odt-ltr-term">try</bdi>] </b>(السطر 10)؛
+  <li>الأسطر 8–15: يتم إلقاء استثناء $e في كتلة<b> [try] </b>(السطر 10)؛
   </li>
   <li>السطر 11: يتم التقاط استثناء<b> [\<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>] </b>وتُكتب رسالة الخطأ الخاصة به إلى وحدة التحكم؛
   </li>
-  <li>الأسطر 13–15: تطبع جملة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>] </b>رسالة. بناءً على ما ذكر سابقًا، يجب طباعة هذه الرسالة دائمًا، بغض النظر عما إذا كان هناك خطأ في كتلة<b> [<bdi dir="ltr" class="odt-ltr-term">try</bdi>] </b>أم لا؛
+  <li>الأسطر 13–15: تطبع جملة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>] </b>رسالة. بناءً على ما ذكر سابقًا، يجب طباعة هذه الرسالة دائمًا، بغض النظر عما إذا كان هناك خطأ في كتلة<b> [try] </b>أم لا؛
   </li>
-  <li>الأسطر 18–24: لا يوجد خطأ في <b>[<bdi dir="ltr" class="odt-ltr-term">try</bdi>]</b>. يجب علينا أيضًا الدخول إلى كتلة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>] </b>هنا؛
+  <li>الأسطر 18–24: لا يوجد خطأ في <b>[try]</b>. يجب علينا أيضًا الدخول إلى كتلة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>] </b>هنا؛
   </li>
-  <li>الأسطر 27–34: يوجد تعبير<b> [<bdi dir="ltr" class="odt-ltr-term">return</bdi>] </b>في كتلة <bdi dir="ltr" class="odt-ltr-term">try</bdi> ولا يوجد خطأ. وقد يتساءل المرء، إذن، عما إذا كنا سندخل إلى جملة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</b>. ويُظهر التنفيذ أننا ندخلها بالفعل؛
+  <li>الأسطر 27–34: يوجد تعبير<b> [<bdi dir="ltr" class="odt-ltr-term">return</bdi>] </b>في كتلة try ولا يوجد خطأ. وقد يتساءل المرء، إذن، عما إذا كنا سندخل إلى جملة<b> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</b>. ويُظهر التنفيذ أننا ندخلها بالفعل؛
   </li>
 </ul>
 
@@ -1541,7 +1541,7 @@
 <ul>
   <li><span style="color: #000000">السطر 6: تعمل عبارة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">exit</bdi>] </span></b><span style="color: #000000">على إيقاف تشغيل البرنامج النصي فورًا: لا يتم تنفيذ جملة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
-  <li><span style="color: #000000">الأسطر 4–9: مثال على <bdi dir="ltr" class="odt-ltr-term">try</bdi> / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> / <bdi dir="ltr" class="odt-ltr-term">finally</bdi> بدون جملة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</span></b><span style="color: #000000">. هذا ممكن؛</span>
+  <li><span style="color: #000000">الأسطر 4–9: مثال على try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> / <bdi dir="ltr" class="odt-ltr-term">finally</bdi> بدون جملة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</span></b><span style="color: #000000">. هذا ممكن؛</span>
   </li>
 </ul>
 
@@ -1624,7 +1624,7 @@
 <ul>
   <li><span style="color: #000000">الأسطر 4–10: نُعرِّف فئتين، </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Exception1</bdi>] </span></b><span style="color: #000000">و</span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Exception2</bdi>]</span></b><span style="color: #000000">، وكلاهما مشتقتان من الفئة المُعرَّفة مسبقًا </span><b><span style="color: #000000">[\<bdi dir="ltr" class="odt-ltr-term">RuntimeException</bdi>]</span></b><span style="color: #000000">. وجسم هاتين الفئتين فارغ. بعبارة أخرى، نستخدمهما فقط من أجل تحديد أنواعهما ( ): ولأن أنواعهما مختلفة، فسنتمكن من التمييز بين هذين الاستثناءين في جمل</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
-  <li><span style="color: #000000">الأسطر 13–16: نحدد متغيرين، $<bdi dir="ltr" class="odt-ltr-term">e1</bdi> و $<bdi dir="ltr" class="odt-ltr-term">e2</bdi>، بنوعي </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Exception1</bdi>] </span></b><span style="color: #000000">و </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Exception2</bdi>]، </span></b><span style="color: #000000">على التوالي؛</span>
+  <li><span style="color: #000000">الأسطر 13–16: نحدد متغيرين، $e1 و $e2، بنوعي </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Exception1</bdi>] </span></b><span style="color: #000000">و </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">Exception2</bdi>]، </span></b><span style="color: #000000">على التوالي؛</span>
   </li>
   <li><span style="color: #000000">الأسطر 20-29: لدينا بنية <bdi dir="ltr" class="odt-ltr-term">try/catch/catch.</bdi> وهذا يسمح لنا بمعالجة أنواع مختلفة من الاستثناءات باستخدام جمل</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>] </span></b><span style="color: #000000">مختلفة؛</span>
   </li>

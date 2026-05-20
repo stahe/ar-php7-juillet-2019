@@ -1350,13 +1350,13 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 6: تشير الترميز <i>$<bdi dir="ltr" class="odt-ltr-term">obj-</bdi>&gt;<bdi dir="ltr" class="odt-ltr-term">attr</bdi> </i>إلى السمة <i><bdi dir="ltr" class="odt-ltr-term">attr</bdi> </i>للمتغير <i>$<bdi dir="ltr" class="odt-ltr-term">obj</bdi></i>. إذا لم تكن موجودة، يتم إنشاؤها، مما يجعل المتغير <i>$<bdi dir="ltr" class="odt-ltr-term">obj</bdi> </i>كائنًا له سمات. وقد رأينا أن <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> تقوم بعد ذلك بإنشاء كائن <b><bdi dir="ltr" class="odt-ltr-term">stdClass</bdi> </b>بشكل افتراضي؛
+  <li>السطر 6: تشير الترميز <i>$<bdi dir="ltr" class="odt-ltr-term">obj-</bdi>&gt;<bdi dir="ltr" class="odt-ltr-term">attr</bdi> </i>إلى السمة <i><bdi dir="ltr" class="odt-ltr-term">attr</bdi> </i>للمتغير <i>$obj</i>. إذا لم تكن موجودة، يتم إنشاؤها، مما يجعل المتغير <i>$obj </i>كائنًا له سمات. وقد رأينا أن <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> تقوم بعد ذلك بإنشاء كائن <b><bdi dir="ltr" class="odt-ltr-term">stdClass</bdi> </b>بشكل افتراضي؛
   </li>
   <li>السطر 16: التعبير $<bdi dir="ltr" class="odt-ltr-term">obj2</bdi>=$<bdi dir="ltr" class="odt-ltr-term">obj1</bdi>، عندما يكون<i> $<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>كائنًا، هو نسخة من الكائنات <b>بالرجوع</b>: <i>$<bdi dir="ltr" class="odt-ltr-term">obj2</bdi> و$<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>هما مرجعان (عنوانان) لنفس الكائن. يمكن تعديل الكائن نفسه بواسطة أي من المرجعين؛
   </li>
   <li>الأسطر 23–27: تهدف إلى إظهار أن <i>$<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>و <i>$<bdi dir="ltr" class="odt-ltr-term">obj2</bdi> </i>متغيران مختلفان: فهما ليسا في نفس عنوان الذاكرة:
     <ul>
-      <li><i>$<bdi dir="ltr" class="odt-ltr-term">obj2</bdi> = $<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>ينسخ قيمة <i>$<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>إلى المتغير <i>$<bdi dir="ltr" class="odt-ltr-term">obj2</bdi> </i>(الخطوة 1 أعلاه). قيمة <i>$<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>هي عنوان كائن. وبالتالي، يشير كل من<i> $<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> و$<bdi dir="ltr" class="odt-ltr-term">obj2</bdi> </i>إلى نفس الكائن. عند معالجة متغير <i>$<bdi dir="ltr" class="odt-ltr-term">obj</bdi> </i>يشير إلى كائن، تقوم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> بمعالجة الكائن الذي يشير إليه المتغير <i>$<bdi dir="ltr" class="odt-ltr-term">obj</bdi></i>. وفقًا للرسم البياني أدناه، يمكننا أن نرى أن الكائن المشار إليه يمكن تعديله إما عبر <i>$<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>أو عبر <i>$<bdi dir="ltr" class="odt-ltr-term">obj2.</bdi> </i> هذا ما تظهره السطور 4 و 5 من النتائج؛
+      <li><i>$<bdi dir="ltr" class="odt-ltr-term">obj2</bdi> = $<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>ينسخ قيمة <i>$<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>إلى المتغير <i>$<bdi dir="ltr" class="odt-ltr-term">obj2</bdi> </i>(الخطوة 1 أعلاه). قيمة <i>$<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>هي عنوان كائن. وبالتالي، يشير كل من<i> $<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> و$<bdi dir="ltr" class="odt-ltr-term">obj2</bdi> </i>إلى نفس الكائن. عند معالجة متغير <i>$obj </i>يشير إلى كائن، تقوم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> بمعالجة الكائن الذي يشير إليه المتغير <i>$obj</i>. وفقًا للرسم البياني أدناه، يمكننا أن نرى أن الكائن المشار إليه يمكن تعديله إما عبر <i>$<bdi dir="ltr" class="odt-ltr-term">obj1</bdi> </i>أو عبر <i>$<bdi dir="ltr" class="odt-ltr-term">obj2.</bdi> </i> هذا ما تظهره السطور 4 و 5 من النتائج؛
       </li>
     </ul>
   </li>
@@ -1421,11 +1421,11 @@
   </li>
   <li>الأسطر 8–11: تعرض الطريقة <i><bdi dir="ltr" class="odt-ltr-term">identity</bdi> </i>قيم ثلاث سمات غير مُعلنة في الفئة. تشير الكلمة الرئيسية <b>$<bdi dir="ltr" class="odt-ltr-term">this</bdi> </b>إلى الكائن الذي تُطبق عليه الطريقة؛
   </li>
-  <li>السطر 17: ننشئ كائنًا <i>$<bdi dir="ltr" class="odt-ltr-term">p</bdi> </i>من نوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi></i>. تُستخدم الكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">new</bdi> </b>لإنشاء كائن جديد. تُرجع العملية <b>مرجعًا </b>إلى الكائن الذي تم إنشاؤه (أي عنوانًا). هناك عدة طرق لكتابة ذلك: <i><bdi dir="ltr" class="odt-ltr-term">new Person</bdi>()</i>، <i><bdi dir="ltr" class="odt-ltr-term">new</bdi> </i><bdi dir="ltr" class="odt-ltr-term">Person</bdi>، <i><bdi dir="ltr" class="odt-ltr-term">new person</bdi></i>. لا يُفرق اسم الفئة بين الأحرف الكبيرة والصغيرة؛
+  <li>السطر 17: ننشئ كائنًا <i>$p </i>من نوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi></i>. تُستخدم الكلمة الرئيسية <b>new </b>لإنشاء كائن جديد. تُرجع العملية <b>مرجعًا </b>إلى الكائن الذي تم إنشاؤه (أي عنوانًا). هناك عدة طرق لكتابة ذلك: <i><bdi dir="ltr" class="odt-ltr-term">new Person</bdi>()</i>، <i>new </i><bdi dir="ltr" class="odt-ltr-term">Person</bdi>، <i><bdi dir="ltr" class="odt-ltr-term">new person</bdi></i>. لا يُفرق اسم الفئة بين الأحرف الكبيرة والصغيرة؛
   </li>
-  <li>الأسطر 18-20: يتم إنشاء السمات الثلاث المطلوبة بواسطة طريقة <i><bdi dir="ltr" class="odt-ltr-term">identity</bdi> </i>في الكائن $<bdi dir="ltr" class="odt-ltr-term">p</bdi>؛
+  <li>الأسطر 18-20: يتم إنشاء السمات الثلاث المطلوبة بواسطة طريقة <i><bdi dir="ltr" class="odt-ltr-term">identity</bdi> </i>في الكائن $p؛
   </li>
-  <li>السطر 22: يتم تطبيق طريقة <i><bdi dir="ltr" class="odt-ltr-term">identity</bdi> </i>لفئة <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> </i>على الكائن <i>$<bdi dir="ltr" class="odt-ltr-term">p</bdi></i>. في كود (الأسطر 8–11) لطريقة <bdi dir="ltr" class="odt-ltr-term">identity</bdi>، تشير<i> $<bdi dir="ltr" class="odt-ltr-term">this</bdi> </i>إلى نفس الكائن الذي <i>تشير إليه $<bdi dir="ltr" class="odt-ltr-term">p</bdi>؛</i>
+  <li>السطر 22: يتم تطبيق طريقة <i><bdi dir="ltr" class="odt-ltr-term">identity</bdi> </i>لفئة <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> </i>على الكائن <i>$p</i>. في كود (الأسطر 8–11) لطريقة <bdi dir="ltr" class="odt-ltr-term">identity</bdi>، تشير<i> $<bdi dir="ltr" class="odt-ltr-term">this</bdi> </i>إلى نفس الكائن الذي <i>تشير إليه $p؛</i>
   </li>
 </ul>
 <p><a id="toc42690629"></a>
@@ -1468,7 +1468,7 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 6–8: يتم إعلان سمات الفئة بشكل صريح باستخدام الكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">var</bdi>؛</b>
+  <li>الأسطر 6–8: يتم إعلان سمات الفئة بشكل صريح باستخدام الكلمة الرئيسية <b>var؛</b>
   </li>
 </ul>
 <p><a id="toc42690630"></a>
@@ -1564,9 +1564,9 @@
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>$p=new Personne() ;
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>$p-&gt;nom=&quot;Landru&quot; ;
 </code></pre></div></td></tr></table></div>
-<p>هنا، نحن خارج فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. وبما أن السمة <em><bdi dir="ltr" class="odt-ltr-term">name</bdi></em> خاصة، فإن السطر 2 غير صحيح. لتهيئة الحقول الخاصة للكائن $<bdi dir="ltr" class="odt-ltr-term">p</bdi>، هناك طريقتان:</p>
+<p>هنا، نحن خارج فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em>. وبما أن السمة <em><bdi dir="ltr" class="odt-ltr-term">name</bdi></em> خاصة، فإن السطر 2 غير صحيح. لتهيئة الحقول الخاصة للكائن $p، هناك طريقتان:</p>
 <ul>
-  <li>استخدام طرق <b><bdi dir="ltr" class="odt-ltr-term">set</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">get</bdi> </b>العامة (يمكن أن تكون أسماء هذه الطرق أي شيء) في الأسطر 12–34. يمكننا بعد ذلك كتابة:
+  <li>استخدام طرق <b>set </b>و <b>get </b>العامة (يمكن أن تكون أسماء هذه الطرق أي شيء) في الأسطر 12–34. يمكننا بعد ذلك كتابة:
   </li>
 </ul>
 
@@ -1583,7 +1583,7 @@
 </code></pre></div></td></tr></table></div>
 <p>يستدعي الكود أعلاه تلقائيًا طريقة فئة <em><bdi dir="ltr" class="odt-ltr-term">Person</bdi></em> المسماة <em>__construct؛</em></p>
 <ul>
-  <li>السطر 59: يعرض هذا السطر الشخص <i>$<bdi dir="ltr" class="odt-ltr-term">p</bdi> </i>كسلسلة. للقيام بذلك، يتم استخدام طريقة فئة <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> </i>المسماة <i>__toString </i>(الأسطر 45–47)؛
+  <li>السطر 59: يعرض هذا السطر الشخص <i>$p </i>كسلسلة. للقيام بذلك، يتم استخدام طريقة فئة <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> </i>المسماة <i>__toString </i>(الأسطر 45–47)؛
   </li>
   <li>تمت إضافة البادئة <b><bdi dir="ltr" class="odt-ltr-term">public</bdi></b> إلى جميع طرق الفئة (الدوال)، مما يشير إلى أن الدالة مرئية خارج الفئة. الكلمات الرئيسية الأخرى التي يمكن استخدامها هي، كما هو الحال مع السمات وبنفس المعنى، <b><bdi dir="ltr" class="odt-ltr-term">private</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">protected.</bdi> </b>بدون سمة رؤية صريحة، تتمتع الدالة برؤية <b>عامة</b> ضمنية؛
   </li>
@@ -1754,11 +1754,11 @@
     <ul>
       <li>استخدام الاسم الكامل للفئة <b>[\<bdi dir="ltr" class="odt-ltr-term">Examples</bdi>\<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</b>؛
       </li>
-      <li>استخدام عبارة <b>`<bdi dir="ltr" class="odt-ltr-term">use</bdi>` </b>في السطر 10. يشير هذا إلى أن الكود التالي يستخدم الفئة <b>`[<bdi dir="ltr" class="odt-ltr-term">Examples</bdi>\<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]`</b>؛
+      <li>استخدام عبارة <b>`use` </b>في السطر 10. يشير هذا إلى أن الكود التالي يستخدم الفئة <b>`[<bdi dir="ltr" class="odt-ltr-term">Examples</bdi>\<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]`</b>؛
       </li>
     </ul>
   </li>
-  <li>السطر 10: يُعلم الأمر <b><bdi dir="ltr" class="odt-ltr-term">use</bdi> </b>المُترجم أن فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>المشار إليها في السطر 14 هي في الواقع فئة<b> [\<bdi dir="ltr" class="odt-ltr-term">Examples</bdi>\<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</b>. ومع ذلك، أين سيجد المُترجم كود هذه الفئة؟ السطر 7 يخبره بذلك. يشير هذا السطر إلى أنه لتنفيذ البرنامج النصي الحالي، يجب أيضًا تحميل البرنامج النصي <b>[<bdi dir="ltr" class="odt-ltr-term">Person.php</bdi>]</b>. هنا، يتم استخدام اسم الملف النسبي. وبالتالي، سيتم البحث عنه في المجلد الذي يحتوي على البرنامج النصي <b>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>]</b>. لذلك، يجب أن يكون البرنامجان النصيان <b>[<bdi dir="ltr" class="odt-ltr-term">Person.php</bdi>] </b>و <b>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>] </b>في نفس المجلد. وهذا هو الحال هنا، حيث يوجد كلاهما في المجلد<b> [<bdi dir="ltr" class="odt-ltr-term">examples/classes</bdi>]</b>. العبارة الموجودة في السطر 10 تعادل:
+  <li>السطر 10: يُعلم الأمر <b>use </b>المُترجم أن فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>المشار إليها في السطر 14 هي في الواقع فئة<b> [\<bdi dir="ltr" class="odt-ltr-term">Examples</bdi>\<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</b>. ومع ذلك، أين سيجد المُترجم كود هذه الفئة؟ السطر 7 يخبره بذلك. يشير هذا السطر إلى أنه لتنفيذ البرنامج النصي الحالي، يجب أيضًا تحميل البرنامج النصي <b>[<bdi dir="ltr" class="odt-ltr-term">Person.php</bdi>]</b>. هنا، يتم استخدام اسم الملف النسبي. وبالتالي، سيتم البحث عنه في المجلد الذي يحتوي على البرنامج النصي <b>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>]</b>. لذلك، يجب أن يكون البرنامجان النصيان <b>[<bdi dir="ltr" class="odt-ltr-term">Person.php</bdi>] </b>و <b>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>] </b>في نفس المجلد. وهذا هو الحال هنا، حيث يوجد كلاهما في المجلد<b> [<bdi dir="ltr" class="odt-ltr-term">examples/classes</bdi>]</b>. العبارة الموجودة في السطر 10 تعادل:
   </li>
 </ul>
 
@@ -1766,11 +1766,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">use</span><span style="color:#008080"> </span>\Exemples\Personne as Personne;</span></span>
 </code></pre></div>
 
-<p>يحدد البيان <strong>[<bdi dir="ltr" class="odt-ltr-term">use</bdi>]</strong> أعلاه أن <strong>الاسم المستعار [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</strong> يشير إلى الفئة <strong>[\<bdi dir="ltr" class="odt-ltr-term">Exemples</bdi>\<bdi dir="ltr" class="odt-ltr-term">Personne</bdi>]</strong>؛</p>
+<p>يحدد البيان <strong>[use]</strong> أعلاه أن <strong>الاسم المستعار [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</strong> يشير إلى الفئة <strong>[\<bdi dir="ltr" class="odt-ltr-term">Exemples</bdi>\<bdi dir="ltr" class="odt-ltr-term">Personne</bdi>]</strong>؛</p>
 <ul>
   <li>السطر 14: يتم إنشاء كائن<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</b>. سيتم تنفيذ طريقة<b> [__construct] </b>للفئة<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>ضمناً هنا؛
   </li>
-  <li>السطر 16: يعرض <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> $<bdi dir="ltr" class="odt-ltr-term">p</bdi></i>. لكي يتم عرضها، يجب تحويل قيمة المتغير $<bdi dir="ltr" class="odt-ltr-term">p</bdi> إلى سلسلة. ضمناً، يتم بعد ذلك تنفيذ طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Person.__toString</bdi>]</b>. لذلك يجب أن ترجع هذه الطريقة سلسلة؛
+  <li>السطر 16: يعرض <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi> $p</i>. لكي يتم عرضها، يجب تحويل قيمة المتغير $p إلى سلسلة. ضمناً، يتم بعد ذلك تنفيذ طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Person.__toString</bdi>]</b>. لذلك يجب أن ترجع هذه الطريقة سلسلة؛
   </li>
   <li>لقد رأينا أن منشئ فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>يمكن أن يُطلق استثناءً من النوع <b>[\<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>]</b>. ولذلك، يجب معالجة هذا الاستثناء. وبالتالي، فإن الكود الموجود في السطر 14 غير مكتمل. يجب علينا استخدام الكود الموجود في الأسطر 18–24 لمعالجة الاستثناء الذي قد يحدث بشكل صحيح. هنا، نقوم بتعمد إحداث استثناء عن طريق تمرير عمر ليس عددًا صحيحًا. في هذه الحالة المحددة، يتم إلقاء الاستثناء الذي تم إنشاؤه — — بواسطة مترجم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> وليس بواسطة كود فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</b>. في الواقع، توقيع طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Person.__construct</bdi>] </b>هو كما يلي:
   </li>
@@ -1780,8 +1780,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">function<span style="color:#008080"> </span>__construct(string<span style="color:#008080"> </span><span style="color:#0000ff">$prenom</span>,<span style="color:#008080"> </span>string<span style="color:#008080"> </span><span style="color:#0000ff">$nom</span>,<span style="color:#008080"> </span>int<span style="color:#008080"> </span><span style="color:#0000ff">$age</span>)</span></span>
 </code></pre></div>
 
-<p>لذلك، يجب أن يكون المعامل <strong>[<bdi dir="ltr" class="odt-ltr-term">age</bdi>]</strong> الذي يتم تمريره إلى المنشئ من النوع <strong><bdi dir="ltr" class="odt-ltr-term">integer</bdi></strong>. إذا لم يكن الأمر كذلك، فإن مترجم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> يرمي <strong>[<bdi dir="ltr" class="odt-ltr-term">TypeError</bdi>]</strong>. علاوة على ذلك، ترمي طرق <strong>[<bdi dir="ltr" class="odt-ltr-term">set</bdi>]</strong> لفئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</strong> استثناء <strong>[\<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>]</strong>. وبما أن المنشئ الذي يستدعيها لا يحتوي على كتلة <bdi dir="ltr" class="odt-ltr-term">try/catch</bdi>، فإن الاستثناء ينتقل إلى المستوى الأعلى إلى الكود الذي استدعى المنشئ، أي الكود الموجود في البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>]</strong>. في النهاية، يمكن أن يتلقى البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>]</strong> نوعين من الاستثناءات: \<strong><bdi dir="ltr" class="odt-ltr-term">Exception</bdi></strong> أو \<strong><bdi dir="ltr" class="odt-ltr-term">TypeError.</bdi></strong> لاحظ أنه عندما يكون المطور متأكدًا من عدم حدوث استثناءات معينة، فإنه لن يستخدم كتل <strong><bdi dir="ltr" class="odt-ltr-term">catch</bdi></strong> المقابلة. هنا، يتم استخدامها بشكل منهجي لأغراض العرض فقط. ومع ذلك<strong>،</strong> سيتم استخدام كتل <strong><bdi dir="ltr" class="odt-ltr-term">catch</bdi> لكل استثناء محتمل، حتى لو كان احتمال حدوثه ضئيلًا</strong>؛</p>
-<p>لهذا السبب، تحتوي كتلة <strong><bdi dir="ltr" class="odt-ltr-term">try</bdi></strong> في الأسطر 18-24 على <strong>كتلتين <bdi dir="ltr" class="odt-ltr-term">catch</bdi></strong> لمعالجة نوعي الاستثناءات بشكل منفصل؛</p>
+<p>لذلك، يجب أن يكون المعامل <strong>[age]</strong> الذي يتم تمريره إلى المنشئ من النوع <strong><bdi dir="ltr" class="odt-ltr-term">integer</bdi></strong>. إذا لم يكن الأمر كذلك، فإن مترجم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> يرمي <strong>[<bdi dir="ltr" class="odt-ltr-term">TypeError</bdi>]</strong>. علاوة على ذلك، ترمي طرق <strong>[set]</strong> لفئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Person</bdi>]</strong> استثناء <strong>[\<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>]</strong>. وبما أن المنشئ الذي يستدعيها لا يحتوي على كتلة <bdi dir="ltr" class="odt-ltr-term">try/catch</bdi>، فإن الاستثناء ينتقل إلى المستوى الأعلى إلى الكود الذي استدعى المنشئ، أي الكود الموجود في البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>]</strong>. في النهاية، يمكن أن يتلقى البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>]</strong> نوعين من الاستثناءات: \<strong><bdi dir="ltr" class="odt-ltr-term">Exception</bdi></strong> أو \<strong><bdi dir="ltr" class="odt-ltr-term">TypeError.</bdi></strong> لاحظ أنه عندما يكون المطور متأكدًا من عدم حدوث استثناءات معينة، فإنه لن يستخدم كتل <strong><bdi dir="ltr" class="odt-ltr-term">catch</bdi></strong> المقابلة. هنا، يتم استخدامها بشكل منهجي لأغراض العرض فقط. ومع ذلك<strong>،</strong> سيتم استخدام كتل <strong><bdi dir="ltr" class="odt-ltr-term">catch</bdi> لكل استثناء محتمل، حتى لو كان احتمال حدوثه ضئيلًا</strong>؛</p>
+<p>لهذا السبب، تحتوي كتلة <strong>try</strong> في الأسطر 18-24 على <strong>كتلتين <bdi dir="ltr" class="odt-ltr-term">catch</bdi></strong> لمعالجة نوعي الاستثناءات بشكل منفصل؛</p>
 <ul>
   <li>السطر 20: يمكنك كتابة <b>[<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>] </b>أو <b>[\<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>]</b>:
     <ul>
@@ -1924,7 +1924,7 @@
   </li>
   <li>السطر 12: تكرار المصفوفة؛
   </li>
-  <li>السطر 13: <i>$<bdi dir="ltr" class="odt-ltr-term">group</bdi></i><i><b>[$<bdi dir="ltr" class="odt-ltr-term">i</bdi>] </b></i>هو كائن من نوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi></i>. تُستخدم الطريقة <b>[<bdi dir="ltr" class="odt-ltr-term">Person.__toString</bdi>] </b>لعرضه؛
+  <li>السطر 13: <i>$<bdi dir="ltr" class="odt-ltr-term">group</bdi></i><i><b>[$i] </b></i>هو كائن من نوع <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi></i>. تُستخدم الطريقة <b>[<bdi dir="ltr" class="odt-ltr-term">Person.__toString</bdi>] </b>لعرضه؛
   </li>
 </ul>
 <p><a id="toc42689862"></a>
@@ -1984,13 +1984,13 @@
   </li>
   <li>السطر 25: يأخذ منشئ فئة <i><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></i> 4 معلمات:
     <ul>
-      <li>3 لتهيئة فئتها الأصلية (<bdi dir="ltr" class="odt-ltr-term">first_name</bdi>، <bdi dir="ltr" class="odt-ltr-term">last_name</bdi>، <bdi dir="ltr" class="odt-ltr-term">age</bdi>)، السطر 27؛
+      <li>3 لتهيئة فئتها الأصلية (<bdi dir="ltr" class="odt-ltr-term">first_name</bdi>، <bdi dir="ltr" class="odt-ltr-term">last_name</bdi>، age)، السطر 27؛
       </li>
       <li>1 لتهيئة نفسها (<bdi dir="ltr" class="odt-ltr-term">subject</bdi>)، السطر 29؛
       </li>
     </ul>
   </li>
-  <li>السطر 27: الفئة المشتقة لديها حق الوصول إلى طرق ومنشئات فئتها الأصلية عبر الكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">parent::</bdi></b>. هنا، نمرر المعلمات (<bdi dir="ltr" class="odt-ltr-term">first_name</bdi>، <bdi dir="ltr" class="odt-ltr-term">last_name</bdi>، <bdi dir="ltr" class="odt-ltr-term">age</bdi>) إلى منشئ الفئة الأصلية؛
+  <li>السطر 27: الفئة المشتقة لديها حق الوصول إلى طرق ومنشئات فئتها الأصلية عبر الكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">parent::</bdi></b>. هنا، نمرر المعلمات (<bdi dir="ltr" class="odt-ltr-term">first_name</bdi>، <bdi dir="ltr" class="odt-ltr-term">last_name</bdi>، age) إلى منشئ الفئة الأصلية؛
   </li>
   <li>الأسطر 33–35: تستخدم طريقة <i>__toString </i>للفئة المشتقة طريقة <i>__toString </i>للفئة الأصلية؛
   </li>
@@ -2030,7 +2030,7 @@
   </li>
   <li>الأسطر 16-18: عرض عناصر المصفوفة؛
   </li>
-  <li>السطر 17: سيتم استدعاء طريقة <i>__toString </i>لكل عنصر <i>$<bdi dir="ltr" class="odt-ltr-term">group</bdi></i><i><b>[$<bdi dir="ltr" class="odt-ltr-term">i</bdi>]</b></i>. تحتوي فئة <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi></i> على طريقة <i>__toString</i>. تحتوي فئة <i><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi> </i>على طريقتين: طريقة الفئة الأم وطريقتها الخاصة. قد يتساءل المرء أيهما سيتم استدعاؤه. يظهر التنفيذ أنه تم استدعاء الطريقة الموجودة في فئة <i><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></i>. هذا هو الحال دائمًا: عندما يتم استدعاء طريقة على كائن، يتم البحث عنها بالترتيب التالي: في الكائن نفسه، ثم في فئته الأصلية إن وجدت، ثم في الفئة الأصلية للفئة الأصلية، وهكذا دواليك... يتوقف البحث بمجرد العثور على الطريقة.
+  <li>السطر 17: سيتم استدعاء طريقة <i>__toString </i>لكل عنصر <i>$<bdi dir="ltr" class="odt-ltr-term">group</bdi></i><i><b>[$i]</b></i>. تحتوي فئة <i><bdi dir="ltr" class="odt-ltr-term">Person</bdi></i> على طريقة <i>__toString</i>. تحتوي فئة <i><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi> </i>على طريقتين: طريقة الفئة الأم وطريقتها الخاصة. قد يتساءل المرء أيهما سيتم استدعاؤه. يظهر التنفيذ أنه تم استدعاء الطريقة الموجودة في فئة <i><bdi dir="ltr" class="odt-ltr-term">Teacher</bdi></i>. هذا هو الحال دائمًا: عندما يتم استدعاء طريقة على كائن، يتم البحث عنها بالترتيب التالي: في الكائن نفسه، ثم في فئته الأصلية إن وجدت، ثم في الفئة الأصلية للفئة الأصلية، وهكذا دواليك... يتوقف البحث بمجرد العثور على الطريقة.
   </li>
 </ul>
 
@@ -2219,9 +2219,9 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 7–17: تحدد الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>طريقتين، <b><bdi dir="ltr" class="odt-ltr-term">f</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">g</bdi></b>؛
+  <li>الأسطر 7–17: تحدد الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>طريقتين، <b>f </b>و <b>g</b>؛
   </li>
-  <li>الأسطر 20–27: الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>] </b>تمتد من الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>وتعيد تعريف طريقتها <b><bdi dir="ltr" class="odt-ltr-term">f</bdi></b>؛
+  <li>الأسطر 20–27: الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>] </b>تمتد من الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>وتعيد تعريف طريقتها <b>f</b>؛
   </li>
 </ul>
 
@@ -2234,15 +2234,15 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 30 من الكود ينشئ كائنًا $<bdi dir="ltr" class="odt-ltr-term">c2</bdi> من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>]</b>؛
+  <li>السطر 30 من الكود ينشئ كائنًا $c2 من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>]</b>؛
   </li>
-  <li>السطر 31 من الكود يستدعي الطريقة <b><bdi dir="ltr" class="odt-ltr-term">f</bdi> </b>للكائن <b>$<bdi dir="ltr" class="odt-ltr-term">c2</bdi></b>. وبما أن هذه الطريقة موجودة، يتم تنفيذها؛
+  <li>السطر 31 من الكود يستدعي الطريقة <b>f </b>للكائن <b>$c2</b>. وبما أن هذه الطريقة موجودة، يتم تنفيذها؛
   </li>
-  <li>السطر 32 من الكود يستدعي الطريقة <b><bdi dir="ltr" class="odt-ltr-term">g</bdi> </b>للكائن <b>$<bdi dir="ltr" class="odt-ltr-term">c2</bdi></b>. وبما أن هذه الطريقة غير موجودة، يتم البحث عنها في الفئة الأم، حيث يتم العثور عليها وتنفيذها؛
+  <li>السطر 32 من الكود يستدعي الطريقة <b>g </b>للكائن <b>$c2</b>. وبما أن هذه الطريقة غير موجودة، يتم البحث عنها في الفئة الأم، حيث يتم العثور عليها وتنفيذها؛
   </li>
-  <li>السطر 33 من الكود ينشئ كائن <b>$<bdi dir="ltr" class="odt-ltr-term">c1</bdi> </b>من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>]</b>؛
+  <li>السطر 33 من الكود ينشئ كائن <b>$c1 </b>من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>]</b>؛
   </li>
-  <li>السطر 34 من الكود يستدعي الطريقة <b><bdi dir="ltr" class="odt-ltr-term">f</bdi> </b>للكائن <b>$<bdi dir="ltr" class="odt-ltr-term">c1</bdi></b>. وبما أن هذه الطريقة موجودة، يتم تنفيذها؛
+  <li>السطر 34 من الكود يستدعي الطريقة <b>f </b>للكائن <b>$c1</b>. وبما أن هذه الطريقة موجودة، يتم تنفيذها؛
   </li>
 </ul>
 <p><a id="toc42689866"></a>
@@ -2377,15 +2377,15 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 7–16: فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>هي فئة مجردة (السطر 7) لأنها لا تعرف كيفية تنفيذ الطريقة <bdi dir="ltr" class="odt-ltr-term">g</bdi> في السطر 15. ولذلك يجب أن تكون مشتقة حتى تكون قابلة للاستخدام؛
+  <li>الأسطر 7–16: فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>هي فئة مجردة (السطر 7) لأنها لا تعرف كيفية تنفيذ الطريقة g في السطر 15. ولذلك يجب أن تكون مشتقة حتى تكون قابلة للاستخدام؛
   </li>
-  <li>الأسطر 19–26: الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>] </b>تمتد من الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>وتعيد تعريف الطريقة <b><bdi dir="ltr" class="odt-ltr-term">g</bdi> </b>لفئتها الأم (الأسطر 22–24)؛
+  <li>الأسطر 19–26: الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>] </b>تمتد من الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>وتعيد تعريف الطريقة <b>g </b>لفئتها الأم (الأسطر 22–24)؛
   </li>
-  <li>الأسطر 29–41: الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class3</bdi>] </b>تمتد من الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>وتعيد تعريف الطريقة <b><bdi dir="ltr" class="odt-ltr-term">g</bdi> </b>لفئتها الأم (الأسطر 32–34)؛
+  <li>الأسطر 29–41: الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class3</bdi>] </b>تمتد من الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>وتعيد تعريف الطريقة <b>g </b>لفئتها الأم (الأسطر 32–34)؛
   </li>
-  <li>الأسطر 37-39: تعيد الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class3</bdi>] </b>تعريف الطريقة <b><bdi dir="ltr" class="odt-ltr-term">f</bdi> </b>لفئتها الأم؛
+  <li>الأسطر 37-39: تعيد الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class3</bdi>] </b>تعريف الطريقة <b>f </b>لفئتها الأم؛
   </li>
-  <li>الأسطر 44–49: يتم إنشاء كائنين من النوعين <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>] </b>و <b>[<bdi dir="ltr" class="odt-ltr-term">Class3</bdi>]</b>، ويتم استدعاء طريقتيهما <b><bdi dir="ltr" class="odt-ltr-term">f</bdi> </b>و <b><bdi dir="ltr" class="odt-ltr-term">g</bdi></b>؛
+  <li>الأسطر 44–49: يتم إنشاء كائنين من النوعين <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>] </b>و <b>[<bdi dir="ltr" class="odt-ltr-term">Class3</bdi>]</b>، ويتم استدعاء طريقتيهما <b>f </b>و <b>g</b>؛
   </li>
 </ul>
 
@@ -2477,11 +2477,11 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 13: تم إعلان الطريقة <b><bdi dir="ltr" class="odt-ltr-term">f</bdi> </b>للفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>على أنها نهائية باستخدام الكلمة الرئيسية <bdi dir="ltr" class="odt-ltr-term">final</bdi>؛
+  <li>السطر 13: تم إعلان الطريقة <b>f </b>للفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>] </b>على أنها نهائية باستخدام الكلمة الرئيسية <bdi dir="ltr" class="odt-ltr-term">final</bdi>؛
   </li>
   <li>السطر 20: الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>] </b>تمتد من الفئة <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>]</b>؛
   </li>
-  <li>السطران 22-23: يتم إعادة تعريف الدالة <b><bdi dir="ltr" class="odt-ltr-term">f</bdi> </b>للفئة الأم <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>]</b>. وهذا من شأنه أن يتسبب في حدوث خطأ؛
+  <li>السطران 22-23: يتم إعادة تعريف الدالة <b>f </b>للفئة الأم <b>[<bdi dir="ltr" class="odt-ltr-term">Class1</bdi>]</b>. وهذا من شأنه أن يتسبب في حدوث خطأ؛
   </li>
   <li>السطر 29: يتم إنشاء كائن من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>] </b>لإجبار مترجم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> على فحص الفئة<b> [<bdi dir="ltr" class="odt-ltr-term">Class2</bdi>]</b>؛
   </li>
@@ -2522,9 +2522,9 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>السطر 6: تم إعلان الطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">say</bdi>] </b>على أنها ثابتة باستخدام الكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">static</bdi></b>؛
+  <li>السطر 6: تم إعلان الطريقة<b> [say] </b>على أنها ثابتة باستخدام الكلمة الرئيسية <b><bdi dir="ltr" class="odt-ltr-term">static</bdi></b>؛
   </li>
-  <li>السطر 13: استدعاء الطريقة الثابتة <b>[<bdi dir="ltr" class="odt-ltr-term">say</bdi>] </b>باستخدام الصيغة: <b><bdi dir="ltr" class="odt-ltr-term">Class1::say</bdi></b>؛
+  <li>السطر 13: استدعاء الطريقة الثابتة <b>[say] </b>باستخدام الصيغة: <b><bdi dir="ltr" class="odt-ltr-term">Class1::say</bdi></b>؛
   </li>
 </ul>
 
@@ -2565,7 +2565,7 @@
   </li>
   <li><span style="color: #000000">السطر 14: لاحظ الترميز </span><b><span style="color: #000000">`<bdi dir="ltr" class="odt-ltr-term">self::</bdi>$<bdi dir="ltr" class="odt-ltr-term">nbObjects</bdi>` </span></b><span style="color: #000000">للإشارة إلى أننا نشير إلى سمة ثابتة للفئة التي يوجد فيها الكود المنفذ؛</span>
   </li>
-  <li><span style="color: #000000">الأسطر 13-15: الطريقة الثابتة </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">say</bdi>] </span></b><span style="color: #000000">مسؤولة عن عرض عدد الكائنات التي تم إنشاؤها؛</span>
+  <li><span style="color: #000000">الأسطر 13-15: الطريقة الثابتة </span><b><span style="color: #000000">[say] </span></b><span style="color: #000000">مسؤولة عن عرض عدد الكائنات التي تم إنشاؤها؛</span>
   </li>
   <li><span style="color: #000000">الأسطر 20–22: نقوم بإنشاء كائنين وعرض عداد الكائنات؛</span>
   </li>
@@ -3070,7 +3070,7 @@
   </li>
   <li>الأسطر 38–46: طريقة<b> [__toString] </b>للفئة؛
   </li>
-  <li>السطر 42: تسترد دالة <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">get_object_vars</bdi>] </b>قيم سمات الفئة كمصفوفة ترابطية <b>[‘<bdi dir="ltr" class="odt-ltr-term">name</bdi>’=&gt;’<bdi dir="ltr" class="odt-ltr-term">name1</bdi>’, ‘<bdi dir="ltr" class="odt-ltr-term">first_name</bdi>’=&gt;’<bdi dir="ltr" class="odt-ltr-term">first_name1</bdi>’, ‘<bdi dir="ltr" class="odt-ltr-term">age</bdi>’=&gt;’<bdi dir="ltr" class="odt-ltr-term">age1</bdi>’, ‘<bdi dir="ltr" class="odt-ltr-term">children</bdi>’=&gt;[]</b>]؛
+  <li>السطر 42: تسترد دالة <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">get_object_vars</bdi>] </b>قيم سمات الفئة كمصفوفة ترابطية <b>[‘<bdi dir="ltr" class="odt-ltr-term">name</bdi>’=&gt;’<bdi dir="ltr" class="odt-ltr-term">name1</bdi>’, ‘<bdi dir="ltr" class="odt-ltr-term">first_name</bdi>’=&gt;’<bdi dir="ltr" class="odt-ltr-term">first_name1</bdi>’, ‘age’=&gt;’<bdi dir="ltr" class="odt-ltr-term">age1</bdi>’, ‘<bdi dir="ltr" class="odt-ltr-term">children</bdi>’=&gt;[]</b>]؛
   </li>
   <li>السطر 45: نُرجع سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> لهذا المصفوف من السمات؛
   </li>

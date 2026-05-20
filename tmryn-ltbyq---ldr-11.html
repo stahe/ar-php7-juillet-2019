@@ -1316,7 +1316,7 @@
 </ul>
 
 <p><strong>اختبار</strong></p>
-<p>أدخل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">http://localhost/php7/scripts-web/impots/version-11/impots-server.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">mari</bdi>%<bdi dir="ltr" class="odt-ltr-term">C3</bdi>%<bdi dir="ltr" class="odt-ltr-term">A9</bdi>=<bdi dir="ltr" class="odt-ltr-term">oui</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">enfants</bdi>=2&amp;<bdi dir="ltr" class="odt-ltr-term">salaire</bdi>=60000]</strong> مباشرة في متصفح <bdi dir="ltr" class="odt-ltr-term">Chrome.</bdi> يتم عرض النتيجة التالية <strong>[1]</strong> في متصفح <bdi dir="ltr" class="odt-ltr-term">Chrome:</bdi></p>
+<p>أدخل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">http://localhost/php7/scripts-web/impots/version-11/impots-server.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">mari</bdi>%<bdi dir="ltr" class="odt-ltr-term">C3</bdi>%<bdi dir="ltr" class="odt-ltr-term">A9</bdi>=oui&amp;<bdi dir="ltr" class="odt-ltr-term">enfants</bdi>=2&amp;<bdi dir="ltr" class="odt-ltr-term">salaire</bdi>=60000]</strong> مباشرة في متصفح <bdi dir="ltr" class="odt-ltr-term">Chrome.</bdi> يتم عرض النتيجة التالية <strong>[1]</strong> في متصفح <bdi dir="ltr" class="odt-ltr-term">Chrome:</bdi></p>
 <p><img src="images/100000000000067F0000020EF639D2C6.png" width="499" height="158" style="width:13.199cm;height:4.175cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000067F0000020EF639D2C6.png" /></p>
 <p><a id="toc42690101"></a>
 <a id="toc42690487"></a>
@@ -1331,7 +1331,7 @@
 <ul>
   <li>ملف التكوين <b>[<bdi dir="ltr" class="odt-ltr-term">config-client.json</bdi>]</b>؛
   </li>
-  <li>طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>الخاصة بالعميل؛
+  <li>طبقة<b> [dao] </b>الخاصة بالعميل؛
   </li>
 </ul>
 
@@ -1368,7 +1368,7 @@
 <a id="toc42690488"></a>
 <a id="toc42690874"></a>
 <a id="refheadingtoc185721971629160"></a></p>
-<h3 id="2221-dao">22.2.1. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="2221-dao">22.2.1. <span style="color: #4f81bd">طبقة [dao]</span></h3>
 <p>تم تعديل العميل <strong>[<bdi dir="ltr" class="odt-ltr-term">ClientDao.php</bdi>]</strong> (السطر 13 أعلاه) لمراعاة تنسيق الاستجابة الجديد. نستخدم <strong>[<bdi dir="ltr" class="odt-ltr-term">simpleXML</bdi>]</strong> لمعالجته:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -1437,7 +1437,7 @@
   </li>
   <li>السطر 53: يتم إرجاع مصفوفة النتائج على خطوتين:
     <ul>
-      <li>يتم تحويل الكائن<b> [$<bdi dir="ltr" class="odt-ltr-term">xml</bdi>] </b>من النوع <b>[\<bdi dir="ltr" class="odt-ltr-term">SimpleXMLElement</bdi>] </b>إلى <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
+      <li>يتم تحويل الكائن<b> [$xml] </b>من النوع <b>[\<bdi dir="ltr" class="odt-ltr-term">SimpleXMLElement</bdi>] </b>إلى <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
       </li>
       <li>نقوم بتحويل سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> الناتجة إلى مصفوفة ترابطية. هذه هي النتيجة التي سيتم إرجاعها؛
       </li>

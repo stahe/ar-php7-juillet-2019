@@ -1671,7 +1671,7 @@
     <ul>
       <li><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">filename</bdi>]، </span></b><span style="color: #000000">وهو اسم الملف النصي المستخدم لحفظ البيانات؛</span>
       </li>
-      <li><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">data</bdi>]</span></b><span style="color: #000000">، وهي السلسلة التي سيتم حفظها في الملف النصي. ستكون هذه السلسلة عبارة عن تسلسل من الأسطر تنتهي بحرف السطر الجديد \<bdi dir="ltr" class="odt-ltr-term">n</bdi>؛</span>
+      <li><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">data</bdi>]</span></b><span style="color: #000000">، وهي السلسلة التي سيتم حفظها في الملف النصي. ستكون هذه السلسلة عبارة عن تسلسل من الأسطر تنتهي بحرف السطر الجديد \n؛</span>
       </li>
     </ul>
   </li>
@@ -1701,7 +1701,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">ستقوم بربط كل عنصر من عناصر المصفوفة </span><strong><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">taxPayersData</bdi>] — </span></strong><span style="color: #000000">التي تم تحويلها إلى سلسلة باستخدام طريقة</span><strong><span style="color: #000000"> [__toString] </span></strong><span style="color: #000000">— بحرف السطر الجديد \<bdi dir="ltr" class="odt-ltr-term">n.</bdi> سيؤدي ذلك إلى سلسلة بالشكل التالي:</span></p>
-<p><strong><span style="color: #000000"><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">json1</bdi></mark></span></strong><strong><span style="color: #000000"><mark style="background-color: #00a933">\</mark></span></strong><strong><span style="color: #000000"><mark style="background-color: #e0c2cd"><bdi dir="ltr" class="odt-ltr-term">njson2</bdi></mark></span></strong><strong><span style="color: #000000"><mark style="background-color: #00a933">\</mark></span></strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">n</bdi>…</span></p>
+<p><strong><span style="color: #000000"><mark style="background-color: #ffff00"><bdi dir="ltr" class="odt-ltr-term">json1</bdi></mark></span></strong><strong><span style="color: #000000"><mark style="background-color: #00a933">\</mark></span></strong><strong><span style="color: #000000"><mark style="background-color: #e0c2cd"><bdi dir="ltr" class="odt-ltr-term">njson2</bdi></mark></span></strong><strong><span style="color: #000000"><mark style="background-color: #00a933">\</mark></span></strong><span style="color: #000000">n…</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><strong><span style="color: #000000">الخلاصة</span></strong></p>
 <p><span style="color: #000000">قامت السمة</span><strong><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">TraitDao</bdi>] </span></strong><span style="color: #000000">بتنفيذ طريقتين من واجهة</span><strong><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">InterfaceDao</bdi>]</span></strong><span style="color: #000000">، وهما </span><strong><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">getTaxPayersData</bdi>] </span></strong><span style="color: #000000">و</span><strong><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">saveResults</bdi>]</span></strong><span style="color: #000000">:</span></p>
@@ -1805,11 +1805,11 @@
 <ul>
   <li>السطر 9: يمكن لواجهة<b> [<bdi dir="ltr" class="odt-ltr-term">BusinessInterface</bdi>] </b>حساب مبلغ الضريبة لمكلف فردي شريطة تزويدها بالمعلومات التالية: الحالة الاجتماعية، عدد الأبناء، الراتب السنوي. لا تستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </b>طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</b>، لذا فهي لا ترمي استثناءات؛
   </li>
-  <li>السطر 9: يمكن لواجهة<b> [<bdi dir="ltr" class="odt-ltr-term">BusinessInterface</bdi>] </b>أيضًا حساب مبلغ الضريبة لمجموعة من دافعي الضرائب الذين تم جمع بياناتهم في ملف نصي باسم <b>[$<bdi dir="ltr" class="odt-ltr-term">taxPayersFileName</bdi>]</b>. وتقوم بكتابة النتائج في ملف نصي باسم <b>[$<bdi dir="ltr" class="odt-ltr-term">resultsFileName</bdi>]</b>. يجب أن تتواصل طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">executeBatchImpots</bdi>] </b>مع طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</b>، التي تتولى الوصول إلى نظام الملفات. قد تنتقل الاستثناءات بعد ذلك من طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</b>، والتي لن تلتقطها طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">executeBatchImpots</bdi>]</b>: ستسمح لها بالانتقال إلى البرنامج النصي الرئيسي. يتم تسجيل الأخطاء غير الفادحة في الملف النصي المسمى <b>[$<bdi dir="ltr" class="odt-ltr-term">errorsFileName</bdi>]</b>؛
+  <li>السطر 9: يمكن لواجهة<b> [<bdi dir="ltr" class="odt-ltr-term">BusinessInterface</bdi>] </b>أيضًا حساب مبلغ الضريبة لمجموعة من دافعي الضرائب الذين تم جمع بياناتهم في ملف نصي باسم <b>[$<bdi dir="ltr" class="odt-ltr-term">taxPayersFileName</bdi>]</b>. وتقوم بكتابة النتائج في ملف نصي باسم <b>[$<bdi dir="ltr" class="odt-ltr-term">resultsFileName</bdi>]</b>. يجب أن تتواصل طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">executeBatchImpots</bdi>] </b>مع طبقة<b> [dao]</b>، التي تتولى الوصول إلى نظام الملفات. قد تنتقل الاستثناءات بعد ذلك من طبقة<b> [dao]</b>، والتي لن تلتقطها طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">executeBatchImpots</bdi>]</b>: ستسمح لها بالانتقال إلى البرنامج النصي الرئيسي. يتم تسجيل الأخطاء غير الفادحة في الملف النصي المسمى <b>[$<bdi dir="ltr" class="odt-ltr-term">errorsFileName</bdi>]</b>؛
   </li>
   <li>السطر 9: طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </b>هي طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>بحتة. وهي لا تهتم بمصدر البيانات التي تستخدمها؛
   </li>
-  <li>السطر 12: ستتفاعل طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">executeBatchImpots</bdi>] </b>مع طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>لقراءة البيانات وكتابتها في ملفات نصية. وستستدعي طريقة الأعمال <b>[<bdi dir="ltr" class="odt-ltr-term">calculerImpot</bdi>] </b>بشكل متكرر؛
+  <li>السطر 12: ستتفاعل طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">executeBatchImpots</bdi>] </b>مع طبقة<b> [dao] </b>لقراءة البيانات وكتابتها في ملفات نصية. وستستدعي طريقة الأعمال <b>[<bdi dir="ltr" class="odt-ltr-term">calculerImpot</bdi>] </b>بشكل متكرر؛
   </li>
 </ul>
 <p><a id="refheadingtoc788632244347140"></a>
@@ -1899,21 +1899,21 @@
 <ul>
   <li><span style="color: #000000">السطر 6: تنفذ فئة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>] </span></b><span style="color: #000000">واجهة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">BusinessInterface</bdi>]</span></b><span style="color: #000000">، أي طريقتي </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </span></b><span style="color: #000000">(الأسطر 30–34) و</span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">executeBatchTaxes</bdi>] </span></b><span style="color: #000000">(الأسطر 66–70)؛</span>
   </li>
-  <li><span style="color: #000000">السطر 8: إشارة إلى طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></b><span style="color: #000000">. وهذا مطلوب حتى تعرف طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </span></b><span style="color: #000000">أين تبحث عندما تحتاج إلى بيانات خارجية. سيتم تهيئة هذه السمة عبر المُعيّن في الأسطر 14–17 أو عبر المُنشئ في الأسطر 19–26؛</span>
+  <li><span style="color: #000000">السطر 8: إشارة إلى طبقة</span><b><span style="color: #000000"> [dao]</span></b><span style="color: #000000">. وهذا مطلوب حتى تعرف طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </span></b><span style="color: #000000">أين تبحث عندما تحتاج إلى بيانات خارجية. سيتم تهيئة هذه السمة عبر المُعيّن في الأسطر 14–17 أو عبر المُنشئ في الأسطر 19–26؛</span>
   </li>
   <li><span style="color: #000000">السطر 10: الكائن من النوع </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">TaxAdminData</bdi>] </span></b><span style="color: #000000">الذي يغلف بيانات إدارة الضرائب. هذه البيانات مطلوبة من قبل طريقة الأعمال </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>]</span></b><span style="color: #000000">. يتم تهيئة هذه السمة عبر المنشئ في الأسطر 19–26؛</span>
   </li>
   <li><span style="color: #000000">الأسطر 19-26: يقوم المنشئ بتهيئة سمتي الفئة:</span>
     <ul>
-      <li><span style="color: #000000">يتم تهيئة السمة</span><b><span style="color: #000000"> [$<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </span></b><span style="color: #000000">بالمرجع الذي يتم تمريره كمعلمة إلى المنشئ. لاحظ أن نوع هذه المعلمة هو نوع واجهة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">InterfaceDao</bdi>]</span></b><span style="color: #000000">، مما يسمح بتهيئة فئة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] </span></b><span style="color: #000000">بواسطة أي فئة تنفذ هذه الواجهة؛</span>
+      <li><span style="color: #000000">يتم تهيئة السمة</span><b><span style="color: #000000"> [$dao] </span></b><span style="color: #000000">بالمرجع الذي يتم تمريره كمعلمة إلى المنشئ. لاحظ أن نوع هذه المعلمة هو نوع واجهة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">InterfaceDao</bdi>]</span></b><span style="color: #000000">، مما يسمح بتهيئة فئة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">Metier</bdi>] </span></b><span style="color: #000000">بواسطة أي فئة تنفذ هذه الواجهة؛</span>
       </li>
-      <li><span style="color: #000000">يتم تهيئة السمة </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </span></b><span style="color: #000000">عن طريق استدعاء طريقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">getTaxAdminData</bdi>] </span></b><span style="color: #000000">الخاصة بطبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></b><span style="color: #000000">؛</span>
+      <li><span style="color: #000000">يتم تهيئة السمة </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </span></b><span style="color: #000000">عن طريق استدعاء طريقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">getTaxAdminData</bdi>] </span></b><span style="color: #000000">الخاصة بطبقة</span><b><span style="color: #000000"> [dao]</span></b><span style="color: #000000">؛</span>
       </li>
     </ul>
   </li>
 </ul>
 
-<p><span style="color: #000000">نستنتج أنه عند تنفيذ الطريقتين </span><strong><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">calculateTaxes</bdi>] </span></strong><span style="color: #000000">و </span><strong><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">executeBatchTaxes</bdi>]</span></strong><span style="color: #000000">، يتم تهيئة كل من السمتين </span><strong><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </span></strong><span style="color: #000000">و </span><strong><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</span></strong><span style="color: #000000">.</span></p>
+<p><span style="color: #000000">نستنتج أنه عند تنفيذ الطريقتين </span><strong><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">calculateTaxes</bdi>] </span></strong><span style="color: #000000">و </span><strong><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">executeBatchTaxes</bdi>]</span></strong><span style="color: #000000">، يتم تهيئة كل من السمتين </span><strong><span style="color: #000000">[$dao] </span></strong><span style="color: #000000">و </span><strong><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</span></strong><span style="color: #000000">.</span></p>
 <p><span style="color: #000000">طريقة</span><strong><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">calculateTaxes</bdi>] </span></strong><span style="color: #000000">هي كما يلي:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> calculerImpot(<span style="font-weight:bold;color:#7f0055">string </span>$marié, <span style="font-weight:bold;color:#7f0055">int </span>$enfants, <span style="font-weight:bold;color:#7f0055">int </span>$salaire): <span style="font-weight:bold;color:#7f0055">array </span>{</span></span>
@@ -2006,9 +2006,9 @@
 
 <p><strong><span style="color: #000000">تعليقات</span></strong></p>
 <ul>
-  <li><span style="color: #000000">السطر 1: يجب أن تستدعي الطريقة بشكل متكرر الطريقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </span></b><span style="color: #000000">لكل دافع ضرائب موجود في الملف النصي المسمى </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">taxPayersFileName</bdi>]</span></b><span style="color: #000000">. ويجب أن تكتب النتائج في الملف النصي المسمى </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">resultsFileName</bdi>]</span></b><span style="color: #000000">. يتم تسجيل الأخطاء غير الفادحة التي تمت مواجهتها في الملف النصي المسمى </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">errorsFileName</bdi>]</span></b><span style="color: #000000">. لا ترمي الطريقة استثناءات بنفسها ولكنها تسمح بتنتقل تلك التي ترميها طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">السطر 1: يجب أن تستدعي الطريقة بشكل متكرر الطريقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </span></b><span style="color: #000000">لكل دافع ضرائب موجود في الملف النصي المسمى </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">taxPayersFileName</bdi>]</span></b><span style="color: #000000">. ويجب أن تكتب النتائج في الملف النصي المسمى </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">resultsFileName</bdi>]</span></b><span style="color: #000000">. يتم تسجيل الأخطاء غير الفادحة التي تمت مواجهتها في الملف النصي المسمى </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">errorsFileName</bdi>]</span></b><span style="color: #000000">. لا ترمي الطريقة استثناءات بنفسها ولكنها تسمح بتنتقل تلك التي ترميها طبقة</span><b><span style="color: #000000"> [dao]</span></b><span style="color: #000000">؛</span>
   </li>
-  <li><span style="color: #000000">السطر 4: يتم طلب بيانات دافعي الضرائب من طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></b><span style="color: #000000">. وهذا يعيد مصفوفة من العناصر من النوع </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">TaxPayerData</bdi>]</span></b><span style="color: #000000">، وهي فئة من السمات </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">married</bdi>، <bdi dir="ltr" class="odt-ltr-term">numberOfChildren</bdi>، <bdi dir="ltr" class="odt-ltr-term">salary</bdi>، <bdi dir="ltr" class="odt-ltr-term">amount</bdi>، <bdi dir="ltr" class="odt-ltr-term">deduction</bdi>، <bdi dir="ltr" class="odt-ltr-term">reduction</bdi>، <bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>، <bdi dir="ltr" class="odt-ltr-term">rate</bdi>] </span></b><span style="color: #000000">(انظر الفقرة </span><a href="#objetsechangesentre"><u><span style="color: #0563c1">المرتبطة</span></u></a><span style="color: #000000">). إذا حدث استثناء هنا، وبما أنه لم يتم التقاطه بواسطة </span><i><span style="color: #000000">كتلة </span></i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">catch</bdi>، فسوف ينتقل تلقائيًا إلى الكود المستدعي. وهذا يعني أنه في حالة حدوث استثناء، لا يتم تنفيذ السطر 6؛</span>
+  <li><span style="color: #000000">السطر 4: يتم طلب بيانات دافعي الضرائب من طبقة</span><b><span style="color: #000000"> [dao]</span></b><span style="color: #000000">. وهذا يعيد مصفوفة من العناصر من النوع </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">TaxPayerData</bdi>]</span></b><span style="color: #000000">، وهي فئة من السمات </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">married</bdi>، <bdi dir="ltr" class="odt-ltr-term">numberOfChildren</bdi>، <bdi dir="ltr" class="odt-ltr-term">salary</bdi>، <bdi dir="ltr" class="odt-ltr-term">amount</bdi>، <bdi dir="ltr" class="odt-ltr-term">deduction</bdi>، <bdi dir="ltr" class="odt-ltr-term">reduction</bdi>، <bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>، <bdi dir="ltr" class="odt-ltr-term">rate</bdi>] </span></b><span style="color: #000000">(انظر الفقرة </span><a href="#objetsechangesentre"><u><span style="color: #0563c1">المرتبطة</span></u></a><span style="color: #000000">). إذا حدث استثناء هنا، وبما أنه لم يتم التقاطه بواسطة </span><i><span style="color: #000000">كتلة </span></i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">catch</bdi>، فسوف ينتقل تلقائيًا إلى الكود المستدعي. وهذا يعني أنه في حالة حدوث استثناء، لا يتم تنفيذ السطر 6؛</span>
   </li>
   <li><span style="color: #000000">السطر 6: مصفوفة النتائج من النوع </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">TaxPayerData</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
@@ -2018,7 +2018,7 @@
   </li>
   <li><span style="color: #000000">السطر 21: تضاف النتيجة إلى مصفوفة النتائج </span><b><span style="color: #000000">[$<bdi dir="ltr" class="odt-ltr-term">results</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
-  <li><span style="color: #000000">السطر 24: بمجرد حساب الضريبة لجميع دافعي الضرائب، يتم حفظ النتائج في ملف نصي. وتقوم طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </span></b><span style="color: #000000">بتنفيذ هذه المهمة؛</span>
+  <li><span style="color: #000000">السطر 24: بمجرد حساب الضريبة لجميع دافعي الضرائب، يتم حفظ النتائج في ملف نصي. وتقوم طبقة</span><b><span style="color: #000000"> [dao] </span></b><span style="color: #000000">بتنفيذ هذه المهمة؛</span>
   </li>
 </ul>
 
@@ -2089,9 +2089,9 @@
   </li>
   <li><span style="color: #000000">السطر 27: اسم ملف <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> الذي يحتوي على بيانات سلطة الضرائب؛</span>
   </li>
-  <li><span style="color: #000000">السطر 31: إنشاء طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">السطر 31: إنشاء طبقة</span><b><span style="color: #000000"> [dao]</span></b><span style="color: #000000">؛</span>
   </li>
-  <li><span style="color: #000000">السطر 33: إنشاء طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </span></b><span style="color: #000000">استنادًا إلى طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </span></b><span style="color: #000000">هذه؛</span>
+  <li><span style="color: #000000">السطر 33: إنشاء طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </span></b><span style="color: #000000">استنادًا إلى طبقة</span><b><span style="color: #000000"> [dao] </span></b><span style="color: #000000">هذه؛</span>
   </li>
   <li><span style="color: #000000">السطر 35: تنفيذ طريقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">executeBatchImpots</bdi>] </span></b><span style="color: #000000">لطبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
@@ -2167,7 +2167,7 @@
 <ul>
   <li><span style="color: #000000">السطر 1: تحذيرات من مترجم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>؛</span>
   </li>
-  <li><span style="color: #000000">السطر 2: رسالة خطأ من الاستثناء الذي أطلقته طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">السطر 2: رسالة خطأ من الاستثناء الذي أطلقته طبقة</span><b><span style="color: #000000"> [dao]</span></b><span style="color: #000000">؛</span>
   </li>
 </ul>
 
@@ -2251,7 +2251,7 @@
 <a id="toc42690316"></a>
 <a id="toc42690702"></a>
 <a id="testsdela"></a></p>
-<h3 id="1173-dao">11.7.3. <span style="color: #4f81bd">اختبارات لطبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="1173-dao">11.7.3. <span style="color: #4f81bd">اختبارات لطبقة [dao]</span></h3>
 <p><img src="images/10000000000001D00000034E225C8212.png" width="163" height="296" style="width:4.3cm;height:7.84cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D00000034E225C8212.png" /></p>
 <ul>
   <li><span style="color: #000000">سنقوم بإنشاء جميع اختباراتنا في المجلد</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">unit</bdi>] [1]</span></b><span style="color: #000000">؛</span>
@@ -2409,11 +2409,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">exit;</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">لاختبار طبقة</span><strong><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></strong><span style="color: #000000">، في فئة الاختبار:</span></p>
+<p><span style="color: #000000">لاختبار طبقة</span><strong><span style="color: #000000"> [dao]</span></strong><span style="color: #000000">، في فئة الاختبار:</span></p>
 <ul>
   <li><span style="color: #000000">نستخدم البيئة من الأسطر 13–27 من </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
-  <li><span style="color: #000000">في منشئ فئة الاختبار، نقوم بإنشاء مثيل لطبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </span></b><span style="color: #000000">كما في السطر 31؛</span>
+  <li><span style="color: #000000">في منشئ فئة الاختبار، نقوم بإنشاء مثيل لطبقة</span><b><span style="color: #000000"> [dao] </span></b><span style="color: #000000">كما في السطر 31؛</span>
   </li>
   <li><span style="color: #000000">نكتب طرق الاختبار؛</span>
   </li>
@@ -2485,7 +2485,7 @@
 <ul>
   <li><span style="color: #000000">الأسطر 10–25: تحميل البيئة المطلوبة للاختبار وتعريف الثوابت؛</span>
   </li>
-  <li><span style="color: #000000">الأسطر 31–36: إنشاء طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </span></b><span style="color: #000000">(السطر 34)، يليها تهيئة السمة</span><b><span style="color: #000000"> [$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </span></b><span style="color: #000000">(السطر 29). تحتوي هذه السمة على بيانات إدارة الضرائب؛</span>
+  <li><span style="color: #000000">الأسطر 31–36: إنشاء طبقة</span><b><span style="color: #000000"> [dao] </span></b><span style="color: #000000">(السطر 34)، يليها تهيئة السمة</span><b><span style="color: #000000"> [$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </span></b><span style="color: #000000">(السطر 29). تحتوي هذه السمة على بيانات إدارة الضرائب؛</span>
   </li>
   <li><span style="color: #000000">الأسطر 39–55: طريقة الاختبار الوحيدة. وتتكون من التحقق من أن محتوى السمة</span><b><span style="color: #000000"> [$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </span></b><span style="color: #000000">يطابق ما هو متوقع؛</span>
   </li>
@@ -2671,9 +2671,9 @@
 
 <p><strong><span style="color: #000000">تعليقات</span></strong></p>
 <ul>
-  <li><span style="color: #000000">الأسطر 10–25: تحميل الملفات التي تحدد بيئة الاختبار. وهذا مماثل لما يحدث في طبقة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">الأسطر 10–25: تحميل الملفات التي تحدد بيئة الاختبار. وهذا مماثل لما يحدث في طبقة</span><b><span style="color: #000000"> [dao]</span></b><span style="color: #000000">؛</span>
   </li>
-  <li><span style="color: #000000">الأسطر 31–37: إنشاء مثيلات لطبقتي </span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </span></b><span style="color: #000000">و</span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">الأسطر 31–37: إنشاء مثيلات لطبقتي </span><b><span style="color: #000000">[dao] </span></b><span style="color: #000000">و</span><b><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
   <li><span style="color: #000000">الأسطر 40–47: اختبار حساب الضريبة؛</span>
   </li>
@@ -2696,7 +2696,7 @@
 <a id="refheadingtoc185653971629160"></a>
 <a id="toc42689932"></a></p>
 <h3 id="1175">11.7.5. <span style="color: #4f81bd">اختبارات الإصدارات المستقبلية</span></h3>
-<p><span style="color: #000000">من الآن فصاعدًا، ستكون الاختبارات الخاصة بطبقتي </span><strong><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </span></strong><span style="color: #000000">و</span><strong><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </span></strong><span style="color: #000000">مطابقة لتلك الموجودة في الإصدار 04. ولن يتغير سوى بيئة الاختبار. ولذلك، سنقدم فقط هذه البيئة ونتائج الاختبار.</span></p>
+<p><span style="color: #000000">من الآن فصاعدًا، ستكون الاختبارات الخاصة بطبقتي </span><strong><span style="color: #000000">[dao] </span></strong><span style="color: #000000">و</span><strong><span style="color: #000000">[<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </span></strong><span style="color: #000000">مطابقة لتلك الموجودة في الإصدار 04. ولن يتغير سوى بيئة الاختبار. ولذلك، سنقدم فقط هذه البيئة ونتائج الاختبار.</span></p>
 
 
 

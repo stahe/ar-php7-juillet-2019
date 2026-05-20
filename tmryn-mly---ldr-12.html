@@ -2054,7 +2054,7 @@
   </li>
 </ul>
 
-<p>ستكون عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوبة على النحو <em>التالي: <bdi dir="ltr" class="odt-ltr-term">http://machine:port/contexte/</bdi>….?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">anAction</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">v1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">v2</bdi>&amp;…</em> سيستخدم <strong>[المحرك الرئيسي]</strong> ملف تكوين لـ&quot;توجيه&quot; الطلب إلى المحرك الصحيح والإجراء الصحيح داخل ذلك المحرك. للقيام بذلك، سيستخدم حقل <strong>[<bdi dir="ltr" class="odt-ltr-term">action</bdi>]</strong> في عنوان <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> يتكون باقي عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">v1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">v2</bdi>&amp;…]</strong> من معلمات اختيارية سيتم تمريرها إلى الإجراء. الحرف <strong><bdi dir="ltr" class="odt-ltr-term">C</bdi></strong> في <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> هنا هو السلسلة <strong>[وحدة التحكم الرئيسية، وحدة التحكم / الإجراء]</strong>. إذا لم تتمكن أي وحدة تحكم من معالجة الإجراء المطلوب، فسيرد خادم الويب بأن عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب لم يتم العثور عليه.</p>
+<p>ستكون عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوبة على النحو <em>التالي: <bdi dir="ltr" class="odt-ltr-term">http://machine:port/contexte/</bdi>….?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">anAction</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=v1&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=v2&amp;…</em> سيستخدم <strong>[المحرك الرئيسي]</strong> ملف تكوين لـ&quot;توجيه&quot; الطلب إلى المحرك الصحيح والإجراء الصحيح داخل ذلك المحرك. للقيام بذلك، سيستخدم حقل <strong>[<bdi dir="ltr" class="odt-ltr-term">action</bdi>]</strong> في عنوان <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> يتكون باقي عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=v1&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=v2&amp;…]</strong> من معلمات اختيارية سيتم تمريرها إلى الإجراء. الحرف <strong><bdi dir="ltr" class="odt-ltr-term">C</bdi></strong> في <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> هنا هو السلسلة <strong>[وحدة التحكم الرئيسية، وحدة التحكم / الإجراء]</strong>. إذا لم تتمكن أي وحدة تحكم من معالجة الإجراء المطلوب، فسيرد خادم الويب بأن عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب لم يتم العثور عليه.</p>
 <ul>
   <li>2 - المعالجة
     <ul>
@@ -2062,7 +2062,7 @@
         <ul>
           <li>مسار <b>[/<bdi dir="ltr" class="odt-ltr-term">param1/param2/</bdi>…] </b>عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>،
           </li>
-          <li>معلمات عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">v1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">v2</bdi>]</b><i>،</i>
+          <li>معلمات عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=v1&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=v2]</b><i>،</i>
           </li>
           <li>المعلمات التي أرسلها المتصفح مع طلبه؛
           </li>
@@ -2178,7 +2178,7 @@
 <a id="toc42690879"></a>
 <a id="refheadingtoc1446233519745392"></a></p>
 <h2 id="233">23.3. <span style="color: #4f81bd"><span style="color: #4f81bd">إجراءات التطبيق</span></span></h2>
-<p>يرسل العميل الإجراء المطلوب تنفيذه إلى خادم الويب كمعلمة <strong>[<bdi dir="ltr" class="odt-ltr-term">action</bdi>]</strong> في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[/<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">xxx</bdi>]</strong>. يتم سرد الإجراءات المسموح بها في ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">config.json</bdi>]</strong> الذي يقوم بتكوين وحدة التحكم الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>]</strong>:</p>
+<p>يرسل العميل الإجراء المطلوب تنفيذه إلى خادم الويب كمعلمة <strong>[<bdi dir="ltr" class="odt-ltr-term">action</bdi>]</strong> في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[/<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=xxx]</strong>. يتم سرد الإجراءات المسموح بها في ملف <strong>[<bdi dir="ltr" class="odt-ltr-term">config.json</bdi>]</strong> الذي يقوم بتكوين وحدة التحكم الرئيسية <strong>[<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&quot;actions&quot;<span style="color:#000000">:</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#000000">{</span></span></span>
@@ -2492,7 +2492,7 @@
 <p><img src="images/10000000000007D300000260F8FE6911.png" width="601" height="182" style="width:15.9cm;height:4.826cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007D300000260F8FE6911.png" /></p>
 <p><img src="images/10000000000001AD000000E3C56E9C59.png" width="150" height="79" style="width:3.971cm;height:2.101cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AD000000E3C56E9C59.png" /></p>
 <p>يتم تجميع الفئات والواجهات الخاصة بطبقتي <strong>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</strong> و <strong>[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</strong> في مجلد <strong>[<bdi dir="ltr" class="odt-ltr-term">Model</bdi>]</strong>. وقد تم تعريفها جميعًا واستخدامها في الإصدارات السابقة:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">ExceptionImports</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الفئة الخاصة بالاستثناءات التي تطلقها طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</b>. تم تعريفها في القسم <a href="#lexceptionexceptionimpots"><u><span style="color: #0563c1">المرتبط</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">InterfaceServerDao</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">واجهة تم تنفيذها بواسطة طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>للخادم. تم تعريفها في القسم <a href="#lacouchedao"><u><span style="color: #0563c1">المرتبط</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">ServerDao</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تنفيذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">InterfaceServerDao</bdi>]</b>. تنفذ طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>للخادم. محددة في قسم <a href="#lacouchedao"><u><span style="color: #0563c1">الرابط</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">ServerDaoWithSession</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تنفيذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">InterfaceServerDao</bdi>]</b>. تنفذ طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>للخادم. محددة في قسم &quot;<a href="#lacouchedao2"><u><span style="color: #0563c1">الرابط&quot;</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">InterfaceServerMetier</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">واجهة يتم تنفيذها بواسطة طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>الخاصة بالخادم. محددة في قسم <a href="#lacouchemetier1"><u><span style="color: #0563c1">الارتباط</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">ServerBusiness</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تنفيذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">InterfaceMetier</bdi>]</b>. ينفذ طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>للخادم. محدد في قسم <a href="#lacouchemetier1"><u><span style="color: #0563c1">&quot;<bdi dir="ltr" class="odt-ltr-term">link</bdi>&quot;</span></u></a>.</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">ExceptionImports</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الفئة الخاصة بالاستثناءات التي تطلقها طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</b>. تم تعريفها في القسم <a href="#lexceptionexceptionimpots"><u><span style="color: #0563c1">المرتبط</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">InterfaceServerDao</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">واجهة تم تنفيذها بواسطة طبقة<b> [dao] </b>للخادم. تم تعريفها في القسم <a href="#lacouchedao"><u><span style="color: #0563c1">المرتبط</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">ServerDao</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تنفيذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">InterfaceServerDao</bdi>]</b>. تنفذ طبقة<b> [dao] </b>للخادم. محددة في قسم <a href="#lacouchedao"><u><span style="color: #0563c1">الرابط</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">ServerDaoWithSession</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تنفيذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">InterfaceServerDao</bdi>]</b>. تنفذ طبقة<b> [dao] </b>للخادم. محددة في قسم &quot;<a href="#lacouchedao2"><u><span style="color: #0563c1">الرابط&quot;</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">InterfaceServerMetier</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">واجهة يتم تنفيذها بواسطة طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>الخاصة بالخادم. محددة في قسم <a href="#lacouchemetier1"><u><span style="color: #0563c1">الارتباط</span></u></a>.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">ServerBusiness</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تنفيذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">InterfaceMetier</bdi>]</b>. ينفذ طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>للخادم. محدد في قسم <a href="#lacouchemetier1"><u><span style="color: #0563c1">&quot;<bdi dir="ltr" class="odt-ltr-term">link</bdi>&quot;</span></u></a>.</div></td></tr></table>
 
 <p>يستخدم التطبيق الذي يجري تطويره حاليًا بشكل مكثف العناصر التي تم عرضها واستخدامها بالفعل:</p>
 <ul>
@@ -3404,7 +3404,7 @@
       </li>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">error-102</bdi>]</b>: الحالة التي يكون فيها المعلمة<b> [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] </b>موجودة في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> ولكن لم يتم التعرف عليها؛
       </li>
-      <li><b>[<bdi dir="ltr" class="odt-ltr-term">error-103</bdi>]</b>: الحالة التي يكون فيها المعلمة<b> [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] </b>موجودة في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> ومُعترف بها، ولكن نوع الاستجابة المتوقع <b>[<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>] </b>لم يتم تعريفه؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">error-103</bdi>]</b>: الحالة التي يكون فيها المعلمة<b> [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] </b>موجودة في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> ومُعترف بها، ولكن نوع الاستجابة المتوقع <b>[<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>] </b>لم يتم تعريفه؛
       </li>
     </ul>
   </li>
@@ -3431,7 +3431,7 @@
 <p><img src="images/100000000000066C000003DFDBE9BCF8.png" width="493" height="297" style="width:13.049cm;height:7.865cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000066C000003DFDBE9BCF8.png" /></p>
 <p>أعلاه:</p>
 <ul>
-  <li>في <b>[14-19]</b>، إجراء تم التعرف عليه ولكن لم يتم تحديد النوع (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) بعد؛
+  <li>في <b>[14-19]</b>، إجراء تم التعرف عليه ولكن لم يتم تحديد النوع (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) بعد؛
   </li>
   <li>في <b>[20-23]</b>، استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> من الخادم؛
   </li>
@@ -3487,9 +3487,9 @@
   </li>
   <li>السطر 21: تُرجع الطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">execute</bdi>] </b>المصفوفة <b><span style="color: #808080">[$<bdi dir="ltr" class="odt-ltr-term">statusCode</bdi>, $<bdi dir="ltr" class="odt-ltr-term">status</bdi>, $<bdi dir="ltr" class="odt-ltr-term">content</bdi>, $<bdi dir="ltr" class="odt-ltr-term">headers</bdi>]</span></b>
     <ul>
-      <li><b>[<bdi dir="ltr" class="odt-ltr-term">int</bdi> $<bdi dir="ltr" class="odt-ltr-term">statusCode</bdi>]</b>: رمز حالة استجابة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>؛
+      <li><b>[int $<bdi dir="ltr" class="odt-ltr-term">statusCode</bdi>]</b>: رمز حالة استجابة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>؛
       </li>
-      <li><b>[<bdi dir="ltr" class="odt-ltr-term">int</bdi> $<bdi dir="ltr" class="odt-ltr-term">state</bdi>]</b>: حالة التطبيق في نهاية التنفيذ؛
+      <li><b>[int $<bdi dir="ltr" class="odt-ltr-term">state</bdi>]</b>: حالة التطبيق في نهاية التنفيذ؛
       </li>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">array</bdi> $<bdi dir="ltr" class="odt-ltr-term">content</bdi>]</b>: مصفوفة ترابطية <b>[<bdi dir="ltr" class="odt-ltr-term">response</bdi>=&gt;<bdi dir="ltr" class="odt-ltr-term">result</bdi>] </b>حيث <b>[<bdi dir="ltr" class="odt-ltr-term">result</bdi>] </b>من أي نوع: هذه هي النتيجة التي أنتجتها وحدة التحكم وسيتم إرسالها إلى العميل بمجرد تسلسلها كسلسلة؛
       </li>
@@ -3513,7 +3513,7 @@
 <a id="refheadingtoc1446533519745392"></a></p>
 <h2 id="2311">23.11. <span style="color: #4f81bd">الإجراءات</span></h2>
 <p>سنستعرض الآن الإجراءات المختلفة الممكنة لخدمة الويب:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الإجراء</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>سياق التنفيذ</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">init-session</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُستخدم لتعيين نوع (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) الاستجابات المطلوبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi></b></div><div style="margin:0 0 0.5em 0">يمكن إرساله في أي وقت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">authenticate-user</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوافق على تسجيل دخول المستخدم أو يرفضه</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">POST main.php</bdi>?</b><b><bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">authenticate-user</bdi></b></div><div style="margin:0 0 0.5em 0">يجب أن يحتوي الطلب على معلمتين مرسلتين <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>, <bdi dir="ltr" class="odt-ltr-term">password</bdi>]</b></div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>حساب الضريبة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يقوم بمحاكاة حساب الضريبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">POST</bdi> </b>إلى <b><bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calculate-tax</bdi></b></div><div style="margin:0 0 0.5em 0">يجب أن يحتوي الطلب على ثلاثة معلمات مرسلة <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>، <bdi dir="ltr" class="odt-ltr-term">children</bdi>، <bdi dir="ltr" class="odt-ltr-term">salary</bdi>]</b></div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم مصادقة المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب لعرض قائمة المحاكاة التي تم إجراؤها منذ بداية الجلسة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></b></div><div style="margin:0 0 0.5em 0">لا يقبل الطلب أي معلمات أخرى</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم توثيق المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">delete-simulation</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحذف محاكاة من قائمة المحاكاة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">number</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi></b></div><div style="margin:0 0 0.5em 0">لا يقبل الطلب أي معلمات أخرى</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم توثيق المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>إنهاء الجلسة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينهي جلسة المحاكاة.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">من الناحية الفنية، يتم حذف جلسة الويب القديمة وإنشاء جلسة جديدة</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم توثيق المستخدم</div></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الإجراء</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>الدور</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>سياق التنفيذ</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">init-session</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يُستخدم لتعيين نوع (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) الاستجابات المطلوبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=x</b></div><div style="margin:0 0 0.5em 0">يمكن إرساله في أي وقت</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">authenticate-user</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يوافق على تسجيل دخول المستخدم أو يرفضه</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">POST main.php</bdi>?</b><b><bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">authenticate-user</bdi></b></div><div style="margin:0 0 0.5em 0">يجب أن يحتوي الطلب على معلمتين مرسلتين <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>, <bdi dir="ltr" class="odt-ltr-term">password</bdi>]</b></div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>حساب الضريبة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يقوم بمحاكاة حساب الضريبة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">POST</bdi> </b>إلى <b><bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calculate-tax</bdi></b></div><div style="margin:0 0 0.5em 0">يجب أن يحتوي الطلب على ثلاثة معلمات مرسلة <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>، <bdi dir="ltr" class="odt-ltr-term">children</bdi>، <bdi dir="ltr" class="odt-ltr-term">salary</bdi>]</b></div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم مصادقة المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب لعرض قائمة المحاكاة التي تم إجراؤها منذ بداية الجلسة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi></b></div><div style="margin:0 0 0.5em 0">لا يقبل الطلب أي معلمات أخرى</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم توثيق المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><bdi dir="ltr" class="odt-ltr-term">delete-simulation</bdi></b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يحذف محاكاة من قائمة المحاكاة</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طلب <b><bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">list-simulations</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">number</bdi>=x</b></div><div style="margin:0 0 0.5em 0">لا يقبل الطلب أي معلمات أخرى</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم توثيق المستخدم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>إنهاء الجلسة</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينهي جلسة المحاكاة.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">من الناحية الفنية، يتم حذف جلسة الويب القديمة وإنشاء جلسة جديدة</div><div style="margin:0 0 0.5em 0">لا يمكن إصداره إلا إذا كان نوع الجلسة (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) معروفًا وتم توثيق المستخدم</div></td></tr></table>
 
 <p>تعمل جميع وحدات التحكم الثانوية بنفس الطريقة:</p>
 <ul>
@@ -3607,7 +3607,7 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>نتوقع طلب<b> [<bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=<bdi dir="ltr" class="odt-ltr-term">xxx</bdi>]</b>
+  <li>نتوقع طلب<b> [<bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=xxx]</b>
   </li>
   <li>السطور 25-26: نتحقق من أن الطلب هو طلب <bdi dir="ltr" class="odt-ltr-term">GET</bdi> مع معلمتين في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>؛
   </li>
@@ -3617,7 +3617,7 @@
   </li>
   <li>السطر 40: تسجيل نوع الجلسة؛
   </li>
-  <li>الأسطر 43–47: نتحقق من أن نوع الجلسة هو أحد المصطلحات (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>).  إذا لم يكن كذلك، نسجل الخطأ؛
+  <li>الأسطر 43–47: نتحقق من أن نوع الجلسة هو أحد المصطلحات (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>).  إذا لم يكن كذلك، نسجل الخطأ؛
   </li>
   <li>الأسطر 49-51: في حالة حدوث خطأ، يتم إرسال نتيجة <b>[$<bdi dir="ltr" class="odt-ltr-term">statusCode</bdi>، $<bdi dir="ltr" class="odt-ltr-term">status</bdi>، $<bdi dir="ltr" class="odt-ltr-term">content</bdi>، $<bdi dir="ltr" class="odt-ltr-term">headers</bdi>] </b>إلى وحدة التحكم الرئيسية؛
   </li>
@@ -3674,7 +3674,7 @@
 <ul>
   <li>السطر 12: يسترد وحدة التحكم الرئيسية النتيجة من وحدة التحكم الثانوية؛
   </li>
-  <li>السطران 35-36: بعد إجراء بعض الفحوصات، ترسل الاستجابة عن طريق إنشاء مثيل لإحدى الفئات <b>[<bdi dir="ltr" class="odt-ltr-term">JsonResponse</bdi>، <bdi dir="ltr" class="odt-ltr-term">XmlResponse</bdi>، <bdi dir="ltr" class="odt-ltr-term">HtmlResponse</bdi>] </b>اعتمادًا على نوع (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) الجلسة الحالية؛
+  <li>السطران 35-36: بعد إجراء بعض الفحوصات، ترسل الاستجابة عن طريق إنشاء مثيل لإحدى الفئات <b>[<bdi dir="ltr" class="odt-ltr-term">JsonResponse</bdi>، <bdi dir="ltr" class="odt-ltr-term">XmlResponse</bdi>، <bdi dir="ltr" class="odt-ltr-term">HtmlResponse</bdi>] </b>اعتمادًا على نوع (<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>) الجلسة الحالية؛
   </li>
 </ul>
 
@@ -4044,7 +4044,7 @@
 <ul>
   <li>الطلب المتوقع هو <b>[<bdi dir="ltr" class="odt-ltr-term">POST main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calculate-tax</bdi>] </b>مع ثلاثة معلمات مرسلة <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>, <bdi dir="ltr" class="odt-ltr-term">children</bdi>, <bdi dir="ltr" class="odt-ltr-term">salary</bdi>]</b>:
     <ul>
-      <li>يجب أن تكون <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>] </b>إما <b>[<bdi dir="ltr" class="odt-ltr-term">yes</bdi>] أو [<bdi dir="ltr" class="odt-ltr-term">no</bdi>]</b>؛
+      <li>يجب أن تكون <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>] </b>إما <b>[yes] أو [no]</b>؛
       </li>
       <li>يجب أن تكون <b>[<bdi dir="ltr" class="odt-ltr-term">children</bdi>، <bdi dir="ltr" class="odt-ltr-term">salary</bdi>] </b>أعدادًا صحيحة موجبة أو صفرًا؛
       </li>
@@ -4058,7 +4058,7 @@
   </li>
   <li>الأسطر 39-41: نتحقق من وجود المعلمة<b> [متزوج]</b>. إذا لم تكن موجودة، يتم تسجيل الخطأ؛
   </li>
-  <li>الأسطر 43-49: نتحقق من أن <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>] </b>لها قيمة في <b>[<bdi dir="ltr" class="odt-ltr-term">yes</bdi>، <bdi dir="ltr" class="odt-ltr-term">no</bdi>]</b>. إذا لم يكن الأمر كذلك، يتم تسجيل الخطأ؛
+  <li>الأسطر 43-49: نتحقق من أن <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>] </b>لها قيمة في <b>[yes، no]</b>. إذا لم يكن الأمر كذلك، يتم تسجيل الخطأ؛
   </li>
   <li>الأسطر 51-54: نتحقق من وجود المعلمة<b> [<bdi dir="ltr" class="odt-ltr-term">children</bdi>]</b>. إذا لم تكن موجودة، يتم تسجيل خطأ؛
   </li>
@@ -4070,7 +4070,7 @@
   </li>
   <li>الأسطر 75-78: إذا لم يكن المصفوف<b> [$<bdi dir="ltr" class="odt-ltr-term">errors</bdi>] </b>فارغًا، فهذا يعني حدوث أخطاء. نقوم بتضمين مصفوفة الأخطاء في الاستجابة وإرجاع النتيجة إلى وحدة التحكم الرئيسية؛
   </li>
-  <li>السطر 80: لدينا معلمات صالحة. يمكننا حساب الضريبة. للقيام بذلك، نحتاج إلى إنشاء طبقات <b>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>التي تعرف كيفية إجراء هذا الحساب؛
+  <li>السطر 80: لدينا معلمات صالحة. يمكننا حساب الضريبة. للقيام بذلك، نحتاج إلى إنشاء طبقات <b>[dao] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>التي تعرف كيفية إجراء هذا الحساب؛
   </li>
   <li>الأسطر 82-94: نقوم بإنشاء عميل<b> [<bdi dir="ltr" class="odt-ltr-term">Redis</bdi>]</b>؛
   </li>
@@ -4078,11 +4078,11 @@
   </li>
   <li>السطر 98: نتحقق مما إذا كان خادم<b> [<bdi dir="ltr" class="odt-ltr-term">Redis</bdi>] </b>يحتوي على المفتاح <b>[<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</b>. يمثل هذا المفتاح بيانات إدارة الضرائب. إذا لم يكن المفتاح موجودًا، فيجب استرداد بيانات الضرائب من قاعدة البيانات؛
   </li>
-  <li>السطر 101: إنشاء طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>عندما يتعين استرداد البيانات الضريبية من قاعدة البيانات. تم وصف فئة<b> [<bdi dir="ltr" class="odt-ltr-term">ServerDaoWithRedis</bdi>] </b>في القسم <a href="#codeduserveur"><u><span style="color: #0563c1">المرتبط</span></u></a>؛
+  <li>السطر 101: إنشاء طبقة<b> [dao] </b>عندما يتعين استرداد البيانات الضريبية من قاعدة البيانات. تم وصف فئة<b> [<bdi dir="ltr" class="odt-ltr-term">ServerDaoWithRedis</bdi>] </b>في القسم <a href="#codeduserveur"><u><span style="color: #0563c1">المرتبط</span></u></a>؛
   </li>
   <li>السطر 103: يتم تخزين البيانات المسترجعة من قاعدة البيانات في <b>[<bdi dir="ltr" class="odt-ltr-term">Redis</bdi>] </b>باستخدام المفتاح <b>[<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</b>؛
   </li>
-  <li>الأسطر 104-110: إذا فشل استعلام قاعدة البيانات، يتم تسجيل الخطأ الذي أرجعته طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>وإدراجه في النتيجة المرسلة إلى وحدة التحكم الرئيسية؛
+  <li>الأسطر 104-110: إذا فشل استعلام قاعدة البيانات، يتم تسجيل الخطأ الذي أرجعته طبقة<b> [dao] </b>وإدراجه في النتيجة المرسلة إلى وحدة التحكم الرئيسية؛
   </li>
   <li>السطر 109: يتم ترميز رسالة الخطأ التي ترجعها طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">PDO</bdi>] </b>بترميز <b>[<bdi dir="ltr" class="odt-ltr-term">iso-8859-1</bdi>]</b>. يتم ترميزها بترميز <b>[<bdi dir="ltr" class="odt-ltr-term">utf-8</bdi>]</b>؛
   </li>
@@ -4325,7 +4325,7 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li><bdi dir="ltr" class="odt-ltr-term">request</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">delete-simulation</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">number</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi>]</b>;
+  <li><bdi dir="ltr" class="odt-ltr-term">request</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">GET main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">delete-simulation</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">number</bdi>=x]</b>;
   </li>
   <li>الأسطر 24–30: نتحقق من وجود طلب <bdi dir="ltr" class="odt-ltr-term">GET</bdi> مع معلمتين؛
   </li>
@@ -4476,7 +4476,7 @@
   </li>
   <li>السطر 38: إبطال صلاحية الجلسة الحالية. يؤدي هذا إلى حذف البيانات المخزنة فيها وبدء جلسة جديدة؛
   </li>
-  <li>السطر 36: قبل إنهاء الجلسة، نقوم بتخزين نوعها <b>[<bdi dir="ltr" class="odt-ltr-term">json</bdi>، <bdi dir="ltr" class="odt-ltr-term">xml</bdi>، <bdi dir="ltr" class="odt-ltr-term">html</bdi>]</b>؛
+  <li>السطر 36: قبل إنهاء الجلسة، نقوم بتخزين نوعها <b>[<bdi dir="ltr" class="odt-ltr-term">json</bdi>، xml، <bdi dir="ltr" class="odt-ltr-term">html</bdi>]</b>؛
   </li>
   <li>السطر 40: يتم تعيين نوع الجلسة السابقة في الجلسة الجديدة. وأخيرًا، ننتقل إلى جلسة جديدة تحتوي على المفتاح الوحيد <b>[<bdi dir="ltr" class="odt-ltr-term">type</bdi>]</b>؛
   </li>
@@ -4999,11 +4999,11 @@
   </li>
   <li>يستدعي هذا الكود بعض التوضيح. لنفترض أن العرض المحدد هو <b>[<bdi dir="ltr" class="odt-ltr-term">vue-authentification.php</bdi>]، </b>الذي يعرض نموذج مصادقة ويب:
     <ul>
-      <li>السطر 69: تبدأ الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">ob_start</bdi>] </b>ما تسميه الوثائق مخزن الإخراج المؤقت. يتم وضع كل ما يتم كتابته بواسطة <bdi dir="ltr" class="odt-ltr-term">print</bdi> و <bdi dir="ltr" class="odt-ltr-term">require</bdi> والعمليات المماثلة — والتي عادةً ما يتم إرسالها على الفور إلى العميل — في مخزن الإخراج المؤقت (<bdi dir="ltr" class="odt-ltr-term">ob</bdi>=<bdi dir="ltr" class="odt-ltr-term">output buffer</bdi>) دون إرسالها إلى العميل؛
+      <li>السطر 69: تبدأ الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">ob_start</bdi>] </b>ما تسميه الوثائق مخزن الإخراج المؤقت. يتم وضع كل ما يتم كتابته بواسطة <bdi dir="ltr" class="odt-ltr-term">print</bdi> و <bdi dir="ltr" class="odt-ltr-term">require</bdi> والعمليات المماثلة — والتي عادةً ما يتم إرسالها على الفور إلى العميل — في مخزن الإخراج المؤقت (ob=<bdi dir="ltr" class="odt-ltr-term">output buffer</bdi>) دون إرسالها إلى العميل؛
       </li>
       <li>السطر 70: يتم تحميل العرض <b>[<bdi dir="ltr" class="odt-ltr-term">authentication-view.php</bdi>]</b>؛ وهو عرض <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> ديناميكي يحتوي على كود <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> ثم يحدث أمران:
         <ul>
-          <li>يتم تحميل كود <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> في عرض<b> [<bdi dir="ltr" class="odt-ltr-term">vue-authentification</bdi></b>.<b><bdi dir="ltr" class="odt-ltr-term">php</bdi>] </b>وتفسيره. والنتيجة هي عرض سنسميه <b>[<bdi dir="ltr" class="odt-ltr-term">vue-authentification.html</bdi>]</b>، والذي يحتوي فقط على كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> — وربما <bdi dir="ltr" class="odt-ltr-term">CSS</bdi> و <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> — ولكن لا يحتوي على <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>؛
+          <li>يتم تحميل كود <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> في عرض<b> [<bdi dir="ltr" class="odt-ltr-term">vue-authentification</bdi></b>.<b>php] </b>وتفسيره. والنتيجة هي عرض سنسميه <b>[<bdi dir="ltr" class="odt-ltr-term">vue-authentification.html</bdi>]</b>، والذي يحتوي فقط على كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> — وربما <bdi dir="ltr" class="odt-ltr-term">CSS</bdi> و <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> — ولكن لا يحتوي على <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>؛
           </li>
           <li>يتم إرسال كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> هذا عادةً إلى العميل. وهذا هو الحال فعليًا لأي نص يصادفه مترجم <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> ولا يكون كود <bdi dir="ltr" class="odt-ltr-term">PHP.</bdi> وبسبب التخزين المؤقت للإخراج، يتم وضع كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> هذا في المخزن المؤقت للإخراج دون إرساله إلى العميل؛
           </li>
@@ -5173,17 +5173,17 @@
 <ul>
   <li>الأسطر 17–43: يتم تضمين نص الصفحة الإلكترونية بين علامتي<b> <bdi dir="ltr" class="odt-ltr-term">body</bdi> و/<bdi dir="ltr" class="odt-ltr-term">body</bdi></b>؛
   </li>
-  <li>الأسطر 18–42: تحدد علامة &lt;<bdi dir="ltr" class="odt-ltr-term">div</bdi>&gt; قسمًا من الصفحة المعروضة. تشير سمات<b> [<bdi dir="ltr" class="odt-ltr-term">class</bdi>] </b>المستخدمة في العرض إلى إطار عمل <bdi dir="ltr" class="odt-ltr-term">Bootstrap CSS.</bdi> تحدد علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">div class</bdi>=’<bdi dir="ltr" class="odt-ltr-term">container</bdi>’</b>&gt; حاوية <bdi dir="ltr" class="odt-ltr-term">Bootstrap</bdi>؛
+  <li>الأسطر 18–42: تحدد علامة &lt;div&gt; قسمًا من الصفحة المعروضة. تشير سمات<b> [<bdi dir="ltr" class="odt-ltr-term">class</bdi>] </b>المستخدمة في العرض إلى إطار عمل <bdi dir="ltr" class="odt-ltr-term">Bootstrap CSS.</bdi> تحدد علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">div class</bdi>=’<bdi dir="ltr" class="odt-ltr-term">container</bdi>’</b>&gt; حاوية <bdi dir="ltr" class="odt-ltr-term">Bootstrap</bdi>؛
   </li>
   <li>السطر 20: نقوم بتضمين البرنامج النصي <b>[<bdi dir="ltr" class="odt-ltr-term">v-banner.php</bdi>]</b>. يقوم هذا البرنامج النصي بإنشاء شعار الصفحة <b>[1]</b>. سنقوم بوصفه بعد قليل؛
   </li>
-  <li>الأسطر 22–26: تحدد علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">div class</bdi>=’<bdi dir="ltr" class="odt-ltr-term">row</bdi>’</b>&gt; صفًا في <bdi dir="ltr" class="odt-ltr-term">Bootstrap.</bdi> تتكون هذه الصفوف من 12 عمودًا؛
+  <li>الأسطر 22–26: تحدد علامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">div class</bdi>=’row’</b>&gt; صفًا في <bdi dir="ltr" class="odt-ltr-term">Bootstrap.</bdi> تتكون هذه الصفوف من 12 عمودًا؛
   </li>
   <li>السطر 23: تحدد العلامة &lt;<b><bdi dir="ltr" class="odt-ltr-term">div class</bdi>=’<bdi dir="ltr" class="odt-ltr-term">col-md-9</bdi>’</b>&gt; قسمًا مكونًا من 9 أعمدة؛
   </li>
   <li>السطر 24: نضمّن البرنامج النصي <b>[<bdi dir="ltr" class="odt-ltr-term">v-authentification.php</bdi>] </b>الذي يعرض نموذج المصادقة للصفحة <b>[2]</b>. سنشرح ذلك لاحقًا؛
   </li>
-  <li>السطر 27: تدرج علامة<b> &lt;?<bdi dir="ltr" class="odt-ltr-term">php</bdi> </b>كود <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> في صفحة <bdi dir="ltr" class="odt-ltr-term">HTML.</bdi> يتم تنفيذ هذا الكود قبل عرض صفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> ويمكنه تعديلها؛
+  <li>السطر 27: تدرج علامة<b> &lt;?php </b>كود <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> في صفحة <bdi dir="ltr" class="odt-ltr-term">HTML.</bdi> يتم تنفيذ هذا الكود قبل عرض صفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> ويمكنه تعديلها؛
   </li>
   <li>السطر 29: سيتم تغليف جميع البيانات الديناميكية في العرض المعروض في كائن<b> [$<bdi dir="ltr" class="odt-ltr-term">model</bdi>] </b>من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">stdClass</bdi>]</b>. هذا اختيار تعسفي. كان بإمكاننا اختيار مصفوفة ترابطية بدلاً من ذلك لتحقيق نفس النتيجة؛
   </li>
@@ -5199,7 +5199,7 @@
 <ul>
   <li>السطر 34: نص؛
   </li>
-  <li>السطر 35: تعرض علامة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> &lt;<b><bdi dir="ltr" class="odt-ltr-term">ul</bdi></b>&gt; (قائمة غير مرتبة) قائمة ذات نقاط. يجب أن يكون لكل عنصر في القائمة الصيغة <b>&lt;<bdi dir="ltr" class="odt-ltr-term">li</bdi>&gt;<bdi dir="ltr" class="odt-ltr-term">item</bdi>&lt;/<bdi dir="ltr" class="odt-ltr-term">li</bdi>&gt;</b>؛
+  <li>السطر 35: تعرض علامة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> &lt;<b>ul</b>&gt; (قائمة غير مرتبة) قائمة ذات نقاط. يجب أن يكون لكل عنصر في القائمة الصيغة <b>&lt;li&gt;<bdi dir="ltr" class="odt-ltr-term">item</bdi>&lt;/li&gt;</b>؛
   </li>
 </ul>
 
@@ -5241,11 +5241,11 @@
   </li>
   <li>الأسطر 3–12: صف <bdi dir="ltr" class="odt-ltr-term">Bootstrap</bdi>؛
   </li>
-  <li>الأسطر 4-6: يتم وضع صورة <b>[<bdi dir="ltr" class="odt-ltr-term">img</bdi>] </b>في الأعمدة الأربعة الأولى من الصف؛
+  <li>الأسطر 4-6: يتم وضع صورة <b>[img] </b>في الأعمدة الأربعة الأولى من الصف؛
   </li>
-  <li>السطر 5: بناء الجملة <b>[&lt;?= $<bdi dir="ltr" class="odt-ltr-term">logo</bdi> ?&gt;] </b>يعادل بناء الجملة <b>[&lt;?<bdi dir="ltr" class="odt-ltr-term">php print</bdi> $<bdi dir="ltr" class="odt-ltr-term">logo</bdi> ?&gt;]</b>. بعبارة أخرى، ستكون قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">src</bdi>] </b>هي قيمة متغير <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> <b>[$<bdi dir="ltr" class="odt-ltr-term">logo</bdi>]</b>؛
+  <li>السطر 5: بناء الجملة <b>[&lt;?= $<bdi dir="ltr" class="odt-ltr-term">logo</bdi> ?&gt;] </b>يعادل بناء الجملة <b>[&lt;?<bdi dir="ltr" class="odt-ltr-term">php print</bdi> $<bdi dir="ltr" class="odt-ltr-term">logo</bdi> ?&gt;]</b>. بعبارة أخرى، ستكون قيمة السمة<b> [src] </b>هي قيمة متغير <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> <b>[$<bdi dir="ltr" class="odt-ltr-term">logo</bdi>]</b>؛
   </li>
-  <li>الأسطر 7–11: سيتم استخدام الأعمدة الثمانية المتبقية من الصف (تذكر أن العدد الإجمالي هو 12) لعرض نص (السطر 9) بخط كبير الحجم (&lt;<bdi dir="ltr" class="odt-ltr-term">h1</bdi>&gt;، الأسطر 8–10)؛
+  <li>الأسطر 7–11: سيتم استخدام الأعمدة الثمانية المتبقية من الصف (تذكر أن العدد الإجمالي هو 12) لعرض نص (السطر 9) بخط كبير الحجم (&lt;h1&gt;، الأسطر 8–10)؛
   </li>
 </ul>
 
@@ -5314,7 +5314,7 @@
       </li>
       <li>هنا، عندما ينقر المستخدم على زر<b> [<bdi dir="ltr" class="odt-ltr-term">Submit</bdi>] </b>(السطر 34)، سيقوم المتصفح بإرسال (<bdi dir="ltr" class="odt-ltr-term">POST</bdi>) (السطر 2) القيم التي تم إدخالها في النموذج إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">authentifier-utilisateur</bdi>] </b>(السطر 2)؛
       </li>
-      <li>القيم المرسلة هي القيم التي أدخلها المستخدم في حقول الإدخال في السطرين 17 و 27. سيتم إرسالها بالتنسيق <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">password</bdi>=<bdi dir="ltr" class="odt-ltr-term">yy</bdi>]</b>. تتوافق أسماء المعلمات <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>, <bdi dir="ltr" class="odt-ltr-term">password</bdi>] </b>مع سمات<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>لحقول الإدخال في السطرين 17 و 27؛
+      <li>القيم المرسلة هي القيم التي أدخلها المستخدم في حقول الإدخال في السطرين 17 و 27. سيتم إرسالها بالتنسيق <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>=xx&amp;<bdi dir="ltr" class="odt-ltr-term">password</bdi>=yy]</b>. تتوافق أسماء المعلمات <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>, <bdi dir="ltr" class="odt-ltr-term">password</bdi>] </b>مع سمات<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>لحقول الإدخال في السطرين 17 و 27؛
       </li>
     </ul>
   </li>
@@ -5332,7 +5332,7 @@
 
 <p><img src="images/10000000000004040000007919C8C2AD.png" width="308" height="36" style="width:8.162cm;height:0.961cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004040000007919C8C2AD.png" /></p>
 <ul>
-  <li>السطر 14 يحدد التسمية <b>[1] </b>عبر ثلاثة أعمدة. تربط السمة<b> [<bdi dir="ltr" class="odt-ltr-term">for</bdi>] </b>لعلامة<b> [<bdi dir="ltr" class="odt-ltr-term">label</bdi>] </b>التسمية بالسمة<b> [<bdi dir="ltr" class="odt-ltr-term">id</bdi>] </b>لحقل الإدخال في السطر 17؛
+  <li>السطر 14 يحدد التسمية <b>[1] </b>عبر ثلاثة أعمدة. تربط السمة<b> [for] </b>لعلامة<b> [<bdi dir="ltr" class="odt-ltr-term">label</bdi>] </b>التسمية بالسمة<b> [id] </b>لحقل الإدخال في السطر 17؛
   </li>
   <li>الأسطر 15-19: تضع حقل الإدخال ضمن تخطيط مكون من أربعة أعمدة؛
   </li>
@@ -5342,9 +5342,9 @@
       </li>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">class</bdi>=&#x27;<bdi dir="ltr" class="odt-ltr-term">form-control</bdi>&#x27;]</b>: نمط <bdi dir="ltr" class="odt-ltr-term">Bootstrap</bdi> لحقل الإدخال؛
       </li>
-      <li><b>[<bdi dir="ltr" class="odt-ltr-term">id</bdi>=&#x27;<bdi dir="ltr" class="odt-ltr-term">user</bdi>&#x27;]</b>: معرف حقل الإدخال. يستخدم هذا المعرف عمومًا بواسطة كود <bdi dir="ltr" class="odt-ltr-term">CSS</bdi> و <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
+      <li><b>[id=&#x27;<bdi dir="ltr" class="odt-ltr-term">user</bdi>&#x27;]</b>: معرف حقل الإدخال. يستخدم هذا المعرف عمومًا بواسطة كود <bdi dir="ltr" class="odt-ltr-term">CSS</bdi> و <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛
       </li>
-      <li><b>[<bdi dir="ltr" class="odt-ltr-term">name</bdi>=&#x27;<bdi dir="ltr" class="odt-ltr-term">user</bdi>&#x27;]</b>: اسم حقل الإدخال. سيتم إرسال القيمة التي أدخلها المستخدم بواسطة المتصفح تحت هذا الاسم <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi>]</b>؛
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">name</bdi>=&#x27;<bdi dir="ltr" class="odt-ltr-term">user</bdi>&#x27;]</b>: اسم حقل الإدخال. سيتم إرسال القيمة التي أدخلها المستخدم بواسطة المتصفح تحت هذا الاسم <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>=xx]</b>؛
       </li>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">placeholder</bdi>=&#x27;<bdi dir="ltr" class="odt-ltr-term">prompt</bdi>&#x27;]</b>: النص المعروض في حقل الإدخال عندما لا يكون المستخدم قد كتب أي شيء بعد؛
       </li>
@@ -5371,7 +5371,7 @@
 </ul>
 
 <p><img src="images/10000000000000DB000000A3EABF926E.png" width="110" height="82" style="width:2.902cm;height:2.161cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DB000000A3EABF926E.png" /></p>
-<p>هناك شيء أخير يجب توضيحه. السطر 2: تحدد السمة <strong>[<bdi dir="ltr" class="odt-ltr-term">action</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">authentifier-utilisateur</bdi>&quot;]</strong> عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> غير مكتمل (لا يبدأ بـ <bdi dir="ltr" class="odt-ltr-term">http://machine:port/chemin</bdi>). في مثالنا، تكون جميع عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الخاصة بالتطبيق بالشكل <strong>[<bdi dir="ltr" class="odt-ltr-term">http://localhost/php7/scripts-web/impots/version-12/main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi>]</strong>. سيتم الوصول إلى عرض المصادقة عبر عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> مختلفة:</p>
+<p>هناك شيء أخير يجب توضيحه. السطر 2: تحدد السمة <strong>[<bdi dir="ltr" class="odt-ltr-term">action</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">authentifier-utilisateur</bdi>&quot;]</strong> عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> غير مكتمل (لا يبدأ بـ <bdi dir="ltr" class="odt-ltr-term">http://machine:port/chemin</bdi>). في مثالنا، تكون جميع عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الخاصة بالتطبيق بالشكل <strong>[<bdi dir="ltr" class="odt-ltr-term">http://localhost/php7/scripts-web/impots/version-12/main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=xx]</strong>. سيتم الوصول إلى عرض المصادقة عبر عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> مختلفة:</p>
 <ul>
   <li><b>[<bdi dir="ltr" class="odt-ltr-term">http://localhost/php7/scripts-web/impots/version-12/main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">type</bdi>=<bdi dir="ltr" class="odt-ltr-term">html</bdi>]</b>؛
   </li>
@@ -5603,14 +5603,14 @@
 
 <p><img src="images/10000000000006220000054E01F30F3E.png" width="471" height="407" style="width:12.462cm;height:10.779cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006220000054E01F30F3E.png" /></p>
 <ul>
-  <li><b>[<bdi dir="ltr" class="odt-ltr-term">authenticate-user-221</bdi>]</b>: مصادقة المستخدم <b>[<bdi dir="ltr" class="odt-ltr-term">x</bdi>, <bdi dir="ltr" class="odt-ltr-term">x</bdi>]</b>؛
+  <li><b>[<bdi dir="ltr" class="odt-ltr-term">authenticate-user-221</bdi>]</b>: مصادقة المستخدم <b>[x, x]</b>؛
   </li>
 </ul>
 
 <p><img src="images/10000000000005F2000005868B4214E8.png" width="457" height="424" style="width:12.083cm;height:11.225cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005F2000005868B4214E8.png" /></p>
 <p>أعلاه:</p>
 <ul>
-  <li>أرسل الطلب السلسلة <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">password</bdi>=<bdi dir="ltr" class="odt-ltr-term">x</bdi>]</b>؛
+  <li>أرسل الطلب السلسلة <b>[<bdi dir="ltr" class="odt-ltr-term">user</bdi>=x&amp;<bdi dir="ltr" class="odt-ltr-term">password</bdi>=x]</b>؛
   </li>
   <li>في <b>[4]</b>، تظهر رسالة خطأ؛
   </li>
@@ -5837,21 +5837,21 @@
     <ul>
       <li>قيمة زر الاختيار المحدد في النموذج:
         <ul>
-          <li><b>[<bdi dir="ltr" class="odt-ltr-term">marié</bdi>=<bdi dir="ltr" class="odt-ltr-term">oui</bdi>] </b>إذا تم تحديد زر الاختيار<b> [<bdi dir="ltr" class="odt-ltr-term">Oui</bdi>] </b>(الأسطر 16–22). <b>[<bdi dir="ltr" class="odt-ltr-term">marié</bdi>] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>في السطر 18، و<b>[<bdi dir="ltr" class="odt-ltr-term">oui</bdi>] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">value</bdi>] </b>في السطر 18؛
+          <li><b>[<bdi dir="ltr" class="odt-ltr-term">marié</bdi>=oui] </b>إذا تم تحديد زر الاختيار<b> [<bdi dir="ltr" class="odt-ltr-term">Oui</bdi>] </b>(الأسطر 16–22). <b>[<bdi dir="ltr" class="odt-ltr-term">marié</bdi>] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>في السطر 18، و<b>[oui] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">value</bdi>] </b>في السطر 18؛
           </li>
-          <li><b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>=<bdi dir="ltr" class="odt-ltr-term">no</bdi>] </b>إذا تم تحديد زر الاختيار<b> [<bdi dir="ltr" class="odt-ltr-term">No</bdi>] </b>(الأسطر 23–28). <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>في السطر 24، و<b>[<bdi dir="ltr" class="odt-ltr-term">no</bdi>] هي </b>قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">value</bdi>] </b>في السطر 24؛
+          <li><b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>=no] </b>إذا تم تحديد زر الاختيار<b> [<bdi dir="ltr" class="odt-ltr-term">No</bdi>] </b>(الأسطر 23–28). <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>في السطر 24، و<b>[no] هي </b>قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">value</bdi>] </b>في السطر 24؛
           </li>
         </ul>
       </li>
-      <li>قيمة حقل الإدخال الرقمي في السطر 37 في النموذج <b>[<bdi dir="ltr" class="odt-ltr-term">children</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi>]، </b>حيث <b>[<bdi dir="ltr" class="odt-ltr-term">children</bdi>] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>في السطر 37، و<b>[<bdi dir="ltr" class="odt-ltr-term">xx</bdi>] هي </b>القيمة التي أدخلها المستخدم عبر لوحة المفاتيح؛
+      <li>قيمة حقل الإدخال الرقمي في السطر 37 في النموذج <b>[<bdi dir="ltr" class="odt-ltr-term">children</bdi>=xx]، </b>حيث <b>[<bdi dir="ltr" class="odt-ltr-term">children</bdi>] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>في السطر 37، و<b>[xx] هي </b>القيمة التي أدخلها المستخدم عبر لوحة المفاتيح؛
       </li>
-      <li>قيمة حقل الإدخال الرقمي في السطر 46 في النموذج <b>[<bdi dir="ltr" class="odt-ltr-term">salary</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi>]</b>، حيث <b>[<bdi dir="ltr" class="odt-ltr-term">salary</bdi>] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>في السطر 46، و<b>[<bdi dir="ltr" class="odt-ltr-term">xx</bdi>] هي </b>القيمة التي أدخلها المستخدم عبر لوحة المفاتيح؛
+      <li>قيمة حقل الإدخال الرقمي في السطر 46 في النموذج <b>[<bdi dir="ltr" class="odt-ltr-term">salary</bdi>=xx]</b>، حيث <b>[<bdi dir="ltr" class="odt-ltr-term">salary</bdi>] </b>هي قيمة السمة<b> [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] </b>في السطر 46، و<b>[xx] هي </b>القيمة التي أدخلها المستخدم عبر لوحة المفاتيح؛
       </li>
     </ul>
   </li>
 </ul>
 
-<p>وأخيرًا، ستكون القيمة المنشورة بالشكل <strong>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">children</bdi>=<bdi dir="ltr" class="odt-ltr-term">yy</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">salary</bdi>=<bdi dir="ltr" class="odt-ltr-term">zz</bdi>]</strong>.</p>
+<p>وأخيرًا، ستكون القيمة المنشورة بالشكل <strong>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>=xx&amp;<bdi dir="ltr" class="odt-ltr-term">children</bdi>=yy&amp;<bdi dir="ltr" class="odt-ltr-term">salary</bdi>=zz]</strong>.</p>
 <ul>
   <li>سيتم إرسال القيم المدخلة عندما ينقر المستخدم على زر<b> [إرسال] </b>في السطر 53؛
   </li>
@@ -5876,7 +5876,7 @@
 
 <p>ستكون هذه المتغيرات جزءًا من قالب العرض.</p>
 <ul>
-  <li>السطر 37: حقل إدخال رقمي <b>[<bdi dir="ltr" class="odt-ltr-term">type</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">number</bdi>&quot;] </b>بقيمة دنيا تساوي 0 <b>[<bdi dir="ltr" class="odt-ltr-term">min</bdi>=&quot;0&quot;]</b>. في المتصفحات الحديثة، يعني هذا أن المستخدم لا يمكنه إدخال سوى رقم &gt;=0. وفي هذه المتصفحات الحديثة نفسها، يمكن إجراء الإدخال باستخدام شريط تمرير يمكن النقر عليه لأعلى أو لأسفل. تشير السمة<b> [<bdi dir="ltr" class="odt-ltr-term">step</bdi>=&quot;1&quot;] </b>في السطر 37 إلى أن شريط التمرير سيعمل بزيادات قدرها 1. ونتيجة لذلك، لن يقبل شريط التمرير سوى القيم الصحيحة التي تتراوح من 0 إلى <bdi dir="ltr" class="odt-ltr-term">n</bdi> بزيادات قدرها 1. بالنسبة للإدخال اليدوي، يعني هذا أن الأرقام التي تحتوي على أرقام عشرية لن يتم قبولها؛
+  <li>السطر 37: حقل إدخال رقمي <b>[<bdi dir="ltr" class="odt-ltr-term">type</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">number</bdi>&quot;] </b>بقيمة دنيا تساوي 0 <b>[min=&quot;0&quot;]</b>. في المتصفحات الحديثة، يعني هذا أن المستخدم لا يمكنه إدخال سوى رقم &gt;=0. وفي هذه المتصفحات الحديثة نفسها، يمكن إجراء الإدخال باستخدام شريط تمرير يمكن النقر عليه لأعلى أو لأسفل. تشير السمة<b> [<bdi dir="ltr" class="odt-ltr-term">step</bdi>=&quot;1&quot;] </b>في السطر 37 إلى أن شريط التمرير سيعمل بزيادات قدرها 1. ونتيجة لذلك، لن يقبل شريط التمرير سوى القيم الصحيحة التي تتراوح من 0 إلى n بزيادات قدرها 1. بالنسبة للإدخال اليدوي، يعني هذا أن الأرقام التي تحتوي على أرقام عشرية لن يتم قبولها؛
   </li>
 </ul>
 
@@ -5916,11 +5916,11 @@
 
 <p><strong>تعليقات</strong></p>
 <ul>
-  <li>الأسطر 2–11: تحيط علامة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">nav</bdi>] </b>بجزء من مستند <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> يحتوي على روابط تنقل إلى مستندات أخرى؛
+  <li>الأسطر 2–11: تحيط علامة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> <b>[nav] </b>بجزء من مستند <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> يحتوي على روابط تنقل إلى مستندات أخرى؛
   </li>
-  <li>السطر 7: تقدم علامة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">a</bdi>] </b>رابط تنقل:
+  <li>السطر 7: تقدم علامة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> <b>[a] </b>رابط تنقل:
     <ul>
-      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">url</bdi>]</b>: هو عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي يتم توجيه المستخدم إليه عند النقر على رابط<b> [$<bdi dir="ltr" class="odt-ltr-term">text</bdi>]</b>. ثم يقوم المتصفح بتنفيذ عملية<b> [<bdi dir="ltr" class="odt-ltr-term">GET</bdi> $<bdi dir="ltr" class="odt-ltr-term">url</bdi>]</b>. إذا كان<b> [$<bdi dir="ltr" class="odt-ltr-term">url</bdi>] </b>عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> نسبي، يتم إرفاقه بجذر عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المعروض حاليًا في شريط عنوان المتصفح. وبالتالي، لإنشاء الرابط <b>[1] </b>عندما يكون عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الحالي للمتصفح بالصيغة <b>[<bdi dir="ltr" class="odt-ltr-term">http://chemin/main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">paramètres</bdi>]</b>، نقوم بإنشاء الرابط:
+      <li><b>[$url]</b>: هو عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي يتم توجيه المستخدم إليه عند النقر على رابط<b> [$<bdi dir="ltr" class="odt-ltr-term">text</bdi>]</b>. ثم يقوم المتصفح بتنفيذ عملية<b> [<bdi dir="ltr" class="odt-ltr-term">GET</bdi> $url]</b>. إذا كان<b> [$url] </b>عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> نسبي، يتم إرفاقه بجذر عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المعروض حاليًا في شريط عنوان المتصفح. وبالتالي، لإنشاء الرابط <b>[1] </b>عندما يكون عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الحالي للمتصفح بالصيغة <b>[<bdi dir="ltr" class="odt-ltr-term">http://chemin/main.php</bdi>?<bdi dir="ltr" class="odt-ltr-term">paramètres</bdi>]</b>، نقوم بإنشاء الرابط:
       </li>
     </ul>
   </li>
@@ -5937,7 +5937,7 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>‘ Fin de session’=&gt;’main.php?action=fin-session’]
 </code></pre></div>
 <ul>
-  <li>السطران 2 و7: فئات <bdi dir="ltr" class="odt-ltr-term">CSS</bdi> <b>[<bdi dir="ltr" class="odt-ltr-term">nav</bdi>, <bdi dir="ltr" class="odt-ltr-term">flex-column</bdi>, <bdi dir="ltr" class="odt-ltr-term">nav-link</bdi>] </b>هي فئات <bdi dir="ltr" class="odt-ltr-term">Bootstrap</bdi> التي تحدد مظهر القائمة؛
+  <li>السطران 2 و7: فئات <bdi dir="ltr" class="odt-ltr-term">CSS</bdi> <b>[nav, <bdi dir="ltr" class="odt-ltr-term">flex-column</bdi>, <bdi dir="ltr" class="odt-ltr-term">nav-link</bdi>] </b>هي فئات <bdi dir="ltr" class="odt-ltr-term">Bootstrap</bdi> التي تحدد مظهر القائمة؛
   </li>
 </ul>
 <p><a id="toc42690158"></a>
@@ -6308,15 +6308,15 @@
 <ul>
   <li>يتم إنشاء جدول <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> باستخدام علامة &lt;<bdi dir="ltr" class="odt-ltr-term">table</bdi>&gt; (السطران 6 و 58)؛
   </li>
-  <li>يتم تضمين عناوين أعمدة الجدول داخل علامة &lt;<bdi dir="ltr" class="odt-ltr-term">thead</bdi>&gt; (رأس الجدول، السطران 8 و21). تحدد علامة &lt;<bdi dir="ltr" class="odt-ltr-term">tr</bdi>&gt; (<i>صف الجدول</i>، السطران 9 و 20) صفًا. الأسطر 10-15: تحدد علامة &lt;<bdi dir="ltr" class="odt-ltr-term">th</bdi>&gt; (<i>رأس الجدول</i>) رأس عمود. وبالتالي، هناك عشرة منها. تشير<b> [<bdi dir="ltr" class="odt-ltr-term">scope</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">col</bdi>&quot;] </b>إلى أن الرأس ينطبق على العمود. تشير<b> [<bdi dir="ltr" class="odt-ltr-term">scope</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">row</bdi>&quot;] </b>إلى أن الرأس ينطبق على الصف؛
+  <li>يتم تضمين عناوين أعمدة الجدول داخل علامة &lt;<bdi dir="ltr" class="odt-ltr-term">thead</bdi>&gt; (رأس الجدول، السطران 8 و21). تحدد علامة &lt;tr&gt; (<i>صف الجدول</i>، السطران 9 و 20) صفًا. الأسطر 10-15: تحدد علامة &lt;th&gt; (<i>رأس الجدول</i>) رأس عمود. وبالتالي، هناك عشرة منها. تشير<b> [<bdi dir="ltr" class="odt-ltr-term">scope</bdi>=&quot;col&quot;] </b>إلى أن الرأس ينطبق على العمود. تشير<b> [<bdi dir="ltr" class="odt-ltr-term">scope</bdi>=&quot;row&quot;] </b>إلى أن الرأس ينطبق على الصف؛
   </li>
   <li>الأسطر 23-57: تحيط علامة &lt;<bdi dir="ltr" class="odt-ltr-term">tbody</bdi>&gt; بالبيانات المعروضة في الجدول؛
   </li>
-  <li>الأسطر 40-51: علامة &lt;<bdi dir="ltr" class="odt-ltr-term">tr</bdi>&gt; تحيط بصف من الجدول؛
+  <li>الأسطر 40-51: علامة &lt;tr&gt; تحيط بصف من الجدول؛
   </li>
-  <li>السطر 41: تحدد العلامة &lt;<bdi dir="ltr" class="odt-ltr-term">th scope</bdi>=’<bdi dir="ltr" class="odt-ltr-term">row</bdi>’&gt; رأس الصف؛
+  <li>السطر 41: تحدد العلامة &lt;<bdi dir="ltr" class="odt-ltr-term">th scope</bdi>=’row’&gt; رأس الصف؛
   </li>
-  <li>الأسطر 42–50: تحدد كل علامة <bdi dir="ltr" class="odt-ltr-term">td</bdi> عمودًا من الصف؛
+  <li>الأسطر 42–50: تحدد كل علامة td عمودًا من الصف؛
   </li>
   <li>السطر 27: توجد قائمة المحاكاة في النموذج <b>[$<bdi dir="ltr" class="odt-ltr-term">model</bdi>→<bdi dir="ltr" class="odt-ltr-term">simulations</bdi>]، </b>وهو مصفوفة ترابطية؛
   </li>
@@ -6523,9 +6523,9 @@
 <ul>
   <li>جميع المعلمات موجودة؛
   </li>
-  <li>يجب أن يكون للمعلمة<b> [<bdi dir="ltr" class="odt-ltr-term">married</bdi>]</b>، التي تأخذ قيمتها من سمات<b> [<bdi dir="ltr" class="odt-ltr-term">value</bdi>] </b>لزرين من أزرار الاختيار، إحدى القيمتين <b>[<bdi dir="ltr" class="odt-ltr-term">yes</bdi>] </b>أو <b>[<bdi dir="ltr" class="odt-ltr-term">no</bdi>]</b>؛
+  <li>يجب أن يكون للمعلمة<b> [<bdi dir="ltr" class="odt-ltr-term">married</bdi>]</b>، التي تأخذ قيمتها من سمات<b> [<bdi dir="ltr" class="odt-ltr-term">value</bdi>] </b>لزرين من أزرار الاختيار، إحدى القيمتين <b>[yes] </b>أو <b>[no]</b>؛
   </li>
-  <li>في المتصفحات الحديثة، تضمن سمات &lt;<bdi dir="ltr" class="odt-ltr-term">input type</bdi>=&#x27;<bdi dir="ltr" class="odt-ltr-term">number</bdi>&#x27; <bdi dir="ltr" class="odt-ltr-term">min</bdi>=&#x27;0&#x27; <bdi dir="ltr" class="odt-ltr-term">step</bdi>=&#x27;1&#x27; …&gt; أن تكون قيمتي <bdi dir="ltr" class="odt-ltr-term">children</bdi> و <bdi dir="ltr" class="odt-ltr-term">salary</bdi> بالضرورة أعدادًا صحيحة &gt;=0؛
+  <li>في المتصفحات الحديثة، تضمن سمات &lt;<bdi dir="ltr" class="odt-ltr-term">input type</bdi>=&#x27;<bdi dir="ltr" class="odt-ltr-term">number</bdi>&#x27; min=&#x27;0&#x27; <bdi dir="ltr" class="odt-ltr-term">step</bdi>=&#x27;1&#x27; …&gt; أن تكون قيمتي <bdi dir="ltr" class="odt-ltr-term">children</bdi> و <bdi dir="ltr" class="odt-ltr-term">salary</bdi> بالضرورة أعدادًا صحيحة &gt;=0؛
   </li>
 </ul>
 
@@ -6614,7 +6614,7 @@
   </li>
   <li>السطر 39: نص تمهيدي؛
   </li>
-  <li>السطر 40: تحيط علامة &lt;<bdi dir="ltr" class="odt-ltr-term">ul</bdi>&gt; بقائمة نقطية. يتم توفير هذه القائمة النقطية بواسطة النموذج<b> [$<bdi dir="ltr" class="odt-ltr-term">model-</bdi>&gt;<bdi dir="ltr" class="odt-ltr-term">errors</bdi>]</b>؛
+  <li>السطر 40: تحيط علامة &lt;ul&gt; بقائمة نقطية. يتم توفير هذه القائمة النقطية بواسطة النموذج<b> [$<bdi dir="ltr" class="odt-ltr-term">model-</bdi>&gt;<bdi dir="ltr" class="odt-ltr-term">errors</bdi>]</b>؛
   </li>
 </ul>
 
@@ -6972,14 +6972,14 @@
 <a id="toc42690561"></a>
 <a id="toc42690947"></a>
 <a id="refheadingtoc3697942017825887"></a></p>
-<h3 id="23142-dao">23.14.2. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</span></h3>
+<h3 id="23142-dao">23.14.2. <span style="color: #4f81bd">طبقة [dao]</span></h3>
 <p><img src="images/1000000000000727000000F66EEBC555.png" width="549" height="74" style="width:14.529cm;height:1.953cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000727000000F66EEBC555.png" /></p>
 <p><a id="toc42690176"></a>
 <a id="toc42690562"></a>
 <a id="toc42690948"></a>
 <a id="refheadingtoc3697962017825887"></a></p>
 <h4 id="231421">23.14.2.1. <span style="color: #4f81bd">الواجهة</span></h4>
-<p>ستكون واجهة طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> كما يلي <strong>[<bdi dir="ltr" class="odt-ltr-term">InterfaceClientDao.php</bdi>]</strong>:</p>
+<p>ستكون واجهة طبقة <strong>[dao]</strong> كما يلي <strong>[<bdi dir="ltr" class="odt-ltr-term">InterfaceClientDao.php</bdi>]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -7071,7 +7071,7 @@
     <ul>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">getTaxPayersData</bdi>(<bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">taxPayersFilename</bdi>, <bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">errorsFilename</bdi>): <bdi dir="ltr" class="odt-ltr-term">array</bdi>]</b>;
       </li>
-      <li><b>[<bdi dir="ltr" class="odt-ltr-term">function calculateTax</bdi>(<bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">married</bdi>, <bdi dir="ltr" class="odt-ltr-term">int</bdi> $<bdi dir="ltr" class="odt-ltr-term">children</bdi>, <bdi dir="ltr" class="odt-ltr-term">int</bdi> $<bdi dir="ltr" class="odt-ltr-term">salary</bdi>): <bdi dir="ltr" class="odt-ltr-term">Simulation</bdi>]</b>;
+      <li><b>[<bdi dir="ltr" class="odt-ltr-term">function calculateTax</bdi>(<bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">married</bdi>, int $<bdi dir="ltr" class="odt-ltr-term">children</bdi>, int $<bdi dir="ltr" class="odt-ltr-term">salary</bdi>): <bdi dir="ltr" class="odt-ltr-term">Simulation</bdi>]</b>;
       </li>
     </ul>
   </li>
@@ -7111,7 +7111,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 </code></pre></div>
 
-<p>نظرًا لأن الإجراء <strong>[<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>]</strong> يجب أن يكون أول إجراء يُطلب من خدمة الويب، فإن الطريقة <strong>[<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>]</strong> ستكون أول طريقة في طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</strong> يتم استدعاؤها.</p>
+<p>نظرًا لأن الإجراء <strong>[<bdi dir="ltr" class="odt-ltr-term">init-session</bdi>]</strong> يجب أن يكون أول إجراء يُطلب من خدمة الويب، فإن الطريقة <strong>[<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>]</strong> ستكون أول طريقة في طبقة <strong>[dao]</strong> يتم استدعاؤها.</p>
 <p><strong>تعليقات</strong></p>
 <ul>
   <li>السطر 1: يتم تمرير نوع الجلسة المطلوب كمعلمة. إذا لم يتم توفير أي معلمة، فسيتم بدء جلسة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
@@ -7124,7 +7124,7 @@
   </li>
   <li>السطر 13: تسترد طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">getResponse</bdi>] </b>استجابة الخادم. وتُرجعها في صورة مصفوفة. هنا، لا يتم استخدام نتيجة الطريقة. ترمي طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">getResponse</bdi>] </b>استثناءً إذا لم يكن رمز حالة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لاستجابة خدمة الويب هو 200 <bdi dir="ltr" class="odt-ltr-term">OK</bdi>؛
   </li>
-  <li>السطور 14–25: نظرًا لأن طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>] </b>هي أول طريقة يتم تنفيذها في طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</b>، فإننا نسترد ملف تعريف ارتباط الجلسة حتى تتمكن الطرق اللاحقة من إرساله مرة أخرى إلى خدمة الويب. وقد تم التعليق على هذا الرمز بالفعل في الإصدار 09؛
+  <li>السطور 14–25: نظرًا لأن طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">initSession</bdi>] </b>هي أول طريقة يتم تنفيذها في طبقة<b> [dao]</b>، فإننا نسترد ملف تعريف ارتباط الجلسة حتى تتمكن الطرق اللاحقة من إرساله مرة أخرى إلى خدمة الويب. وقد تم التعليق على هذا الرمز بالفعل في الإصدار 09؛
   </li>
 </ul>
 <p><a id="toc42690179"></a>
@@ -7505,7 +7505,7 @@
   </li>
   <li>الأسطر 20–38: طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">executeBatchImports</bdi>] </b>هي الوحيدة الخاصة بطبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>. تنفيذ الطرق الأخرى يفوض العمل إلى طرق تحمل نفس الأسماء في طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</b>؛
   </li>
-  <li>السطر 23: نستدعي طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>لاسترداد بيانات دافعي الضرائب في مصفوفة من كائنات<b> [<bdi dir="ltr" class="odt-ltr-term">TaxPayerData</bdi>]</b>؛
+  <li>السطر 23: نستدعي طبقة<b> [dao] </b>لاسترداد بيانات دافعي الضرائب في مصفوفة من كائنات<b> [<bdi dir="ltr" class="odt-ltr-term">TaxPayerData</bdi>]</b>؛
   </li>
   <li>السطر 25: يتم تجميع المحاكاة المختلفة المحسوبة في مصفوفة<b> [$<bdi dir="ltr" class="odt-ltr-term">simulations</bdi>]</b>؛
   </li>
@@ -7629,7 +7629,7 @@
   </li>
   <li>الأسطر 28-34: تعريف الثوابت والأسماء المستعارة؛
   </li>
-  <li>الأسطر 36-39: إنشاء طبقات <b>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>؛
+  <li>الأسطر 36-39: إنشاء طبقات <b>[dao] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>؛
   </li>
   <li>السطر 44: تهيئة جلسة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi>؛
   </li>
@@ -7946,7 +7946,7 @@
 <ul>
   <li>الأسطر 34–46: لاحظ أن منشئ فئة الاختبار يتم تنفيذه قبل كل اختبار؛
   </li>
-  <li>الأسطر 38–41: إنشاء طبقتي <b>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>؛
+  <li>الأسطر 38–41: إنشاء طبقتي <b>[dao] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>؛
   </li>
   <li>الأسطر 42–45: تختبر طرق الاختبار <b>[<bdi dir="ltr" class="odt-ltr-term">test1</bdi>…، <bdi dir="ltr" class="odt-ltr-term">test11</bdi>] </b>طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>]</b>. ولتحقيق ذلك، يجب أولاً تهيئة جلسة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> وإجراء المصادقة؛
   </li>
@@ -7956,7 +7956,7 @@
 <p><img src="images/10000000000006AB0000027C69B761FC.png" width="598" height="223" style="width:15.812cm;height:5.891cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006AB0000027C69B761FC.png" /></p>
 <p>يجب إجراء العديد من الاختبارات الأخرى:</p>
 <ul>
-  <li>اختبار الطرق المختلفة لطبقة<b> [<bdi dir="ltr" class="odt-ltr-term">dao</bdi>]</b>؛
+  <li>اختبار الطرق المختلفة لطبقة<b> [dao]</b>؛
   </li>
   <li>اختبار الحالات التي يعرضها خادم الويب. هذه الحالات مهمة لأن قيمتها تحدد صفحة <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> التي سيتم عرضها؛
   </li>
