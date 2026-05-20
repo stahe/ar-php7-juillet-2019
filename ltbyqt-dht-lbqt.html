@@ -1,0 +1,1475 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مقدمة إلى PHP7 من خلال أمثلة">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ar-php7-juillet-2019/ltbyqt-dht-lbqt.html">
+      
+      
+        <link rel="prev" href="lsmt.html">
+      
+      
+        <link rel="next" href="tmryn-mly---ldr-4.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>10. التطبيقات ذات الطبقات - مقدمة إلى PHP7 من خلال أمثلة</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "مقدمة إلى PHP7 من خلال أمثلة";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="مقدمة إلى PHP7 من خلال أمثلة" class="md-header__button md-logo" aria-label="مقدمة إلى PHP7 من خلال أمثلة" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مقدمة إلى PHP7 من خلال أمثلة
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              10. التطبيقات ذات الطبقات
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الداكن"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الداكن" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الفاتح"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الفاتح" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/ar-php7-juillet-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="مقدمة إلى PHP7 من خلال أمثلة" class="md-nav__button md-logo" aria-label="مقدمة إلى PHP7 من خلال أمثلة" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مقدمة إلى PHP7 من خلال أمثلة
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/ar-php7-juillet-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مرحبًا بكم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm-l-php-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة إلى PHP 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dd-byy-ltwyr.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. إعداد بيئة التطوير
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ssyt-php.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. أساسيات PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-mly---ldrn-1-w-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. تمرين عملي – الإصداران 1 و 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lfyt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. الفئات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lwjht.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. الواجهات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lstthnt-wlkh.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. الاستثناءات والأخطاء
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-tbyqy---ldr-3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. تمرين تطبيقي – الإصدار 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lsmt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. السمات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. التطبيقات ذات الطبقات
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="ltbyqt-dht-lbqt.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. التطبيقات ذات الطبقات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1. مقدمة
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2. الكائنات المتبادلة بين الطبقات
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-dao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3. طبقة [DAO]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-business" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4. طبقة [Business]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5. النص البرمجي الرئيسي
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-mly---ldr-4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. تمرين عملي – الإصدار 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="stkhdm-nm-dr-qwd-lbynt-mysql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. استخدام نظام إدارة قواعد البيانات MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-mly---ldr-5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. تمرين عملي – الإصدار 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-tbyqy---ldr-6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. تمرين تطبيقي – الإصدار 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-tbyqy---ldr-7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. تمرين تطبيقي – الإصدار 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wyf-lshbk.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. وظائف الشبكة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="khdmt-lwyb.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. خدمات الويب
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-mly---ldr-8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. تمرين عملي – الإصدار 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-tbyqy---ldr-9.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. تمرين تطبيقي – الإصدار 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-ltbyq---ldr-10.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. تمرين التطبيق – الإصدار 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mlj-mstndt-xml.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. معالجة مستندات XML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-ltbyq---ldr-11.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    22. تمرين التطبيق – الإصدار 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-mly---ldr-12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    23. تمرين عملي – الإصدار 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tmryn-ltbyq---ldr-13.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24. تمرين التطبيق – الإصدار 13
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="toc42690679"></a>
+<a id="refheadingtoc788352244347140"></a>
+<a id="toc42689907"></a>
+<a id="toc42690293"></a></p>
+<h1 id="10">10. <span style="color: #365f91">التطبيقات ذات الطبقات</span></h1>
+<p><a id="toc42690680"></a>
+<a id="refheadingtoc788372244347140"></a>
+<a id="toc42689908"></a>
+<a id="toc42690294"></a></p>
+<h2 id="101">10.1. <span style="color: #4f81bd">مقدمة</span></h2>
+<p><img src="images/1000000000000183000001D944836178.png" width="135" height="165" style="width:3.581cm;height:4.376cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000183000001D944836178.png" /></p>
+<p>سنستكشف الآن كيفية هيكلة تطبيق <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> في طبقات:</p>
+<p><img src="images/10000000000004EB000001154342CD64.png" width="378" height="83" style="width:9.991cm;height:2.198cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004EB000001154342CD64.png" /></p>
+<p>في هذا الرسم التوضيحي، <strong>تبدأ الطبقة اليسرى في استخدام الطبقة اليمنى</strong>. وتتمثل أدوار الطبقات فيما يلي:</p>
+<ul>
+  <li><b>[1]</b>: تتولى الطبقة المسماة <b>[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>(كائنات الوصول إلى البيانات) التعامل مع مخازن البيانات الخارجية <b>[4] </b>(الملفات وقواعد البيانات وخدمات الويب، وما إلى ذلك). تُسمى هذه الطبقة أحيانًا <b>[<bdi dir="ltr" class="odt-ltr-term">DAL</bdi>] </b>(طبقة الوصول إلى البيانات)، وهو مصطلح يصف دور الطبقة بشكل أفضل. يمكن لهذه الطبقة قراءة البيانات <b>[3] </b>أو كتابة البيانات <b>[2]</b>. يتم استدعاؤها من قبل طبقة<b> [الأعمال] [6] </b>وتعيد النتائج إليها <b>[7]</b>؛
+  </li>
+  <li><b>[5]</b>: طبقة تسمى <b>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>تحتوي على إجراءات &quot;الأعمال&quot;، والتي يتم تزويدها بجميع البيانات التي تحتاجها. هذه هي عمومًا الطبقة الأكثر استقرارًا في المشروع لأنها لا تعتمد على كيفية الحصول على البيانات. تأتي البيانات من مصدرين:
+    <ul>
+      <li><b>[9]</b>: البيانات التي يوفرها البرنامج النصي <bdi dir="ltr" class="odt-ltr-term">PHP</bdi>؛
+      </li>
+      <li><b>[6،7]</b>: البيانات المطلوبة من طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</b>.
+      </li>
+    </ul>
+  </li>
+  <li><b>[8]</b>: يعمل البرنامج النصي الرئيسي كمنسق. في تطبيق وحدة التحكم، سيقوم بما يلي:
+    <ul>
+      <li>إنشاء طبقتي <b>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>و <b>[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</b>؛
+      </li>
+      <li>تنفيذ خوارزمية التطبيق. تعمل هذه الخوارزمية كمنسق: فهي لا تحتوي على منطق &quot;الأعمال&quot; أو كود الوصول إلى البيانات. يقوم البرنامج النصي الرئيسي ببساطة باستدعاء إجراءات طبقة<b> [الأعمال] [9]</b>. يتجاهل تمامًا طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>والبيانات الخارجية. يمكنه توفير البيانات لطبقة<b> [الأعمال] [9]</b>. في تطبيق وحدة التحكم، قد تأتي هذه البيانات من ملفات التكوين أو من مستخدم البرنامج النصي. يتلقى النتائج <b>[10] </b>من طبقة<b> [الأعمال]</b>. قد يحتاج إلى تخزين نتائج معينة: للقيام بذلك، يستخدم مرة أخرى إجراءات طبقة<b> [الأعمال]</b>، والتي بدورها ستتواصل مع طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>لأداء المهمة؛
+      </li>
+      <li>من بين النتائج، قد يتلقى البرنامج النصي الرئيسي استثناءات. وتتمثل مهمته في معالجة الاستثناءات التي تنتشر من جميع الطبقات؛
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>تم تصميم هذه البنية الطبقية لتسهيل تطوير التطبيق. ولهذا الغرض، تنفذ كل طبقة واجهة. لنفترض أن:</p>
+<ul>
+  <li>يتم تنفيذ طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>بواسطة فئة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>التي تنفذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</b>؛
+  </li>
+  <li>يتم تنفيذ طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>بواسطة فئة<b> [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>] </b>التي تنفذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">IBusiness</bdi>]</b>؛
+  </li>
+</ul>
+
+<p>ستستخدم الإجراءات في طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</strong> واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</strong> بدلاً من فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>]</strong>. وهذا يسمح بتحديث طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>]</strong> دون التأثير على طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]</strong>. لنفترض أنه في الإصدار 1، تستخدم طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao1</bdi>]</strong> بيانات من قاعدة بيانات. بعد التحديث، يتم توفير هذه البيانات الآن بواسطة خدمة ويب في الإصدار 2، <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>]</strong>. سنضمن أن كلا من فئتي <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao1</bdi>]</strong> و<strong>[<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>]</strong> تنفذان نفس واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</strong> وترميان نفس الاستثناءات. إذا تم التحقق من ذلك، فستبقى طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]</strong> التي تعمل مع واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</strong> دون تغيير؛</p>
+<p>وينطبق نفس المنطق على طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]</strong>.</p>
+<p>دعونا نلقي نظرة على تطبيق باستخدام الفئات والواجهات:</p>
+<p><img src="images/100000000000012A00000145FDB3E370.png" width="104" height="114" style="width:2.76cm;height:3.009cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000012A00000145FDB3E370.png" /></p>
+<p>سيطبق التطبيق الهيكل الطبقي التالي:</p>
+<p><img src="images/1000000000000338000000EDAD236403.png" width="247" height="71" style="width:6.541cm;height:1.88cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000338000000EDAD236403.png" /></p>
+<p><a id="toc42690681"></a>
+<a id="refheadingtoc788392244347140"></a>
+<a id="toc42689909"></a>
+<a id="toc42690295"></a></p>
+<h2 id="102">10.2. <span style="color: #4f81bd">الكائنات المتبادلة بين الطبقات</span></h2>
+<p>عادةً، تتبادل الطبقات كائنات مختلفة. هنا، ستتبادل الطبقات الفئة التالية <strong>[<bdi dir="ltr" class="odt-ltr-term">Person.php</bdi>]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// a person</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">class</span><span style="color:#008080"> </span>Personne<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// identifier</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$id</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// manufacturer</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span>public<span style="color:#008080"> </span>function<span style="color:#008080"> </span>__construct(int<span style="color:#008080"> </span><span style="color:#0000ff">$id</span>)<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span>$this<span style="color:#000000">-&gt;id</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span>$id<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// toString</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span>public<span style="color:#008080"> </span>function<span style="color:#008080"> </span>__toString():<span style="color:#008080"> </span>string<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">return</span><span style="color:#008080"> </span>&quot;[Personne($this-&gt;id)]&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>السطر 6: الشخص له سمة واحدة فقط، وهي معرّفه <b>[$<bdi dir="ltr" class="odt-ltr-term">id</bdi>]</b>. سنفترض أن هذا يحدد شخصًا فريدًا في مستودع البيانات؛
+  </li>
+  <li>الأسطر 9–11: المنشئ الذي يسمح لنا بإنشاء كائن<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] </b>باستخدام معرّفه؛
+  </li>
+  <li>الأسطر 14–16: طريقة<b> [__toString] </b>التي تعرض معرف الشخص؛
+  </li>
+</ul>
+<p><a id="toc42690682"></a>
+<a id="refheadingtoc788412244347140"></a>
+<a id="toc42689910"></a>
+<a id="toc42690296"></a></p>
+<h2 id="103-dao">10.3. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</span></h2>
+<p>واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</strong> التي تنفذها طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">dao</bdi>, 1]</strong> هي كما يلي <strong>[<bdi dir="ltr" class="odt-ltr-term">IDao.php</bdi>]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// layer [dao] ------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">interface<span style="color:#008080"> </span>IDao<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// recovery of a person from an external warehouse</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// pass the person&#x27;s login</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>get(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$id</span>):<span style="color:#008080"> </span>Personne;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// saving a person in an external warehouse</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>save(Personne<span style="color:#008080"> </span><span style="color:#0000ff">$p</span>):<span style="color:#008080"> </span>void;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>يتم تنفيذ هذه الواجهة بواسطة الفئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao1</bdi>]</strong> التالية <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao1.php</bdi>]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">class<span style="color:#008080"> </span>Dao1<span style="color:#008080"> </span>implements<span style="color:#008080"> </span>IDao<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// saving a person in an external warehouse</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>save(Personne<span style="color:#008080"> </span><span style="color:#0000ff">$p</span>):<span style="color:#008080"> </span>void<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span>&quot;<span style="font-weight:bold">[Dao1]</span> : Sauvegarde de la personne <span style="color:#0000ff">$p</span> en base de données <span style="font-weight:bold">[locale]</span>\n&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// recovery of a person from an external warehouse</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>get(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$id</span>):<span style="color:#008080"> </span>Personne<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span>&quot;<span style="font-weight:bold">[Dao1]</span> : Récupération de la personne d&#x27;identité (<span style="color:#0000ff">$id</span>) en base de données <span style="font-weight:bold">[locale]</span>\n&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">return</span><span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Personne(<span style="color:#0000ff">$id</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>لا تتفاعل الفئة مع مستودع البيانات. نحن نعرض ببساطة رسائل لتتبع تنفيذ الكود (السطران 7 و 12)؛
+  </li>
+  <li>السطر 13: نُرجع شخصًا بمعرف تم تمريره كمعلمة إلى الأسلوب (السطر 11)؛
+  </li>
+</ul>
+
+<p>نقوم أيضًا بتنفيذ واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</strong> باستخدام الفئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>]</strong> التالية <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao2.php</bdi>]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">class<span style="color:#008080"> </span>Dao2<span style="color:#008080"> </span>implements<span style="color:#008080"> </span>IDao<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// saving a person in an external warehouse</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>save(Personne<span style="color:#008080"> </span><span style="color:#0000ff">$p</span>):<span style="color:#008080"> </span>void<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span>&quot;<span style="font-weight:bold">[Dao2]</span> : Sauvegarde de la personne <span style="color:#0000ff">$p</span> en base de données <span style="font-weight:bold">[distante]</span>\n&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// recovery of a person from an external warehouse</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>get(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$id</span>):<span style="color:#008080"> </span>Personne<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span>&quot;<span style="font-weight:bold">[Dao2]</span> : Récupération de la personne d&#x27;identité (<span style="color:#0000ff">$id</span>) en base de données <span style="font-weight:bold">[distante]</span>\n&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">return</span><span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Personne(<span style="color:#0000ff">$id</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p>تشبه فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>]</strong> فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao1</bdi>]</strong>، باستثناء أننا قمنا بتعديل الرسائل المعروضة.</p>
+<p><a id="toc42690683"></a>
+<a id="refheadingtoc788432244347140"></a>
+<a id="toc42689911"></a>
+<a id="toc42690297"></a></p>
+<h2 id="104-business">10.4. <span style="color: #4f81bd">طبقة [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]</span></h2>
+<p>توفر طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>, 2]</strong> واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>]</strong> التالية <strong>[<bdi dir="ltr" class="odt-ltr-term">IMetier.php</bdi>]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// business] layer ------------------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">interface</span><span style="color:#008080"> </span>IMétier<span style="color:#008080"> </span><span style="font-weight:bold">extends</span><span style="color:#008080"> </span>IDao<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// we use a person identified by his id</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>doSomething(Personne<span style="color:#008080"> </span><span style="color:#0000ff">$p</span>):<span style="color:#008080"> </span>void;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>توسع واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">IMétier</bdi>] </b>واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</b>. وهذا ليس إلزامياً على الإطلاق. نحن نفعل ذلك هنا لأن المثال بسيط؛
+  </li>
+  <li>السطر 7: طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">doSomething</bdi>] </b>خاصة بطبقة<b> [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>]</b>؛
+  </li>
+</ul>
+
+<p>سيتم تنفيذ واجهة <strong>[<bdi dir="ltr" class="odt-ltr-term">IMetier</bdi>]</strong> بواسطة فئة <strong>[<bdi dir="ltr" class="odt-ltr-term">Métier</bdi>]</strong> التالية <strong>[<bdi dir="ltr" class="odt-ltr-term">Métier.php</bdi>]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">class</span><span style="color:#008080"> </span>Métier<span style="color:#008080"> </span><span style="font-weight:bold">implements</span><span style="color:#008080"> </span>IMétier<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// layer [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">private</span><span style="color:#008080"> </span><span style="color:#0000ff">$dao</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// getter / setter</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>setDao(IDao<span style="color:#008080"> </span><span style="color:#0000ff">$dao</span>):<span style="color:#008080"> </span>void<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span>$this<span style="color:#000000">-&gt;dao</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span>$dao<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>getDao():<span style="color:#008080"> </span>IDao<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span>-&gt;dao;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// a person is exploited</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>doSomething(Personne<span style="color:#008080"> </span><span style="color:#0000ff">$p</span>):<span style="color:#008080"> </span>void<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// treatment</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span>&quot;Métier : Traitement métier de la personne <span style="color:#0000ff">$p</span>\n&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// safeguarding the individual</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>save(Personne<span style="color:#008080"> </span><span style="color:#0000ff">$p</span>):<span style="color:#008080"> </span>void<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span>&quot;<span style="font-weight:bold">[Métier]</span> : Sauvegarde de la personne <span style="color:#0000ff">$p</span>\n&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// the [dao] layer is asked to make the backup</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$this</span>-&gt;dao-&gt;save(<span style="color:#0000ff">$p</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>get(<span style="font-weight:bold">int</span><span style="color:#008080"> </span><span style="color:#0000ff">$id</span>):<span style="color:#008080"> </span>Personne<span style="color:#008080"> </span>{</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span>&quot;<span style="font-weight:bold">[Métier]</span> : récupération de la personne d&#x27;identifiant <span style="color:#0000ff">$id</span>\n&quot;<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// we ask for the person in the diaper [dao]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span>$personne<span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span>$this<span style="color:#000000">-&gt;dao-&gt;get(</span>$id<span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span>$personne<span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>السطر 5: يجب أن تحتوي طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>على مرجع إلى طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>من أجل استخدام أساليبها؛
+  </li>
+  <li>الأسطر 8–10: تسمح طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">setDao</bdi>] </b>بتزويد طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>بإشارة إلى طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</b>. لاحظ أن نوع المعلمة هو <b>[<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</b>. وهذا يعني أن طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>ستكون قادرة على العمل مع أي فئة تنفذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</b>. إذا قمنا بالتبديل من طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">Dao1</bdi>] </b>إلى طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>] </b>وكلاهما ينفذ واجهة<b> [<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</b>، فلن تكون هناك حاجة لإعادة كتابة طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</b>؛
+  </li>
+  <li>الأسطر 17-20: تنفيذ <b>[<bdi dir="ltr" class="odt-ltr-term">IMetier::doSomething</bdi>]</b>؛
+  </li>
+  <li>الأسطر 23–27: تنفيذ <b>[<bdi dir="ltr" class="odt-ltr-term">IMetier::save</bdi>]</b>. يجب أن تحفظ هذه الطريقة شخصًا في مستودع البيانات. لا تستطيع طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>القيام بذلك. فهي تستدعي طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>لتنفيذ عملية الحفظ هذه؛
+  </li>
+  <li>الأسطر 29–34: تنفيذ <b>[<bdi dir="ltr" class="odt-ltr-term">IMetier::get</bdi>]</b>. يجب أن تسترد هذه الطريقة من مستودع البيانات الشخص الذي تم تمرير معرفه إليها كمعلمة. لا تعرف طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>كيفية القيام بذلك. فهي تستدعي طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] </b>للقيام بهذه المهمة (السطر 32)؛
+  </li>
+</ul>
+
+<p><strong>الخلاصة</strong></p>
+<p>عندما تحتاج طبقة <strong>[الأعمال]</strong> إلى الوصول إلى البيانات المخزنة في مستودع البيانات، يجب أن تمر عبر طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</strong>، التي تم إنشاؤها للوصول إلى هذه البيانات.</p>
+<p><a id="toc42690684"></a>
+<a id="refheadingtoc788452244347140"></a>
+<a id="toc42689912"></a>
+<a id="toc42690298"></a></p>
+<h2 id="105">10.5. <span style="color: #4f81bd">النص البرمجي الرئيسي</span></h2>
+<p>سنكتب نصين برمجيين ليقوما بدور المنسقين لهذا التطبيق. سيستخدم النص الأول <strong>[<bdi dir="ltr" class="odt-ltr-term">main1.php</bdi>]</strong> طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao1</bdi>]</strong>، بينما سيستخدم النص الثاني <strong>[<bdi dir="ltr" class="odt-ltr-term">main2.php</bdi>]</strong> طبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>]</strong>. نريد أن نثبت أن هذا لا يؤثر على الكود في طبقة <strong>[الأعمال]</strong>.</p>
+<p>النص البرمجي <strong>[<bdi dir="ltr" class="odt-ltr-term">main1.php</bdi>]</strong> هو كما يلي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// strict adherence to function parameters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">declare</span><span style="color:#008080"> </span>(strict_types=<span style="color:#000080">1</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// inclusion classes and interfaces</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/Personne.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/IDao.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/IMetier.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/Dao1.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/Métier.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// test ----------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// layer creation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$dao1</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Dao1();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$métier</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Métier();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$métier<span style="color:#000000">-&gt;setDao(</span>$dao1<span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// using the [business] layer</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$personne<span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span>$métier<span style="color:#000000">-&gt;get(</span><span style="color:#000080">4</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$métier<span style="color:#000000">-&gt;doSomething(</span>$personne<span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$métier<span style="color:#000000">-&gt;save(</span>$personne<span style="color:#000000">);</span></span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>دعونا نستعرض بعض النقاط: يعمل البرنامج النصي<b> [<bdi dir="ltr" class="odt-ltr-term">main1.php</bdi>] </b>كمنسق للتطبيق. فهو ينشئ البنية الطبقية للتطبيق (الأسطر 15–17) ثم يبدأ في التواصل مع الطبقة<b> [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] </b>(الأسطر 19–21). البنية الطبقية هي كما يلي:
+  </li>
+</ul>
+
+<p><img src="images/1000000000000338000000EDAD236403.png" width="247" height="71" style="width:6.541cm;height:1.88cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000338000000EDAD236403.png" /></p>
+<p>وفقًا لهذا الرسم التخطيطي، يجب أن يتفاعل البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">main1.php</bdi>]</strong> مع الطبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">business</bdi>]</strong> فقط. ولا يجب أن يتفاعل مع الطبقة <strong>[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]</strong>، على الرغم من أن ذلك ممكن نظريًا.</p>
+<p>نتائج التنفيذ هي كما يلي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Métier]</span> : récupération de la personne d&#x27;identifiant 4</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Dao1]</span> : Récupération de la personne d&#x27;identité (4) en base de données <span style="font-weight:bold">[locale]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Métier]</span> : Traitement métier de la personne <span style="font-weight:bold">[Personne(4)]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Métier]</span> : Sauvegarde de la personne <span style="font-weight:bold">[Personne(4)]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Dao1]</span> : Sauvegarde de la personne <span style="font-weight:bold">[Personne(4)]</span> en base de données <span style="font-weight:bold">[locale]</span></span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>تسبب السطر 10 من الكود في كتابة السطرين 1 و 2 من النتائج؛
+  </li>
+  <li>تسبب السطر 20 من الكود في كتابة السطر 3 من النتائج؛
+  </li>
+  <li>تسبب السطر 21 من الكود في كتابة السطرين 4 و 5 من النتائج؛
+  </li>
+</ul>
+
+<p>النص البرمجي <strong>[<bdi dir="ltr" class="odt-ltr-term">main2.php</bdi>]</strong> هو كما يلي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// strict adherence to function parameters</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">declare</span><span style="color:#008080"> </span>(strict_types=<span style="color:#000080">1</span>);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// inclusion classes and interfaces</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/Personne.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/IDao.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/IMetier.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/Dao2.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">require_once<span style="color:#008080"> </span>__DIR__.<span style="color:#008000">&quot;/Métier.php&quot;</span>;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// test ----------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// layer creation</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$dao2</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Dao2();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$métier</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Métier();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$métier<span style="color:#000000">-&gt;setDao(</span>$dao2<span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// using the [business] layer</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$personne<span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span>$métier<span style="color:#000000">-&gt;get(</span><span style="color:#000080">4</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$métier<span style="color:#000000">-&gt;doSomething(</span>$personne<span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$métier<span style="color:#000000">-&gt;save(</span>$personne<span style="color:#000000">);</span></span></span>
+</code></pre></div>
+
+<p><strong>تعليقات</strong></p>
+<ul>
+  <li>الأسطر 36–38: تستخدم البنية الطبقية الآن طبقة<b> [<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>]</b>؛
+  </li>
+</ul>
+
+<p>نتائج التنفيذ هي كما يلي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Métier]</span> : récupération de la personne d&#x27;identifiant 4</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Dao2]</span> : Récupération de la personne d&#x27;identité (4) en base de données <span style="font-weight:bold">[distante]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Métier]</span> : Traitement métier de la personne <span style="font-weight:bold">[Personne(4)]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Métier]</span> : Sauvegarde de la personne <span style="font-weight:bold">[Personne(4)]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">[Dao2]</span> : Sauvegarde de la personne <span style="font-weight:bold">[Personne(4)]</span> en base de données <span style="font-weight:bold">[distante]</span></span></span>
+</code></pre></div>
+
+<p><span style="color: #000000">تحاكي طبقة</span><strong><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">Dao1</bdi>] </span></strong><span style="color: #000000">الوصول إلى قاعدة بيانات محلية، بينما تحاكي طبقة</span><strong><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">Dao2</bdi>] </span></strong><span style="color: #000000">الوصول إلى قاعدة بيانات بعيدة. طالما أن هاتين الطبقتين تتوافقان مع واجهة</span><strong><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">IDao</bdi>]</span></strong><span style="color: #000000">، يمكننا أن نرى أن الكود في طبقة</span><strong><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">Business</bdi>] </span></strong><span style="color: #000000">لم يحتج إلى تغيير.</span></p>
+<p><span style="color: #000000">سنطبق ما تعلمناه للتو على تمرين حساب الضرائب الذي يمثل خيطنا التوجيهي.</span></p>
+<p><span style="color: #000000"> </span></p>
+<p><span style="color: #000000"> </span></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        هذا البرنامج التعليمي الذي كتبه <strong>Serge Tahé</strong> متاح للجمهور وفقًا لشروط
+<em>Creative Commons Attribution – Non-commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
