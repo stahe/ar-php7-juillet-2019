@@ -1449,7 +1449,7 @@
   </li>
   <li>الأسطر 25–34: الحالة التي تم فيها إعلان جميع عناصر المصفوفة <b>[$<bdi dir="ltr" class="odt-ltr-term">tableau</bdi>] </b>صالحة؛
   </li>
-  <li>السطر 32: القيمة المُرجعة <b>[$<bdi dir="ltr" class="odt-ltr-term">result</bdi>→<bdi dir="ltr" class="odt-ltr-term">value</bdi>] </b>هي مصفوفة من <b>الأعداد العائمة </b>أو عدد عائم واحد؛
+  <li>السطر 32: القيمة المُرجعة <b>[$<bdi dir="ltr" class="odt-ltr-term">result→value</bdi>] </b>هي مصفوفة من <b>الأعداد العائمة </b>أو عدد عائم واحد؛
   </li>
 </ul>
 
@@ -1512,7 +1512,7 @@
 <p>ينتهي كل مُعيّن بعملية <strong>[<bdi dir="ltr" class="odt-ltr-term">return</bdi> $<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong>. وهذا يسمح بتهيئة السمات على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$data→setLimites($limites)→setCoeffR($coeffR)→setCoeffN($coeffN) ;
 </code></pre></div>
-<p>في الواقع، قيمة <strong>[$<bdi dir="ltr" class="odt-ltr-term">data</bdi>→<bdi dir="ltr" class="odt-ltr-term">setLimites</bdi>($<bdi dir="ltr" class="odt-ltr-term">limites</bdi>)]</strong> (السطر 32 من الكود) هي <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong>، لذا فهي هنا <strong>[$<bdi dir="ltr" class="odt-ltr-term">data</bdi>]</strong>. وبالتالي، يمكننا استدعاء الطريقة <strong>[<bdi dir="ltr" class="odt-ltr-term">setCoeffR</bdi>($<bdi dir="ltr" class="odt-ltr-term">coeffR</bdi>)]</strong> لهذا الكائن وهكذا دواليك، لأن هذه الطريقة بدورها تُرجع أيضًا <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong> (السطر 37 من الكود). يُسمى أسلوب كتابة طرق الفئة هذا، حيث تُرجع الطرق التي لا ينبغي أن تُرجع شيئًا الكائن <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong> بدلاً من ذلك، بالكتابة <strong>السلسة</strong>. وهو يجعل استخدام هذه الطرق أسهل.</p>
+<p>في الواقع، قيمة <strong>[$<bdi dir="ltr" class="odt-ltr-term">data→setLimites</bdi>($<bdi dir="ltr" class="odt-ltr-term">limites</bdi>)]</strong> (السطر 32 من الكود) هي <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong>، لذا فهي هنا <strong>[$<bdi dir="ltr" class="odt-ltr-term">data</bdi>]</strong>. وبالتالي، يمكننا استدعاء الطريقة <strong>[<bdi dir="ltr" class="odt-ltr-term">setCoeffR</bdi>($<bdi dir="ltr" class="odt-ltr-term">coeffR</bdi>)]</strong> لهذا الكائن وهكذا دواليك، لأن هذه الطريقة بدورها تُرجع أيضًا <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong> (السطر 37 من الكود). يُسمى أسلوب كتابة طرق الفئة هذا، حيث تُرجع الطرق التي لا ينبغي أن تُرجع شيئًا الكائن <strong>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>]</strong> بدلاً من ذلك، بالكتابة <strong>السلسة</strong>. وهو يجعل استخدام هذه الطرق أسهل.</p>
 <p><a id="toc42690666"></a>
 <a id="refheadingtoc55581710956990"></a>
 <a id="toc42689894"></a>
@@ -1765,15 +1765,15 @@
   </li>
   <li>الأسطر 15–64: وظيفة حساب الضريبة التي سبق أن صادفناها في الأقسام <a href="#version1"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">link</bdi></span></u></a> و <a href="#version2"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">link</bdi></span></u></a>؛ 
   </li>
-  <li>قامت النسخة 02 بتخزين بيانات إدارة الضرائب في مصفوفة ترابطية <b>[$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</b>. أما النسخة 03 فتخزنها في السمة <b>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>→<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</b>. الفرق الأول بين هذين النهجين هو مدى ظهور بيانات الضرائب:
+  <li>قامت النسخة 02 بتخزين بيانات إدارة الضرائب في مصفوفة ترابطية <b>[$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>]</b>. أما النسخة 03 فتخزنها في السمة <b>[$<bdi dir="ltr" class="odt-ltr-term">this→taxAdminData</bdi>]</b>. الفرق الأول بين هذين النهجين هو مدى ظهور بيانات الضرائب:
     <ul>
       <li>في الإصدار 02، لم يكن للمصفوفة الترابطية <b>[$<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </b>نطاق عالمي. ولذلك، كانت تُمرَّر كمعلمة إلى جميع دوال حساب الضرائب؛
       </li>
-      <li>في الإصدار 03، تتمتع السمة <b>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>→<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </b>برؤية عامة لجميع أساليب الفئة. وبالتالي، لا يتم تمريرها كمعلمة إلى جميع وظائف حساب الضرائب؛
+      <li>في الإصدار 03، تتمتع السمة <b>[$<bdi dir="ltr" class="odt-ltr-term">this→taxAdminData</bdi>] </b>برؤية عامة لجميع أساليب الفئة. وبالتالي، لا يتم تمريرها كمعلمة إلى جميع وظائف حساب الضرائب؛
       </li>
     </ul>
   </li>
-  <li>ينبع الاختلاف الثاني من حقيقة أن الإصدار 03 يستبدل الدوال بأساليب الفئة. يتم الآن استدعاء كل أسلوب باستخدام التعبير <b>[$<bdi dir="ltr" class="odt-ltr-term">this</bdi>→<bdi dir="ltr" class="odt-ltr-term">getMethod</bdi>(…)] </b>(الأسطر 27، 31، 57، 60)؛
+  <li>ينبع الاختلاف الثاني من حقيقة أن الإصدار 03 يستبدل الدوال بأساليب الفئة. يتم الآن استدعاء كل أسلوب باستخدام التعبير <b>[$<bdi dir="ltr" class="odt-ltr-term">this→getMethod</bdi>(…)] </b>(الأسطر 27، 31، 57، 60)؛
   </li>
   <li>والاختلاف الثالث هو أنه عندما تبدأ طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </b>عملها، فإنها لا تعرف ما إذا كانت السمة<b> [<bdi dir="ltr" class="odt-ltr-term">private</bdi> $<bdi dir="ltr" class="odt-ltr-term">taxAdminData</bdi>] </b>التي تحتاجها قد تم تهيئتها أم لا. ويرجع ذلك إلى أن مُنشئ الفئة لا يقوم بتهيئتها. لذلك، فإن الأمر متروك لطريقة<b> [<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi>] </b>للقيام بذلك باستخدام طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">getTaxAdminData</bdi>] </b>في السطر 12. وهذا ما يتم في الأسطر 23-25؛
   </li>
@@ -1908,7 +1908,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 3: نظرًا لأن عددًا من العمليات قد يؤدي إلى حدوث استثناء، فإن كتلة try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> / <bdi dir="ltr" class="odt-ltr-term">finally</bdi> تحيط بكامل كود الأسلوب؛
+  <li>السطر 3: نظرًا لأن عددًا من العمليات قد يؤدي إلى حدوث استثناء، فإن كتلة <bdi dir="ltr" class="odt-ltr-term">try / catch / finally</bdi> تحيط بكامل كود الأسلوب؛
   </li>
   <li>الأسطر 3–19: يتم فتح الملفات الثلاثة. يتم إلقاء استثناء بمجرد فشل عملية الفتح؛
   </li>
@@ -1922,7 +1922,7 @@
   </li>
   <li>السطر 59: إذا كان السطر المقروء صالحًا، يتم حساب الضريبة. يتم الحصول على النتيجة كمصفوفة ترابطية <b>[&quot;tax&quot; =&gt; <bdi dir="ltr" class="odt-ltr-term">floor</bdi>($tax), &quot;<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">surcharge</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">discount</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">discount</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">reduction</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">reduction</bdi>, &quot;<bdi dir="ltr" class="odt-ltr-term">rate</bdi>&quot; =&gt; $<bdi dir="ltr" class="odt-ltr-term">rate</bdi>]</b>؛
   </li>
-  <li>السطر 61: تتم إضافة المفاتيح <b>[<bdi dir="ltr" class="odt-ltr-term">married</bdi>, <bdi dir="ltr" class="odt-ltr-term">children</bdi>, <bdi dir="ltr" class="odt-ltr-term">salary</bdi>] </b>إلى النتيجة؛
+  <li>السطر 61: تتم إضافة المفاتيح <b>[<bdi dir="ltr" class="odt-ltr-term">married, children, salary</bdi>] </b>إلى النتيجة؛
   </li>
   <li>السطر 61: يتم كتابة النتيجة إلى الملف النصي <b>[$<bdi dir="ltr" class="odt-ltr-term">results</bdi>] </b>في شكل سلسلة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> للنتيجة التي تم الحصول عليها؛
   </li>

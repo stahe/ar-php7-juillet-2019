@@ -2666,7 +2666,7 @@
   </li>
 </ul>
 
-<p>تأكد من تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Laragon Apache</bdi>، وباستخدام <strong>[<bdi dir="ltr" class="odt-ltr-term">curl</bdi>]،</strong> اطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">http://localhost/</bdi>]</strong> باستخدام الأمر <strong>[<bdi dir="ltr" class="odt-ltr-term">curl</bdi> –<bdi dir="ltr" class="odt-ltr-term">verbose</bdi> –<bdi dir="ltr" class="odt-ltr-term">output localhost.HTML http://localhost/</bdi>]</strong>. ستحصل على النتائج التالية:</p>
+<p>تأكد من تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Laragon Apache</bdi>، وباستخدام <strong>[<bdi dir="ltr" class="odt-ltr-term">curl</bdi>]،</strong> اطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <strong>[<bdi dir="ltr" class="odt-ltr-term">http://localhost/</bdi>]</strong> باستخدام الأمر <strong>[<bdi dir="ltr" class="odt-ltr-term">curl –verbose –output localhost.HTML http://localhost/</bdi>]</strong>. ستحصل على النتائج التالية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">c:\Temp\curl                                                                                    </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">λ <span style="background-color:#ffff00">curl --verbose --output localhost.HTML http://localhost/</span>                                      </span></span>
@@ -3402,7 +3402,7 @@
   </li>
   <li>في <b>[12]</b>، استجابة الخادم؛
   </li>
-  <li>في <b>[13-16]</b>، يجب على العميل إرسال قائمة من الأسطر النصية تنتهي بسطر يحتوي على نقطة واحدة فقط. قد تحتوي الرسالة على أسطر<b> [<bdi dir="ltr" class="odt-ltr-term">Subject:</bdi>, <bdi dir="ltr" class="odt-ltr-term">From:</bdi>, <bdi dir="ltr" class="odt-ltr-term">To:</bdi>] </b>(13) لتحديد موضوع الرسالة والمرسل والمستلم، على التوالي؛
+  <li>في <b>[13-16]</b>، يجب على العميل إرسال قائمة من الأسطر النصية تنتهي بسطر يحتوي على نقطة واحدة فقط. قد تحتوي الرسالة على أسطر<b> [<bdi dir="ltr" class="odt-ltr-term">Subject:, From:, To:</bdi>] </b>(13) لتحديد موضوع الرسالة والمرسل والمستلم، على التوالي؛
   </li>
   <li>في <b>[14]</b>، يجب أن يتبع الرؤوس السابقة سطر فارغ؛
   </li>
@@ -4115,17 +4115,17 @@
   </li>
   <li>الأسطر 45-69: نحدد الرسالة باستخدام فئة<b> [\<bdi dir="ltr" class="odt-ltr-term">SwiftMessage</bdi>]</b>؛
   </li>
-  <li>السطر 47: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage</bdi>→<bdi dir="ltr" class="odt-ltr-term">setSubject</bdi>] </b>لتعيين موضوع الرسالة؛
+  <li>السطر 47: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage→setSubject</bdi>] </b>لتعيين موضوع الرسالة؛
   </li>
-  <li>السطر 49: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage</bdi>→<bdi dir="ltr" class="odt-ltr-term">setFrom</bdi>] </b>لتعيين مرسل الرسالة؛
+  <li>السطر 49: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage→setFrom</bdi>] </b>لتعيين مرسل الرسالة؛
   </li>
-  <li>السطر 51: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage</bdi>→<bdi dir="ltr" class="odt-ltr-term">setTo</bdi>] </b>لتعيين مستلم الرسالة؛
+  <li>السطر 51: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage→setTo</bdi>] </b>لتعيين مستلم الرسالة؛
   </li>
-  <li>السطر 53: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage</bdi>→<bdi dir="ltr" class="odt-ltr-term">setBody</bdi>] </b>لتعيين نص الرسالة؛
+  <li>السطر 53: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage→setBody</bdi>] </b>لتعيين نص الرسالة؛
   </li>
-  <li>السطر 55: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage</bdi>→<bdi dir="ltr" class="odt-ltr-term">addPart</bdi>] </b>لتعيين إصدارات مختلفة من الرسالة، وفي هذه الحالة تكون الرسالة بتنسيق <bdi dir="ltr" class="odt-ltr-term">HTML.</bdi> عندما تحتوي الرسالة على متغيرات، تعرض برامج البريد الإلكتروني المتغير المفضل لدى المستخدم؛
+  <li>السطر 55: تُستخدم طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage→addPart</bdi>] </b>لتعيين إصدارات مختلفة من الرسالة، وفي هذه الحالة تكون الرسالة بتنسيق <bdi dir="ltr" class="odt-ltr-term">HTML.</bdi> عندما تحتوي الرسالة على متغيرات، تعرض برامج البريد الإلكتروني المتغير المفضل لدى المستخدم؛
   </li>
-  <li>الأسطر 58–69: تسمح لك طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage</bdi>→<bdi dir="ltr" class="odt-ltr-term">addAttachment</bdi>] </b>(64) بإرفاق ملف بالرسالة؛
+  <li>الأسطر 58–69: تسمح لك طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMessage→addAttachment</bdi>] </b>(64) بإرفاق ملف بالرسالة؛
   </li>
   <li>الأسطر 70–79: بمجرد تحديد الرسالة المراد إرسالها، يجب تحديد كيفية إرسالها. يتم تحديد وضع نقل الرسالة بواسطة فئة<b> [\<bdi dir="ltr" class="odt-ltr-term">Swift_SmtpTransport</bdi>]</b>. يجب توفير معلومتين على الأقل: <i>اسم </i>خادم <bdi dir="ltr" class="odt-ltr-term">SMTP</bdi> <i>ومنفذه</i>. وهناك معلومة ثالثة: هل يتطلب خادم <bdi dir="ltr" class="odt-ltr-term">SMTP</bdi> مصادقة آمنة؟
   </li>
@@ -4135,7 +4135,7 @@
   </li>
   <li>السطر 81: ترسل فئة<b> [\<bdi dir="ltr" class="odt-ltr-term">SwiftMailer</bdi>] </b>الرسائل. يجب تمرير وضع النقل المختار إليها؛
   </li>
-  <li>السطر 83: يتم إرسال رسالة<b> [\<bdi dir="ltr" class="odt-ltr-term">SwiftMessage</bdi>] </b>عبر <b>[\<bdi dir="ltr" class="odt-ltr-term">Swift_SmtpTransport</bdi>] </b>المحدد. تُرجع طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMailer</bdi>→<bdi dir="ltr" class="odt-ltr-term">send</bdi>] </b>القيمة <bdi dir="ltr" class="odt-ltr-term">FALSE</bdi> إذا تعذر إرسال الرسالة؛
+  <li>السطر 83: يتم إرسال رسالة<b> [\<bdi dir="ltr" class="odt-ltr-term">SwiftMessage</bdi>] </b>عبر <b>[\<bdi dir="ltr" class="odt-ltr-term">Swift_SmtpTransport</bdi>] </b>المحدد. تُرجع طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMailer→send</bdi>] </b>القيمة <bdi dir="ltr" class="odt-ltr-term">FALSE</bdi> إذا تعذر إرسال الرسالة؛
   </li>
   <li>الأسطر 86–89: ترمي مكتبة<b> [<bdi dir="ltr" class="odt-ltr-term">SwiftMailer</bdi>] </b>استثناءً بمجرد حدوث خطأ ما؛
   </li>
@@ -5691,7 +5691,7 @@
   </li>
   <li>الأسطر 47-70: هذا <b>الجزء الفرعي الأول </b>من النوع <b>[<bdi dir="ltr" class="odt-ltr-term">text/plain</bdi>] </b>(السطران 51 و54)، ومشفّر كـ <b>[<bdi dir="ltr" class="odt-ltr-term">QUOTED-PRINTABLE</bdi>] </b>(السطر 52)، وله معلمة<b> [<bdi dir="ltr" class="odt-ltr-term">charset</bdi>=<bdi dir="ltr" class="odt-ltr-term">utf-8</bdi>] </b>(السطران 66-67)؛
   </li>
-  <li>الأسطر 49–72 تصف الأسطر s–x من الرسالة النصية؛
+  <li>الأسطر 49–72 تصف الأسطر <bdi dir="ltr" class="odt-ltr-term">s–x</bdi> من الرسالة النصية؛
   </li>
   <li>الأسطر 74–99: تصف <b>الجزء الفرعي الثاني </b>من الجزء<b> [<bdi dir="ltr" class="odt-ltr-term">multipart/alternative</bdi>]</b>؛
   </li>
@@ -5833,7 +5833,7 @@
       </li>
     </ul>
   </li>
-  <li>الأسطر 17–34: تعرض نوع محتوى القسم <b>[$<bdi dir="ltr" class="odt-ltr-term">section</bdi>] </b>من الرسالة. للقيام بذلك، نستخدم الحقول <b>[$<bdi dir="ltr" class="odt-ltr-term">part</bdi>→<bdi dir="ltr" class="odt-ltr-term">type</bdi>] </b>و <b>[$<bdi dir="ltr" class="odt-ltr-term">part</bdi>→<bdi dir="ltr" class="odt-ltr-term">subtype</bdi>] </b>من القسم <b>[$<bdi dir="ltr" class="odt-ltr-term">part</bdi>]</b>؛
+  <li>الأسطر 17–34: تعرض نوع محتوى القسم <b>[$<bdi dir="ltr" class="odt-ltr-term">section</bdi>] </b>من الرسالة. للقيام بذلك، نستخدم الحقول <b>[$<bdi dir="ltr" class="odt-ltr-term">part→type</bdi>] </b>و <b>[$<bdi dir="ltr" class="odt-ltr-term">part→subtype</bdi>] </b>من القسم <b>[$<bdi dir="ltr" class="odt-ltr-term">part</bdi>]</b>؛
   </li>
   <li>السطور 36-37: يتم عرض نوع الترميز للجزء <b>[$<bdi dir="ltr" class="odt-ltr-term">sectionNumber</bdi>]</b>؛
   </li>
@@ -6274,7 +6274,7 @@
       </li>
       <li><b>[$<bdi dir="ltr" class="odt-ltr-term">text</bdi>]</b>: هو النص المراد حفظه. ولكن يجب أولاً فك تشفيره لأنه مشفر؛
       </li>
-      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">infosMail</bdi>]</b>: يحتوي على معلومات عامة عن البريد الإلكتروني. سنستخدم الحقول<b> [<bdi dir="ltr" class="odt-ltr-term">from</bdi>, to, <bdi dir="ltr" class="odt-ltr-term">subject</bdi>]</b>؛
+      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">infosMail</bdi>]</b>: يحتوي على معلومات عامة عن البريد الإلكتروني. سنستخدم الحقول<b> [<bdi dir="ltr" class="odt-ltr-term">from, to, subject</bdi>]</b>؛
       </li>
       <li><b>[$<bdi dir="ltr" class="odt-ltr-term">struct</bdi>]</b>: هي البنية التي تصف الجزء من البريد الإلكتروني الذي نقوم بحفظه. سيسمح لنا ذلك بتحديد نوع تشفير النص المراد حفظه؛
       </li>
@@ -6282,7 +6282,7 @@
   </li>
   <li>الأسطر 4–12: نقوم بفك تشفير النص المراد حفظه؛
   </li>
-  <li>الأسطر 13–25: نسترد معلومات<b> [<bdi dir="ltr" class="odt-ltr-term">from</bdi>, to, <bdi dir="ltr" class="odt-ltr-term">subject</bdi>] </b>من البريد الإلكتروني؛
+  <li>الأسطر 13–25: نسترد معلومات<b> [<bdi dir="ltr" class="odt-ltr-term">from, to, subject</bdi>] </b>من البريد الإلكتروني؛
   </li>
   <li>الأسطر 27–36: اعتمادًا على نوع (0 أو 1) النص المراد حفظه، نقوم بإنشاء نص عادي (السطر 30) أو نص <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> (السطر 34)؛
   </li>
@@ -6375,7 +6375,7 @@
 <ul>
   <li>السطر 2: تقبل الدالة<b> [<bdi dir="ltr" class="odt-ltr-term">saveAttachment</bdi>] </b>المعلمات التالية:
     <ul>
-      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">imapResource</bdi>, int $<bdi dir="ltr" class="odt-ltr-term">msgNumber</bdi>, <bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">sectionNumber</bdi>] </b>تحدد بشكل فريد قسم <bdi dir="ltr" class="odt-ltr-term">IMAP</bdi> المراد حفظه؛
+      <li><b>[$<bdi dir="ltr" class="odt-ltr-term">imapResource, int</bdi> $<bdi dir="ltr" class="odt-ltr-term">msgNumber, string</bdi> $<bdi dir="ltr" class="odt-ltr-term">sectionNumber</bdi>] </b>تحدد بشكل فريد قسم <bdi dir="ltr" class="odt-ltr-term">IMAP</bdi> المراد حفظه؛
       </li>
       <li><b>[<bdi dir="ltr" class="odt-ltr-term">string</bdi> $<bdi dir="ltr" class="odt-ltr-term">outputDir</bdi>] </b>هو دليل الحفظ؛
       </li>
@@ -6383,9 +6383,9 @@
       </li>
     </ul>
   </li>
-  <li>الأسطر 6–44: نبحث عن اسم الملف المرتبط بالمرفق. سنستخدم نفس اسم الملف هذا لحفظه. يوجد اسم ملف المرفق في المصفوفة <b>[$<bdi dir="ltr" class="odt-ltr-term">struct</bdi>→<bdi dir="ltr" class="odt-ltr-term">dparameters</bdi>] </b>أو المصفوفة <b>[$<bdi dir="ltr" class="odt-ltr-term">struct</bdi>→<bdi dir="ltr" class="odt-ltr-term">parameters</bdi>]</b>، أو كليهما؛
+  <li>الأسطر 6–44: نبحث عن اسم الملف المرتبط بالمرفق. سنستخدم نفس اسم الملف هذا لحفظه. يوجد اسم ملف المرفق في المصفوفة <b>[$<bdi dir="ltr" class="odt-ltr-term">struct→dparameters</bdi>] </b>أو المصفوفة <b>[$<bdi dir="ltr" class="odt-ltr-term">struct→parameters</bdi>]</b>، أو كليهما؛
   </li>
-  <li>الأسطر 30–40: إذا كان اسم الملف يحتوي على أحرف غير مشفرة بـ 7 بتات، فهذا يعني أنه تم تشفيره بـ <b>[<bdi dir="ltr" class="odt-ltr-term">quoted-printable</bdi>]</b>. في هذه الحالة، في <b>[$<bdi dir="ltr" class="odt-ltr-term">struct</bdi>→<bdi dir="ltr" class="odt-ltr-term">dparameters</bdi>]</b>، يُسمى السمة <b>[<bdi dir="ltr" class="odt-ltr-term">fileName</bdi>*] </b>بدلاً من <b>[<bdi dir="ltr" class="odt-ltr-term">fileName</bdi>]</b>. وهذا يعني أنه لم يستوف الشرط في السطر 16. ثم يتم البحث عن اسم الملف في المصفوفة <b>[$<bdi dir="ltr" class="odt-ltr-term">struct</bdi>→<bdi dir="ltr" class="odt-ltr-term">parameters</bdi>]</b>؛
+  <li>الأسطر 30–40: إذا كان اسم الملف يحتوي على أحرف غير مشفرة بـ 7 بتات، فهذا يعني أنه تم تشفيره بـ <b>[<bdi dir="ltr" class="odt-ltr-term">quoted-printable</bdi>]</b>. في هذه الحالة، في <b>[$<bdi dir="ltr" class="odt-ltr-term">struct→dparameters</bdi>]</b>، يُسمى السمة <b>[<bdi dir="ltr" class="odt-ltr-term">fileName</bdi>*] </b>بدلاً من <b>[<bdi dir="ltr" class="odt-ltr-term">fileName</bdi>]</b>. وهذا يعني أنه لم يستوف الشرط في السطر 16. ثم يتم البحث عن اسم الملف في المصفوفة <b>[$<bdi dir="ltr" class="odt-ltr-term">struct→parameters</bdi>]</b>؛
   </li>
   <li>السطر 32: مثال على اسم ملف مشفر. له الشكل التالي: =?<bdi dir="ltr" class="odt-ltr-term">original_encoding</bdi>?<bdi dir="ltr" class="odt-ltr-term">current_encoding</bdi>?<bdi dir="ltr" class="odt-ltr-term">encoded_name.</bdi> وبالتالي، فإن الاسم <b>[=?<bdi dir="ltr" class="odt-ltr-term">utf-8</bdi>?<bdi dir="ltr" class="odt-ltr-term">Q</bdi>?<bdi dir="ltr" class="odt-ltr-term">Cours-Tutoriels-Serge-Tah</bdi>=<bdi dir="ltr" class="odt-ltr-term">C3</bdi>=<bdi dir="ltr" class="odt-ltr-term">A9-1568x268</bdi>=2Ep] </b>يعني أن اسم الملف كان بتنسيق <bdi dir="ltr" class="odt-ltr-term">UTF-8</bdi> وهو حاليًا بتنسيق <b>[<bdi dir="ltr" class="odt-ltr-term">quoted-printable</bdi>] </b>(<bdi dir="ltr" class="odt-ltr-term">Q</bdi>)؛
   </li>
@@ -6874,7 +6874,7 @@
   </li>
   <li>السطر 24: استرجاع نوع المرفق (سمة <i><bdi dir="ltr" class="odt-ltr-term">Content-Type</bdi></i>)؛
   </li>
-  <li>الأسطر 34–38: حفظ المرفق في المجلد<b> [$<bdi dir="ltr" class="odt-ltr-term">outputDir</bdi>]</b>. المعلمة الثانية <b>[<bdi dir="ltr" class="odt-ltr-term">PhpMimeMailParser</bdi>\<bdi dir="ltr" class="odt-ltr-term">Parser::ATTACHMENT_DUPLICATE_SUFFIX</bdi>] </b>هي استراتيجية تسمية للمرفقات. إذا كان<b> [$<bdi dir="ltr" class="odt-ltr-term">attachment</bdi>→<bdi dir="ltr" class="odt-ltr-term">getFilename</bdi>()] </b>هو <bdi dir="ltr" class="odt-ltr-term">X</bdi> وكان الملف <bdi dir="ltr" class="odt-ltr-term">X</bdi> موجودًا بالفعل، فإن مكتبة<b> [<bdi dir="ltr" class="odt-ltr-term">php-mime-mail-parser</bdi>] </b>تجرب الأسماء <b>[<bdi dir="ltr" class="odt-ltr-term">X_1</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">X_2</bdi>] </b>وما إلى ذلك، حتى تجد اسم ملف غير موجود؛
+  <li>الأسطر 34–38: حفظ المرفق في المجلد<b> [$<bdi dir="ltr" class="odt-ltr-term">outputDir</bdi>]</b>. المعلمة الثانية <b>[<bdi dir="ltr" class="odt-ltr-term">PhpMimeMailParser</bdi>\<bdi dir="ltr" class="odt-ltr-term">Parser::ATTACHMENT_DUPLICATE_SUFFIX</bdi>] </b>هي استراتيجية تسمية للمرفقات. إذا كان<b> [$<bdi dir="ltr" class="odt-ltr-term">attachment→getFilename</bdi>()] </b>هو <bdi dir="ltr" class="odt-ltr-term">X</bdi> وكان الملف <bdi dir="ltr" class="odt-ltr-term">X</bdi> موجودًا بالفعل، فإن مكتبة<b> [<bdi dir="ltr" class="odt-ltr-term">php-mime-mail-parser</bdi>] </b>تجرب الأسماء <b>[<bdi dir="ltr" class="odt-ltr-term">X_1</bdi>] </b>و<b>[<bdi dir="ltr" class="odt-ltr-term">X_2</bdi>] </b>وما إلى ذلك، حتى تجد اسم ملف غير موجود؛
   </li>
   <li>السطر 40: نتحقق مما إذا كان المرفق عبارة عن بريد إلكتروني؛
   </li>

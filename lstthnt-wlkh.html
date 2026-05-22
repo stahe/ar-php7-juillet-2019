@@ -1395,7 +1395,7 @@
       </li>
     </ul>
   </li>
-  <li><span style="color: #000000">الأسطر 32–62: 4 طرق مختلفة لمعالجة الاستثناء الذي تم إنشاؤه بواسطة الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">intdiv</bdi>] </span></b><span style="color: #000000">عند تمرير مقسوم عليه يساوي 0. تقوم الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">intdiv</bdi>(int $<bdi dir="ltr" class="odt-ltr-term">dividend</bdi>, int $<bdi dir="ltr" class="odt-ltr-term">divisor</bdi>): int] </span></b><span style="color: #000000">بإجراء القسمة الصحيحة $<bdi dir="ltr" class="odt-ltr-term">dividend</bdi> / $<bdi dir="ltr" class="odt-ltr-term">divisor.</bdi> عندما يكون المقسوم عليه صفرًا، يتم إلقاء استثناء</span><b><span style="color: #000000"> [\<bdi dir="ltr" class="odt-ltr-term">DivisionByzeroError</bdi>]</span></b><span style="color: #000000">؛</span>
+  <li><span style="color: #000000">الأسطر 32–62: 4 طرق مختلفة لمعالجة الاستثناء الذي تم إنشاؤه بواسطة الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">intdiv</bdi>] </span></b><span style="color: #000000">عند تمرير مقسوم عليه يساوي 0. تقوم الدالة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">intdiv</bdi>(int $<bdi dir="ltr" class="odt-ltr-term">dividend, int</bdi> $<bdi dir="ltr" class="odt-ltr-term">divisor</bdi>): int] </span></b><span style="color: #000000">بإجراء القسمة الصحيحة $<bdi dir="ltr" class="odt-ltr-term">dividend</bdi> / $<bdi dir="ltr" class="odt-ltr-term">divisor.</bdi> عندما يكون المقسوم عليه صفرًا، يتم إلقاء استثناء</span><b><span style="color: #000000"> [\<bdi dir="ltr" class="odt-ltr-term">DivisionByzeroError</bdi>]</span></b><span style="color: #000000">؛</span>
     <ul>
       <li><span style="color: #000000">السطر 35: نلتقط أي خطأ ينفذ واجهة</span><b><span style="color: #000000"> [\<bdi dir="ltr" class="odt-ltr-term">Throwable</bdi>]</span></b><span style="color: #000000">. هذا صحيح؛</span>
       </li>
@@ -1541,7 +1541,7 @@
 <ul>
   <li><span style="color: #000000">السطر 6: تعمل عبارة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">exit</bdi>] </span></b><span style="color: #000000">على إيقاف تشغيل البرنامج النصي فورًا: لا يتم تنفيذ جملة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">finally</bdi>]</span></b><span style="color: #000000">؛</span>
   </li>
-  <li><span style="color: #000000">الأسطر 4–9: مثال على try / <bdi dir="ltr" class="odt-ltr-term">catch</bdi> / <bdi dir="ltr" class="odt-ltr-term">finally</bdi> بدون جملة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</span></b><span style="color: #000000">. هذا ممكن؛</span>
+  <li><span style="color: #000000">الأسطر 4–9: مثال على <bdi dir="ltr" class="odt-ltr-term">try / catch / finally</bdi> بدون جملة</span><b><span style="color: #000000"> [<bdi dir="ltr" class="odt-ltr-term">catch</bdi>]</span></b><span style="color: #000000">. هذا ممكن؛</span>
   </li>
 </ul>
 

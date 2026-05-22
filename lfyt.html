@@ -1793,7 +1793,7 @@
 
 <p>من الأفضل استخدام الأسماء المطلقة للاستثناءات المحددة مسبقًا في <bdi dir="ltr" class="odt-ltr-term">PHP</bdi> في البرنامج النصي الذي لا يحتوي على مساحة أسماء بحد ذاته. وبالتالي، إذا قررت إعطاء هذا البرنامج النصي مساحة أسماء، فإن كتابة أسماء الفئات المطلقة تظل صالحة، بينما في الحالة الأخرى، سيؤدي تغيير مساحة الأسماء إلى حدوث أخطاء في أسماء الفئات النسبية؛</p>
 <ul>
-  <li>السطر 21: عند حدوث استثناء، تسترد طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>→<bdi dir="ltr" class="odt-ltr-term">getMessage</bdi>] </b>رسالة خطأ الاستثناء. وينطبق الأمر نفسه على <b>[<bdi dir="ltr" class="odt-ltr-term">TypeError</bdi>]</b>. في طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Person.setFirstName</bdi>]</b>، كتبنا:
+  <li>السطر 21: عند حدوث استثناء، تسترد طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Exception→getMessage</bdi>] </b>رسالة خطأ الاستثناء. وينطبق الأمر نفسه على <b>[<bdi dir="ltr" class="odt-ltr-term">TypeError</bdi>]</b>. في طريقة<b> [<bdi dir="ltr" class="odt-ltr-term">Person.setFirstName</bdi>]</b>، كتبنا:
   </li>
 </ul>
 
@@ -1809,7 +1809,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>في السطر 5، يتم إلقاء استثناء مع رسالة الخطأ <strong>[يجب ألا يكون الاسم الأول فارغًا]</strong>. وهذا ما ستسترده طريقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Exception</bdi>→<bdi dir="ltr" class="odt-ltr-term">getMessage</bdi>]</strong> في السطر 29 من البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>]</strong>.</p>
+<p>في السطر 5، يتم إلقاء استثناء مع رسالة الخطأ <strong>[يجب ألا يكون الاسم الأول فارغًا]</strong>. وهذا ما ستسترده طريقة <strong>[<bdi dir="ltr" class="odt-ltr-term">Exception→getMessage</bdi>]</strong> في السطر 29 من البرنامج النصي <strong>[<bdi dir="ltr" class="odt-ltr-term">classes-05.php</bdi>]</strong>.</p>
 <p><strong>النتائج</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span class="odt-code-line-content">Exemple1, personne=<span style="font-weight:bold">[Paul,Langevin,48]</span></span></span>
@@ -3127,7 +3127,7 @@
   </li>
   <li>الأسطر 21–25: نقوم بتهيئة كائن<b> [<bdi dir="ltr" class="odt-ltr-term">Person</bdi>] [$<bdi dir="ltr" class="odt-ltr-term">child2</bdi>]</b>؛
   </li>
-  <li>الأسطر 27–29: يتم تهيئة السمة<b> [$<bdi dir="ltr" class="odt-ltr-term">father</bdi>→<bdi dir="ltr" class="odt-ltr-term">children</bdi>] </b>بمصفوفة من الطفلين؛
+  <li>الأسطر 27–29: يتم تهيئة السمة<b> [$<bdi dir="ltr" class="odt-ltr-term">father→children</bdi>] </b>بمصفوفة من الطفلين؛
   </li>
   <li>الأسطر 32-33: نعيّن الطفلين للأب؛
   </li>
